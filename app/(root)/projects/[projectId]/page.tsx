@@ -123,6 +123,25 @@ export default async function Project({ params }: ProjectPageProps) {
         />
       </div>
 
+      {project.paperLink && (
+        <div className="mb-7 rounded-lg border bg-muted/40 p-5">
+          <h2 className="flex items-center font-heading text-xl leading-tight lg:text-xl mb-2">
+            <Icons.research className="h-5 w-5 mr-2" /> Research Paper
+          </h2>
+          <p className="text-muted-foreground mb-4">
+            Read the full research paper this project produced, submitted
+            for the school&apos;s research paper competition.
+          </p>
+          <Link
+            href={project.paperLink}
+            target="_blank"
+            className={cn(buttonVariants({ variant: "default" }))}
+          >
+            <Icons.post className="w-4 h-4 mr-2" /> View Full Paper (PDF)
+          </Link>
+        </div>
+      )}
+
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
           Page Info

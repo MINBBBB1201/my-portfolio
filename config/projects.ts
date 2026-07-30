@@ -183,15 +183,51 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Arduino", "Python", "System Architecture"],
     startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
     endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
-    companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
-    pagesInfoArr: [],
+    companyLogoImg:
+      "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+    pagesInfoArr: [
+      {
+        title: "Components & Circuit Design",
+        description:
+          "Sourced servos, a camera module, and control electronics, and prototyped the pan-tilt control circuit before physical assembly.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/01-parts-kit.jpg",
+          "/projects/ciws-drone-tracking-turret/02-circuit-diagram.jpg",
+          "/projects/ciws-drone-tracking-turret/03-servo-bracket.jpg",
+          "/projects/ciws-drone-tracking-turret/05-servo-mount-closeup.jpg",
+        ],
+      },
+      {
+        title: "Assembly",
+        description:
+          "Built up a single-axis pan-tilt prototype first, then integrated the camera module and status LED indicator before scaling to a dual-turret setup.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/04-single-axis-build.jpg",
+          "/projects/ciws-drone-tracking-turret/06-led-power-module.jpg",
+          "/projects/ciws-drone-tracking-turret/07-camera-servo-assembled.jpg",
+          "/projects/ciws-drone-tracking-turret/08-camera-module-closeup.jpg",
+        ],
+      },
+      {
+        title: "Dual-Turret Tracking Demo",
+        description:
+          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+          "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
+          "/projects/ciws-drone-tracking-turret/11-live-tracking-demo.jpg",
+        ],
+      },
+    ],
     descriptionDetails: {
       paragraphs: [
         "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
+        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
       ],
       bullets: [
-        "Developed real-time tracking algorithms and targeting logic.",
-        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data.",
+        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
+        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
+        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
       ],
     },
   },
@@ -205,12 +241,30 @@ export const Projects: ProjectInterface[] = [
     techStack: ["FreeCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-01-31"),
-    companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
+    companyLogoImg: "/projects/wind-tunnel-rc-aircraft/01-hero-aircraft-topdown.jpg",
     paperLink: "/projects/wind-tunnel-rc-aircraft/research-paper.pdf",
-    pagesInfoArr: [],
+    pagesInfoArr: [
+      {
+        title: "The Test Aircraft",
+        description:
+          "A hand-built, hand-painted foam-board test article — not a scale showpiece, but a functional platform for gathering real flight data. Motors, control surfaces, and wiring are all scratch-built.",
+        imgArr: [
+          "/projects/wind-tunnel-rc-aircraft/01-hero-aircraft-topdown.jpg",
+          "/projects/wind-tunnel-rc-aircraft/02-aircraft-build-detail.jpg",
+        ],
+      },
+      {
+        title: "Flight Test",
+        description:
+          "Outdoor flight test used to validate the design predictions from wind tunnel data against real flight behavior.",
+        imgArr: [],
+        videoArr: ["/projects/wind-tunnel-rc-aircraft/03-flight-test.mp4"],
+      },
+    ],
     descriptionDetails: {
       paragraphs: [
         "Built a functional wind tunnel to run empirical aerodynamic testing and flow visualization, then applied fundamental principles of flight and fluid dynamics to design, manufacture, and flight-test a custom F-22-inspired RC aircraft.",
+        "The aircraft itself is a hand-built foam-board test article — built for generating real flight data to validate against wind tunnel predictions, not as a polished scale model.",
         "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
         "The paper won 1st place in the Physics Division of the school's research paper competition.",
       ],
