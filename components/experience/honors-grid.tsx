@@ -9,6 +9,7 @@ const typeIcon: Record<HonorInterface["type"], any> = {
   Award: Icons.trophy,
   Certification: Icons.certificate,
   Leadership: Icons.graduationCap,
+  Research: Icons.research,
 };
 
 export default function HonorsGrid({ honors }: HonorsGridProps) {

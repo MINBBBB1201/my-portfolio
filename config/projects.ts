@@ -130,25 +130,26 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "wind-tunnel-rc-aircraft",
-    companyName: "Aerodynamic Wind Tunnel & Custom RC Aircraft",
+    companyName: "F-22-Inspired RC Aircraft: Aerodynamic Design & Flight Stability Research",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Built a functional wind tunnel for aerodynamic testing, then applied the empirical lift/drag data to design, build, and flight-test a custom RC aircraft.",
+      "Designed, built, and flight-tested an F-22-inspired RC aircraft, then wrote a research paper on the correlation between its aerodynamic design variables and flight stability — 1st place, Physics Division, school research paper competition.",
     techStack: ["FreeCAD", "System Architecture"],
-    startDate: new Date("2024-09-01"), // TODO: 정확한 기간 확인
-    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
+    startDate: new Date("2025-09-01"),
+    endDate: new Date("2026-01-31"),
     companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
     pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [
-        "Designed and manufactured a functional wind tunnel to run empirical aerodynamic testing and flow visualization.",
-        "Applied fundamental principles of flight and fluid dynamics to design and manufacture a custom radio-controlled (RC) aircraft, translating wind tunnel data directly into the build.",
+        "Built a functional wind tunnel to run empirical aerodynamic testing and flow visualization, then applied fundamental principles of flight and fluid dynamics to design, manufacture, and flight-test a custom F-22-inspired RC aircraft.",
+        "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
+        "The paper won 1st place in the Physics Division of the school's research paper competition.",
       ],
       bullets: [
         "Analyzed lift and drag performance data from wind tunnel testing to optimize the design, stability, and control configuration of the RC aircraft.",
         "Optimized wingspan, wing profile, and structural stability based on empirical aerodynamic data.",
-        "Flight-tested the finished aircraft to validate performance against design predictions.",
+        "Flight-tested the finished aircraft to validate performance against design predictions and documented findings in a formal research paper.",
       ],
     },
   },

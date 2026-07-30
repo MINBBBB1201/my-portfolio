@@ -10,7 +10,7 @@ export interface HonorInterface {
   title: string;
   issuer: string;
   date: string;
-  type: "Award" | "Certification" | "Leadership";
+  type: "Award" | "Certification" | "Leadership" | "Research";
 }
 
 export const honors: HonorInterface[] = [
@@ -33,19 +33,14 @@ export const honors: HonorInterface[] = [
     type: "Award",
   },
   {
-    title: "1st Place, School Creative Writing & Essay Contest (Physics Division)",
+    title:
+      '1st Place (Physics Division), School Research Paper Competition — "Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft"',
     issuer: "Qingdao Daewon School",
-    date: "2025 – 2026",
-    type: "Award",
+    date: "G11, 2025 – 2026",
+    type: "Research",
   },
   {
     title: "Vice President, Student Council",
-    issuer: "Qingdao Daewon School",
-    date: "2025 – 2026",
-    type: "Leadership",
-  },
-  {
-    title: "Vice President, Robotics & Hardware Programming Club",
     issuer: "Qingdao Daewon School",
     date: "2025 – 2026",
     type: "Leadership",

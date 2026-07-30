@@ -37,6 +37,24 @@ export const experiences: ExperienceInterface[] = [
     logo: "",
   },
   {
+    id: "mechanics-club",
+    position: "Vice President",
+    company: "Mechanics Club",
+    location: "Qingdao Daewon School",
+    startDate: new Date("2026-03-01"),
+    endDate: "Present",
+    description: [
+      "Designed and built a 4-bit Ripple Carry Adder from scratch — researched binary arithmetic, logic gates (AND/OR/XOR), and half-/full-adder theory, then implemented and verified the circuit on a breadboard with logic gate ICs and LED indicators.",
+      "Conceived and am building SmartFlight, a flight booking web app (Next.js 16, React 19, Firebase, Three.js) with flight search, seat selection, and reservation features, using AI-assisted development workflows while maintaining engineering rigor.",
+    ],
+    achievements: [
+      "Combined circuit-level hardware understanding with software engineering, bridging low-level digital logic and applied product development.",
+    ],
+    skills: ["Digital Logic", "Next.js", "React", "Firebase", "Three.js"],
+    companyUrl: "",
+    logo: "",
+  },
+  {
     id: "cosmos",
     position: "Founder & President",
     company: "COSMOS (Aero-Engineering Club)",

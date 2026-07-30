@@ -67,7 +67,8 @@ export type ValidSkills =
   | "FreeCAD"
   | "OpenSCAD"
   | "APIs"
-  | "System Architecture";
+  | "System Architecture"
+  | "Digital Logic";
 
 export type ValidCategory =
   | "Full Stack"
@@ -90,4 +91,5 @@ export type ValidPages =
   | "contact"
   | "contributions"
   | "resume"
-  | "blogs";
+  | "blogs"
+  | "community";

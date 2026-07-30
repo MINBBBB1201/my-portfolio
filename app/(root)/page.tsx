@@ -120,6 +120,43 @@ export default function IndexPage() {
       </section>
       <AnimatedSection
         direction="up"
+        className="container space-y-6 py-10 my-14"
+        id="about"
+      >
+        <div className="mx-auto max-w-[48rem] space-y-4 text-center sm:text-left">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center"
+          >
+            About
+          </AnimatedText>
+          <AnimatedText as="p" delay={0.2} className="text-muted-foreground leading-relaxed">
+            I'm a 12th grader at Qingdao Daewon School studying Aviation,
+            Aeronautics, and Aerospace Science and Technology. It started in a
+            physics class assignment — designing and flight-testing an
+            F-22-inspired RC aircraft — which turned into a research paper
+            that won 1st place in the Physics Division of my school's
+            research competition. That project is also what led me to found
+            COSMOS, our school's aero-engineering club, where I've led a
+            10-member team through a rocket motor thrust test stand and an
+            open-circuit wind tunnel, from CAD design through fabrication and
+            static-fire testing.
+          </AnimatedText>
+          <AnimatedText as="p" delay={0.3} className="text-muted-foreground leading-relaxed">
+            I care about the same rigor showing up in software. Tern, a
+            flight-booking app I built and maintain, and SmartFlight, an
+            in-progress project with my school's Mechanics club, both come
+            from the same instinct: build the thing, measure whether it
+            actually works, and iterate from data instead of guesses. Outside
+            the lab, I've served on my school's Student Council and run an
+            anonymous peer-support channel through PSYCHOFISH — because I
+            think the same attention to detail that goes into a wind tunnel
+            should go into how you treat the people around you.
+          </AnimatedText>
+        </div>
+      </AnimatedSection>
+      <AnimatedSection
+        direction="up"
         className="container space-y-6 bg-muted py-10 my-14"
         id="projects"
       >

@@ -82,4 +82,14 @@ export const pagesConfig: PagesConfig = {
         "Minchan Kim's journey across software and aerospace engineering.",
     },
   },
+  community: {
+    title: "Community & Leadership",
+    description:
+      "Student council, peer support, and school community involvement beyond engineering.",
+    metadata: {
+      title: "Community & Leadership",
+      description:
+        "Minchan Kim's leadership and community involvement at Qingdao Daewon School.",
+    },
+  },
 };
