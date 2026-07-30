@@ -3,6 +3,7 @@ import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
 interface PagesInfoInterface {
   title: string;
   imgArr: string[];
+  videoArr?: string[];
   description?: string;
 }
 
@@ -66,8 +67,41 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Arduino", "System Architecture", "Python"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-06-01"), // TODO: 정확한 완료 시점 확인
-    companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
-    pagesInfoArr: [],
+    companyLogoImg: "/projects/cosmos-rocket-thrust-stand/01-hero-static-fire.png",
+    pagesInfoArr: [
+      {
+        title: "Design & Assembly",
+        description:
+          "Parametric CAD design of the thrust stand and load cell mount, followed by physical assembly of the aluminum extrusion frame.",
+        imgArr: [
+          "/projects/cosmos-rocket-thrust-stand/02-cad-propellant-mix.png",
+          "/projects/cosmos-rocket-thrust-stand/03-assembled-stand.png",
+          "/projects/cosmos-rocket-thrust-stand/04-stand-side-view.png",
+          "/projects/cosmos-rocket-thrust-stand/05-stand-frame-top.png",
+        ],
+      },
+      {
+        title: "Propellant Casting & Instrumentation",
+        description:
+          "Hand-cast solid propellant grains (KNO3/sorbitol-based) and wired the load cell + microcontroller data-logging chain used to capture thrust during static fire.",
+        imgArr: [
+          "/projects/cosmos-rocket-thrust-stand/06-propellant-mixing.png",
+          "/projects/cosmos-rocket-thrust-stand/07-component-kit.png",
+          "/projects/cosmos-rocket-thrust-stand/08-component-array.png",
+          "/projects/cosmos-rocket-thrust-stand/09-loadcell-wiring-diagram.png",
+        ],
+      },
+      {
+        title: "Static-Fire Test & Results",
+        description:
+          "Live static-fire footage alongside the thrust-time curve logged during the test, from which peak thrust, total impulse, and specific impulse were derived.",
+        imgArr: [
+          "/projects/cosmos-rocket-thrust-stand/10-ready-for-test.png",
+          "/projects/cosmos-rocket-thrust-stand/11-thrust-time-graph.png",
+        ],
+        videoArr: ["/projects/cosmos-rocket-thrust-stand/12-static-fire-test.mp4"],
+      },
+    ],
     descriptionDetails: {
       paragraphs: [
         "As founder and president of COSMOS, the school's aero-engineering club, I led a 10-member team through a full theory to design to fabrication to test-validation cycle to build a solid/liquid rocket motor thrust test stand.",

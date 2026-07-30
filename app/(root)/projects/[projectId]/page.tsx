@@ -93,7 +93,7 @@ export default async function Project({ params }: ProjectPageProps) {
           alt={project.companyName}
           width={720}
           height={405}
-          className="my-8 rounded-md border bg-muted transition-colors"
+          className="my-8 w-full h-auto rounded-md border bg-muted transition-colors"
           priority
         />
       )}
@@ -127,17 +127,30 @@ export default async function Project({ params }: ProjectPageProps) {
             </h3>
             <div>
               <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
+              {page.imgArr
+                .filter((img) => !!img)
+                .map((img, ind) => (
+                  <Image
+                    src={img}
+                    key={ind}
+                    alt={img}
+                    width={720}
+                    height={405}
+                    className="my-4 w-full h-auto rounded-md border bg-muted transition-colors"
+                    priority
+                  />
+                ))}
+              {page.videoArr
+                ?.filter((video) => !!video)
+                .map((video, ind) => (
+                  <video
+                    key={ind}
+                    src={video}
+                    controls
+                    playsInline
+                    className="my-4 w-full rounded-md border bg-muted transition-colors"
+                  />
+                ))}
             </div>
           </div>
         ))}
