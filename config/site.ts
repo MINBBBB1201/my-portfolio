@@ -10,9 +10,9 @@ export const siteConfig = {
     github: "https://github.com/MINBBBB1201",
     templateRepo: "https://github.com/COSMOS-Aero-Engineering/Rocket-Thrust-Test-Stand",
   },
-  ogImage: "",
-  iconIco: "",
-  logoIcon: "",
+  ogImage: "/logo.png",
+  iconIco: "/favicon.ico",
+  logoIcon: "/logo.png",
   keywords: [
     "Minchan Kim",
     "AI Engineer",
