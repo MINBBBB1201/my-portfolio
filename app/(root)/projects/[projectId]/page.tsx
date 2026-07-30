@@ -61,6 +61,13 @@ export default async function Project({ params }: ProjectPageProps) {
                 </Link>
               </CustomTooltip>
             )}
+            {project.paperLink && (
+              <CustomTooltip text="Read the research paper (PDF).">
+                <Link href={project.paperLink} target="_blank">
+                  <Icons.research className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
+                </Link>
+              </CustomTooltip>
+            )}
           </div>
         </h1>
         <ChipContainer textArr={project.category} />

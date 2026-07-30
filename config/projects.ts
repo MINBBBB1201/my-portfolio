@@ -20,6 +20,7 @@ export interface ProjectInterface {
   shortDescription: string;
   websiteLink?: string;
   githubLink?: string;
+  paperLink?: string;
   techStack: ValidSkills[];
   startDate: Date;
   endDate: Date;
@@ -120,23 +121,55 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Directed the design, fabrication, and testing of an open-circuit suction wind tunnel used to compare airflow over multiple NACA airfoil profiles.",
+      "Directing the parametric CAD design and fabrication of an open-circuit suction wind tunnel to compare airflow over multiple NACA airfoil profiles — in progress, continuing next semester.",
     githubLink:
       "https://github.com/COSMOS-Aero-Engineering/COSMOS-Aeroview-Windtunnel",
     techStack: ["FreeCAD", "OpenSCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
-    endDate: new Date("2026-06-01"), // TODO: 정확한 완료 시점 확인
-    companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
-    pagesInfoArr: [],
+    endDate: new Date("2026-12-01"), // 다음 학기(2학기)에 이어서 진행 예정 — 아직 미완성
+    companyLogoImg: "/projects/cosmos-aeroview-windtunnel/01-hero-full-assembly.jpg",
+    pagesInfoArr: [
+      {
+        title: "Parametric CAD Design",
+        description:
+          "Modeled every subsystem parametrically — fan box, wing/airfoil mount, and flow-straightener honeycomb panel — in FreeCAD and OpenSCAD before fabrication.",
+        imgArr: [
+          "/projects/cosmos-aeroview-windtunnel/02-cad-full-assembly-render.png",
+          "/projects/cosmos-aeroview-windtunnel/03-cad-fan-box.png",
+          "/projects/cosmos-aeroview-windtunnel/04-cad-wing-mount.png",
+          "/projects/cosmos-aeroview-windtunnel/05-cad-flow-straightener.png",
+        ],
+      },
+      {
+        title: "Fabrication & Assembly",
+        description:
+          "Built the plywood fan box and diffuser/nozzle sections from the CAD drawings, mounting a 4-fan intake array to drive suction airflow.",
+        imgArr: [
+          "/projects/cosmos-aeroview-windtunnel/06-fan-box-assembly.jpg",
+          "/projects/cosmos-aeroview-windtunnel/07-frame-construction.jpg",
+          "/projects/cosmos-aeroview-windtunnel/08-fan-array-closeup.jpg",
+          "/projects/cosmos-aeroview-windtunnel/09-fan-box-open.jpg",
+        ],
+      },
+      {
+        title: "Flow Visualization & Current Status",
+        description:
+          "Set up a fog-machine flow visualization rig and built the clear acrylic test section for airfoil comparison. The tunnel is still under construction — final assembly and airflow testing are planned for next semester.",
+        imgArr: [
+          "/projects/cosmos-aeroview-windtunnel/10-smoke-flow-visualization-setup.jpg",
+          "/projects/cosmos-aeroview-windtunnel/11-test-section.png",
+        ],
+      },
+    ],
     descriptionDetails: {
       paragraphs: [
         "Directed the parametric CAD design (FreeCAD, OpenSCAD) and fabrication of an open-circuit suction wind tunnel to compare airflow over NACA 0012, 2412, and 4412 airfoils.",
-        "Managed the project across a six-week physical build cycle, from structural design through final assembly.",
+        "Managed the project across a six-week physical build cycle, from structural design through final assembly. The tunnel is still under construction as of this writing — final assembly and airflow data collection are planned for next semester.",
       ],
       bullets: [
         "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
         "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy.",
-        "Directed physical assembly of the full wind tunnel structure.",
+        "Directing fabrication and assembly of the fan box, diffuser, and flow-visualization test section, with final integration and airflow testing planned for next semester.",
       ],
     },
   },
@@ -173,6 +206,7 @@ export const Projects: ProjectInterface[] = [
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-01-31"),
     companyLogoImg: "/logo.png", // TODO: 실제 프로젝트 로고/스크린샷으로 교체
+    paperLink: "/projects/wind-tunnel-rc-aircraft/research-paper.pdf",
     pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [

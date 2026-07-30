@@ -69,7 +69,7 @@ export const experiences: ExperienceInterface[] = [
     achievements: [
       "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
       "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
-      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy; directed physical assembly across a 6-week build cycle.",
+      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy; directing fabrication and assembly, with final integration and airflow testing planned for next semester.",
     ],
     skills: ["FreeCAD", "OpenSCAD", "Arduino", "System Architecture"],
     companyUrl: "https://github.com/COSMOS-Aero-Engineering",
