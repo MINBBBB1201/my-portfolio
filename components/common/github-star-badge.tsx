@@ -40,7 +40,7 @@ export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
       href={siteConfig.links.templateRepo}
       target="_blank"
       rel="noreferrer"
-      aria-label={`View template repo on GitHub${
+      aria-label={`View project repo on GitHub${
         stars != null ? ` (${stars.toLocaleString()} stars)` : ""
       }`}
       className={cn(
@@ -50,7 +50,7 @@ export function GitHubStarBadge({ className }: GitHubStarBadgeProps) {
     >
       <span className="hidden items-center gap-2 sm:inline-flex">
         <Icons.gitHub className="h-3.5 w-3.5" />
-        <span className="font-medium">Template</span>
+        <span className="font-medium">Rocket Test Stand</span>
         <span className="text-muted-foreground/60">·</span>
       </span>
       <Icons.star className="h-3.5 w-3.5" />

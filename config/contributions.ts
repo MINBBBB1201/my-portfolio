@@ -7,39 +7,18 @@ export interface contributionsInterface {
 
 export const contributionsUnsorted: contributionsInterface[] = [
   {
-    repo: "minimal-next-portfolio",
+    repo: "Rocket-Thrust-Test-Stand",
     contibutionDescription:
-      "Open-source Next.js portfolio template. Trusted and forked by developers worldwide (130+ GitHub stars).",
-    repoOwner: "namanbarkiya",
-    link: "https://github.com/namanbarkiya/minimal-next-portfolio",
+      "Led design, fabrication, and testing of a solid propellant rocket motor thrust test stand as COSMOS club president.",
+    repoOwner: "COSMOS-Aero-Engineering",
+    link: "https://github.com/COSMOS-Aero-Engineering/Rocket-Thrust-Test-Stand",
   },
   {
-    repo: "niya-saas-template",
+    repo: "COSMOS-Aeroview-Windtunnel",
     contibutionDescription:
-      "Modern Next.js SaaS template. Production-ready starter for devs and AI startups (30+ GitHub stars).",
-    repoOwner: "namanbarkiya",
-    link: "https://github.com/namanbarkiya/niya-saas-template",
-  },
-  {
-    repo: "autogen",
-    contibutionDescription:
-      "Improved the gallery component to showcase the community work.",
-    repoOwner: "Microsoft",
-    link: "https://github.com/microsoft/autogen/pull/1445",
-  },
-  {
-    repo: "creativecommons",
-    contibutionDescription:
-      "Closed Issue: Fixed navbar issue on the main website of creative common.",
-    repoOwner: "Creative Commons",
-    link: "https://github.com/creativecommons/creativecommons.github.io-source/pull/738",
-  },
-  {
-    repo: "creativecommons",
-    contibutionDescription:
-      "Added section for 'Other Opportunities' on main page.",
-    repoOwner: "Creative Commons",
-    link: "https://github.com/creativecommons/creativecommons.github.io-source/pull/719",
+      "Directed CAD design and fabrication of an open-circuit suction wind tunnel to compare NACA airfoil profiles.",
+    repoOwner: "COSMOS-Aero-Engineering",
+    link: "https://github.com/COSMOS-Aero-Engineering/COSMOS-Aeroview-Windtunnel",
   },
 ];
 

@@ -25,16 +25,16 @@ export default function GithubRedirectCard() {
           />
         </div>
         <h2 className="font-heading text-xl tracking-tight lg:text-3xl duration-300">
-          Like this template?
+          Check out my work
         </h2>
         <p className="mt-2 mb-10 font-heading text-lg text-muted-foreground">
-          It&#39;s open source. Explore and contribute on GitHub.
+          Explore my open-source engineering projects on GitHub.
         </p>
         <Github className="w-10 h-10 text-muted-foreground mb-5" />
       </CardContent>
       <CardFooter className="px-8 pb-8 pt-0">
         <Link
-          href={"https://github.com/namanbarkiya/minimal-next-portfolio"}
+          href={"https://github.com/COSMOS-Aero-Engineering"}
           target="_blank"
           className={cn(
             buttonVariants({ variant: "outline" }),

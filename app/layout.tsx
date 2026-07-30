@@ -3,8 +3,8 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
-import Script from "next/script";
 
+import ChatBot from "@/components/ChatBot";
 import { Analytics } from "@/components/common/analytics";
 import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -127,16 +127,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           ]}
         >
           {children}
+          <ChatBot />
           <Analytics />
           <Toaster />
           <ModalProvider />
         </ThemeProvider>
-        <Script
-          src="https://convot.xyz/widget.js"
-          data-token="3vpr28Va7E8luRq8DMOStAr9tefOCVqifQ28fpp6grrKS4zflNRZQjQpmeu4os_2nuLmmh1DOshndiN5O1vvGg"
-          data-api-url="https://api.convot.xyz"
-          strategy="afterInteractive"
-        />
       </body>
       <GoogleAnalytics gaId={GA_ID} />
     </html>

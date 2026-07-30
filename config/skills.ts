@@ -16,145 +16,74 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.nextjs,
   },
   {
-    name: "React",
-    description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
-    rating: 5,
-    icon: Icons.react,
-  },
-  {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    rating: 4,
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    rating: 4,
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
-    description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
-    rating: 5,
-    icon: Icons.express,
-  },
-  {
-    name: "Node.js",
-    description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
-    name: "Typescript",
+    name: "TypeScript",
     description:
       "Enhance JavaScript with static types, making code more understandable and reliable.",
     rating: 5,
     icon: Icons.typescript,
   },
   {
-    name: "Javascript",
+    name: "React",
     description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
-    rating: 5,
-    icon: Icons.javascript,
-  },
-  {
-    name: "HTML 5",
-    description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
-    rating: 4,
-    icon: Icons.html5,
-  },
-  {
-    name: "CSS 3",
-    description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
-    icon: Icons.css3,
-  },
-  {
-    name: "React Native",
-    description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
+      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
     rating: 4,
     icon: Icons.react,
   },
   {
-    name: "Angular",
+    name: "React Three Fiber",
     description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
-    rating: 3,
-    icon: Icons.angular,
-  },
-  {
-    name: "Redux",
-    description:
-      "Manage app state effectively using a predictable and centralized state container.",
+      "Build interactive 3D scenes and visualizations declaratively on top of Three.js and React.",
     rating: 4,
-    icon: Icons.redux,
+    icon: Icons.threejs,
   },
   {
-    name: "Socket.io",
+    name: "GSAP",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
+      "Choreograph smooth scroll-driven and interactive animations with ScrollTrigger.",
     rating: 3,
-    icon: Icons.socketio,
+    icon: Icons.gsap,
   },
   {
-    name: "Material UI",
+    name: "Python",
     description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    rating: 4,
-    icon: Icons.mui,
+      "Analyze data, automate workflows, and prototype logic across engineering and software projects.",
+    rating: 3,
+    icon: Icons.python,
   },
-
+  {
+    name: "System Architecture",
+    description:
+      "Design maintainable, scalable structures for full-stack applications and hardware systems alike.",
+    rating: 3,
+    icon: Icons.settings,
+  },
+  {
+    name: "APIs",
+    description:
+      "Integrate and design REST APIs to connect real-time data sources into applications.",
+    rating: 4,
+    icon: Icons.link,
+  },
   {
     name: "Tailwind CSS",
     description:
       "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    rating: 5,
+    rating: 4,
     icon: Icons.tailwindcss,
   },
   {
-    name: "AWS",
+    name: "Arduino",
     description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
+      "Prototype and control hardware systems with microcontrollers for real-time sensing and actuation.",
     rating: 3,
-    icon: Icons.amazonaws,
+    icon: Icons.arduino,
   },
   {
-    name: "Bootstrap",
+    name: "FreeCAD",
     description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
-  },
-  {
-    name: "MySQL",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
-  },
-  {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
+      "Design parametric CAD models for fabrication, from wind tunnels to structural components.",
+    rating: 3,
+    icon: Icons.freecad,
   },
 ];
 

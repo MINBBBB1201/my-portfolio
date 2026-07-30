@@ -60,7 +60,14 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "React Three Fiber"
+  | "GSAP"
+  | "Arduino"
+  | "FreeCAD"
+  | "OpenSCAD"
+  | "APIs"
+  | "System Architecture";
 
 export type ValidCategory =
   | "Full Stack"
@@ -69,7 +76,9 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
+  | "Aerospace Engineering"
+  | "Hardware/Robotics";
 
 export type ValidExpType = "Personal" | "Professional";
 
