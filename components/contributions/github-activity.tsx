@@ -51,7 +51,7 @@ export default function GitHubActivity() {
 
       {repos && repos.length > 0 && (
         <div className="grid gap-4 sm:grid-cols-2">
-          {repos.map((r) => (
+          {repos.filter((r) => !!r.url).map((r) => (
             <a
               key={`${r.owner}/${r.repo}`}
               href={r.url}

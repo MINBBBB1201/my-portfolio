@@ -12,7 +12,9 @@ export default function ContributionCard({
 }: ContributionCardProps) {
   return (
     <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
-      {contributions.map((contribution, id) => (
+      {contributions
+        .filter((contribution) => !!contribution.link)
+        .map((contribution, id) => (
         <Link
           href={contribution.link}
           target="_blank"

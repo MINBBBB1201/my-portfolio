@@ -34,4 +34,13 @@ export const communityInvolvement: CommunityInterface[] = [
       "Helped organize a Halloween story-collection event and led \"Random Acts of Kindness\" campus clean-up volunteering.",
     ],
   },
+  {
+    name: "Support Group",
+    role: "Group Leader (조장)",
+    period: "2024 – 2026 (4 semesters through G11)",
+    description: [
+      "Participated in the school's semesterly Support Group program all four times offered through 11th grade, a small-group peer mentoring initiative run each semester.",
+      "Served as group leader for every Support Group iteration in 11th grade, facilitating group discussions and helping the group meet its goals.",
+    ],
+  },
 ];

@@ -27,11 +27,11 @@ export async function POST(req: Request) {
           {
             role: "system",
             content:
-              "You are a helpful assistant embedded in Minchan Kim's personal portfolio site. Answer visitor questions about his projects using the provided project data. Be concise and friendly. Answer in the same language the visitor used.",
+              "You are a helpful assistant embedded in Minchan Kim's personal portfolio site. Answer visitor questions about his projects using the provided project data (in JSON below). Be concise and friendly. IMPORTANT: Always respond in the exact same language as the visitor's question, whatever language that is (English, Korean, etc.) — never default to Korean or any other language regardless of what language the project data is in.",
           },
           {
             role: "user",
-            content: `다음은 내 프로젝트 정보야: ${JSON.stringify(projectContext)}\n\n질문: ${message}`,
+            content: `Project data (JSON): ${JSON.stringify(projectContext)}\n\nVisitor question: ${message}`,
           },
         ],
       }),

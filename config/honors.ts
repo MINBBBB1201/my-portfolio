@@ -45,4 +45,11 @@ export const honors: HonorInterface[] = [
     date: "2025 – 2026",
     type: "Leadership",
   },
+  {
+    title:
+      '2nd Place, School-wide Writing Contest (백일장) — Top Excellence Award, prose essay on "What I\'d Want to Tell My 8-Year-Old Self"',
+    issuer: "Qingdao Daewon School",
+    date: "G10, 2024",
+    type: "Award",
+  },
 ];
