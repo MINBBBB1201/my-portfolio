@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -12,7 +11,8 @@ import { HudCorners } from "@/components/common/hud-corners";
 import { Icons } from "@/components/common/icons";
 import { ParticleNetwork } from "@/components/common/particle-network";
 import { SectionLabel } from "@/components/common/section-label";
-import { TiltCard } from "@/components/common/tilt-card";
+import { StudioLamp } from "@/components/common/studio-lamp";
+import { TechBackdrop } from "@/components/common/tech-backdrop";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
@@ -61,76 +61,17 @@ export default function IndexPage() {
       <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center overflow-hidden">
         <ParticleNetwork
           className="absolute inset-0"
-          density={0.055}
-          maxParticles={110}
+          density={0.03}
+          maxParticles={65}
         />
+        <TechBackdrop />
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
-        <FloatingIcons className="hidden sm:block" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <AnimatedText delay={0}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Aerospace + AI Engineering Portfolio
-            </span>
-          </AnimatedText>
-          <TiltCard className="relative mb-2 flex items-center justify-center py-6">
-            <div
-              className="absolute h-full w-full rounded-2xl bg-primary/20 blur-3xl"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_10px_2px]"
-              style={{
-                offsetPath: "circle(54% at 50% 50%)",
-                animation: "orbit-move 9s linear infinite",
-                boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.7)",
-              }}
-              aria-hidden="true"
-            />
-            <div
-              className="absolute h-1.5 w-1.5 rounded-full bg-primary/70"
-              style={{
-                offsetPath: "circle(54% at 50% 50%)",
-                offsetDistance: "42%",
-                animation: "orbit-move 9s linear infinite",
-                animationDelay: "-3s",
-              }}
-              aria-hidden="true"
-            />
-            <div className="relative w-[85%] max-w-[22rem] sm:max-w-[25rem]">
-              {/* Spotlight fixture, mounted just above the frame's top edge */}
-              <div
-                className="absolute -top-7 left-1/2 h-2 w-20 -translate-x-1/2 rounded-full bg-primary"
-                style={{ boxShadow: "0 0 24px 6px hsl(var(--primary) / 0.8)" }}
-                aria-hidden="true"
-              />
-              {/* Light cone shining down onto the top edge (painted behind the photo) */}
-              <div
-                className="absolute -top-7 left-1/2 h-36 w-[150%] -translate-x-1/2"
-                style={{
-                  background:
-                    "linear-gradient(180deg, hsl(var(--primary) / 0.45), transparent 85%)",
-                  clipPath: "polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%)",
-                }}
-                aria-hidden="true"
-              />
-              <Image
-                src={profileImg}
-                height={500}
-                width={400}
-                sizes="100vw"
-                className="relative aspect-[4/5] w-full rounded-2xl border-2 border-primary object-cover shadow-xl shadow-primary/20"
-                alt="Minchan Kim Portfolio"
-                priority
-              />
-              {/* Glow where the light falls on the photo's surface */}
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 rounded-t-2xl bg-gradient-to-b from-primary/30 to-transparent"
-                aria-hidden="true"
-              />
-              <HudCorners size="sm" className="absolute -inset-3" />
-            </div>
-          </TiltCard>
+          <StudioLamp
+            src={profileImg}
+            alt="Minchan Kim"
+            className="mb-4"
+          />
           <AnimatedText
             as="h1"
             delay={0.2}
@@ -152,29 +93,6 @@ export default function IndexPage() {
               test stands.
             </p>
           </div>
-
-          <AnimatedText delay={0.5}>
-            <div className="mt-8 flex flex-wrap items-stretch justify-center divide-x divide-primary/20 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
-              {[
-                { value: "05", label: "Projects Shipped" },
-                { value: "10", label: "Team Led · COSMOS" },
-                { value: "190N", label: "Peak Thrust" },
-                { value: "3.94", label: "GPA" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center gap-0.5 px-5 py-3 sm:px-7"
-                >
-                  <span className="font-mono text-lg sm:text-xl font-bold text-primary">
-                    {stat.value}
-                  </span>
-                  <span className="text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground whitespace-nowrap">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </AnimatedText>
 
           <div className="flex flex-col mt-6 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
