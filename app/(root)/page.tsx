@@ -57,21 +57,38 @@ export default function IndexPage() {
       <section className="relative space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
-          <AnimatedText
-            delay={0}
-            className="font-mono text-xs sm:text-sm tracking-[0.3em] text-primary uppercase"
-          >
-            // Aerospace + AI Engineering Portfolio
+          <AnimatedText delay={0}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              Aerospace + AI Engineering Portfolio
+            </span>
           </AnimatedText>
-          <Image
-            src={profileImg}
-            height={100}
-            width={100}
-            sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Minchan Kim Portfolio"
-            priority
-          />
+          <div className="relative mb-2 flex items-center justify-center">
+            <div
+              className="absolute h-[150%] w-[150%] rounded-full border border-primary/15"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute h-[125%] w-[125%] rounded-full border border-dashed border-primary/20"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute h-full w-full rounded-2xl bg-primary/25 blur-3xl"
+              aria-hidden="true"
+            />
+            <div className="relative w-[58%] max-w-[15rem]">
+              <Image
+                src={profileImg}
+                height={300}
+                width={300}
+                sizes="100vw"
+                className="aspect-square w-full rounded-2xl border-2 border-primary object-cover shadow-xl shadow-primary/20"
+                alt="Minchan Kim Portfolio"
+                priority
+              />
+              <HudCorners size="sm" className="absolute -inset-3" />
+            </div>
+          </div>
           <AnimatedText
             as="h1"
             delay={0.2}
@@ -99,7 +116,10 @@ export default function IndexPage() {
               <Link
                 href={"/resume"}
                 target="_blank"
-                className={cn(buttonVariants({ size: "lg" }))}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "shadow-lg shadow-primary/25"
+                )}
                 aria-label="View resume"
               >
                 <Icons.post className="w-4 h-4 mr-2" /> Resume

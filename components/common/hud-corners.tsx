@@ -1,5 +1,8 @@
+import { cn } from "@/lib/utils";
+
 interface HudCornersProps {
   className?: string;
+  size?: "sm" | "lg";
 }
 
 /**
@@ -7,8 +10,11 @@ interface HudCornersProps {
  * viewfinder or targeting reticle. Purely visual — absolutely
  * positioned within a `relative` parent, non-interactive.
  */
-export function HudCorners({ className }: HudCornersProps) {
-  const corner = "absolute h-6 w-6 sm:h-10 sm:w-10 text-primary/40";
+export function HudCorners({ className, size = "lg" }: HudCornersProps) {
+  const corner = cn(
+    "absolute text-primary/40",
+    size === "sm" ? "h-4 w-4 sm:h-6 sm:w-6" : "h-6 w-6 sm:h-10 sm:w-10"
+  );
   return (
     <div
       className={className}
@@ -16,7 +22,7 @@ export function HudCorners({ className }: HudCornersProps) {
       style={{ pointerEvents: "none" }}
     >
       <svg
-        className={`${corner} left-0 top-0`}
+        className={cn(corner, "left-0 top-0")}
         viewBox="0 0 40 40"
         fill="none"
       >
@@ -27,7 +33,7 @@ export function HudCorners({ className }: HudCornersProps) {
         />
       </svg>
       <svg
-        className={`${corner} right-0 top-0`}
+        className={cn(corner, "right-0 top-0")}
         viewBox="0 0 40 40"
         fill="none"
       >
@@ -38,7 +44,7 @@ export function HudCorners({ className }: HudCornersProps) {
         />
       </svg>
       <svg
-        className={`${corner} bottom-0 left-0`}
+        className={cn(corner, "bottom-0 left-0")}
         viewBox="0 0 40 40"
         fill="none"
       >
@@ -49,7 +55,7 @@ export function HudCorners({ className }: HudCornersProps) {
         />
       </svg>
       <svg
-        className={`${corner} bottom-0 right-0`}
+        className={cn(corner, "bottom-0 right-0")}
         viewBox="0 0 40 40"
         fill="none"
       >
