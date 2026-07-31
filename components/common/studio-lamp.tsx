@@ -33,32 +33,52 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
   return (
     <div className={cn("relative flex flex-col items-center", className)}>
       {/* ---------- LED bar ---------- */}
-      {/* Outer housing: a slim dark bezel, like the body of a real LED light bar */}
-      <div
-        className={cn(
-          "relative z-20 w-[13rem] rounded-full p-[2.5px] transition-colors duration-300 sm:w-[15rem]",
-          on ? "bg-slate-800/90 dark:bg-slate-950/90" : "bg-slate-700/50 dark:bg-slate-900/60"
-        )}
-        style={{
-          boxShadow: on
-            ? "0 0 16px 3px hsl(var(--primary) / 0.7), 0 0 55px 18px hsl(var(--primary) / 0.32), 0 1px 2px hsl(0 0% 0% / 0.3)"
-            : "0 1px 2px hsl(0 0% 0% / 0.2)",
-        }}
-      >
-        {/* Diffuser lens: the actual emitting surface */}
+      {/* Squared aluminum-extrusion housing (matches the site's rounded-md
+          radius, not a pill) with small mounting tabs at each end so it
+          reads as a machined instrument, not a rounded consumer object. */}
+      <div className="relative z-20 flex items-center gap-[3px]">
+        <span
+          className={cn(
+            "h-2.5 w-[2px] rounded-[1px] transition-colors duration-300",
+            on ? "bg-primary/60" : "bg-muted-foreground/25"
+          )}
+          aria-hidden="true"
+        />
         <div
           className={cn(
-            "h-[9px] rounded-full transition-all duration-300 sm:h-[11px]",
-            flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
+            "w-[12rem] rounded-[3px] p-[2.5px] transition-colors duration-300 sm:w-[14rem]",
+            on
+              ? "bg-slate-800/90 dark:bg-slate-950/90"
+              : "bg-slate-700/50 dark:bg-slate-900/60"
           )}
           style={{
-            background: on
-              ? "linear-gradient(180deg, hsl(0 0% 100% / 0.95) 0%, hsl(var(--primary)) 40%, hsl(var(--primary) / 0.8) 100%)"
-              : "linear-gradient(180deg, hsl(var(--muted-foreground) / 0.35) 0%, hsl(var(--muted-foreground) / 0.18) 100%)",
             boxShadow: on
-              ? "inset 0 1.5px 1px hsl(0 0% 100% / 0.65), inset 0 -2px 2.5px hsl(var(--primary) / 0.6)"
-              : "inset 0 1px 1px hsl(0 0% 100% / 0.06)",
+              ? "0 0 16px 3px hsl(var(--primary) / 0.7), 0 0 55px 18px hsl(var(--primary) / 0.32), 0 1px 2px hsl(0 0% 0% / 0.3)"
+              : "0 1px 2px hsl(0 0% 0% / 0.2)",
           }}
+        >
+          {/* Diffuser lens: the actual emitting surface */}
+          <div
+            className={cn(
+              "h-[8px] rounded-[1.5px] transition-all duration-300 sm:h-[10px]",
+              flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
+            )}
+            style={{
+              background: on
+                ? "linear-gradient(180deg, hsl(0 0% 100% / 0.95) 0%, hsl(var(--primary)) 40%, hsl(var(--primary) / 0.8) 100%)"
+                : "linear-gradient(180deg, hsl(var(--muted-foreground) / 0.35) 0%, hsl(var(--muted-foreground) / 0.18) 100%)",
+              boxShadow: on
+                ? "inset 0 1.5px 1px hsl(0 0% 100% / 0.65), inset 0 -2px 2.5px hsl(var(--primary) / 0.6)"
+                : "inset 0 1px 1px hsl(0 0% 100% / 0.06)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
+        <span
+          className={cn(
+            "h-2.5 w-[2px] rounded-[1px] transition-colors duration-300",
+            on ? "bg-primary/60" : "bg-muted-foreground/25"
+          )}
           aria-hidden="true"
         />
       </div>
