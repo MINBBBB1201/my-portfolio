@@ -54,33 +54,41 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="relative space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
+      <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center">
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
+        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <AnimatedText delay={0}>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               Aerospace + AI Engineering Portfolio
             </span>
           </AnimatedText>
-          <div className="relative mb-2 flex items-center justify-center">
+          <div className="relative mb-2 flex items-center justify-center py-6">
             <div
-              className="absolute h-[150%] w-[150%] rounded-full border border-primary/15"
+              className="absolute h-[145%] w-[145%] rounded-full border border-primary/15"
               aria-hidden="true"
             />
             <div
-              className="absolute h-[125%] w-[125%] rounded-full border border-dashed border-primary/20"
+              className="absolute h-[118%] w-[118%] rounded-full border border-dashed border-primary/20"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute h-[145%] w-[145%] animate-[spin_14s_linear_infinite] rounded-full"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, transparent 0%, hsl(var(--primary) / 0.5) 3%, transparent 8%)",
+              }}
               aria-hidden="true"
             />
             <div
               className="absolute h-full w-full rounded-2xl bg-primary/25 blur-3xl"
               aria-hidden="true"
             />
-            <div className="relative w-[58%] max-w-[15rem]">
+            <div className="relative w-[75%] max-w-[19rem] sm:max-w-[21rem]">
               <Image
                 src={profileImg}
-                height={300}
-                width={300}
+                height={420}
+                width={420}
                 sizes="100vw"
                 className="aspect-square w-full rounded-2xl border-2 border-primary object-cover shadow-xl shadow-primary/20"
                 alt="Minchan Kim Portfolio"
@@ -111,7 +119,30 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
+          <AnimatedText delay={0.5}>
+            <div className="mt-8 flex flex-wrap items-stretch justify-center divide-x divide-primary/20 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
+              {[
+                { value: "05", label: "Projects Shipped" },
+                { value: "10", label: "Team Led · COSMOS" },
+                { value: "190N", label: "Peak Thrust" },
+                { value: "3.94", label: "GPA" },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex flex-col items-center gap-0.5 px-5 py-3 sm:px-7"
+                >
+                  <span className="font-mono text-lg sm:text-xl font-bold text-primary">
+                    {stat.value}
+                  </span>
+                  <span className="text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground whitespace-nowrap">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </AnimatedText>
+
+          <div className="flex flex-col mt-6 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
                 href={"/resume"}
