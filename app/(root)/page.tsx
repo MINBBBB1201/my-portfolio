@@ -5,6 +5,7 @@ import Script from "next/script";
 import BlogCard from "@/components/blogs/blog-card";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
+import { AmbientGlow } from "@/components/common/ambient-glow";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { FloatingIcons } from "@/components/common/floating-icons";
 import { HudCorners } from "@/components/common/hud-corners";
@@ -12,7 +13,6 @@ import { Icons } from "@/components/common/icons";
 import { ParticleNetwork } from "@/components/common/particle-network";
 import { SectionLabel } from "@/components/common/section-label";
 import { StudioLamp } from "@/components/common/studio-lamp";
-import { TechBackdrop } from "@/components/common/tech-backdrop";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
@@ -64,7 +64,7 @@ export default function IndexPage() {
           density={0.03}
           maxParticles={65}
         />
-        <TechBackdrop />
+        <AmbientGlow />
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <StudioLamp
