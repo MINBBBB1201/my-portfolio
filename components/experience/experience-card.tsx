@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import { HoverGlow } from "@/components/common/hover-glow";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
@@ -30,7 +31,8 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
+    <HoverGlow className="h-full">
+      <div className="group relative h-full overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
       <div className="flex items-start gap-3 sm:gap-4">
         {experience.logo && (
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
@@ -104,7 +106,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           </Link>
         </Button>
       </div>
-    </div>
+      </div>
+    </HoverGlow>
   );
 };
 
