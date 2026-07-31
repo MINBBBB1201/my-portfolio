@@ -7,8 +7,10 @@ import BlogCard from "@/components/blogs/blog-card";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
+import { FloatingIcons } from "@/components/common/floating-icons";
 import { HudCorners } from "@/components/common/hud-corners";
 import { Icons } from "@/components/common/icons";
+import { SectionLabel } from "@/components/common/section-label";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
@@ -54,8 +56,9 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center">
+      <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center overflow-hidden">
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
+        <FloatingIcons className="hidden sm:block" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <AnimatedText delay={0}>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 font-mono text-[10px] sm:text-xs tracking-[0.25em] text-primary uppercase">
@@ -65,23 +68,7 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="relative mb-2 flex items-center justify-center py-6">
             <div
-              className="absolute h-[145%] w-[145%] rounded-full border border-primary/15"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute h-[118%] w-[118%] rounded-full border border-dashed border-primary/20"
-              aria-hidden="true"
-            />
-            <div
-              className="absolute h-[145%] w-[145%] animate-[spin_14s_linear_infinite] rounded-full"
-              style={{
-                background:
-                  "conic-gradient(from 0deg, transparent 0%, hsl(var(--primary) / 0.5) 3%, transparent 8%)",
-              }}
-              aria-hidden="true"
-            />
-            <div
-              className="absolute h-full w-full rounded-2xl bg-primary/25 blur-3xl"
+              className="absolute h-full w-full rounded-2xl bg-primary/20 blur-3xl"
               aria-hidden="true"
             />
             <div className="relative w-[75%] max-w-[19rem] sm:max-w-[21rem]">
@@ -179,10 +166,12 @@ export default function IndexPage() {
       </section>
       <AnimatedSection
         direction="up"
-        className="container space-y-6 py-10 my-14"
+        className="relative container space-y-6 py-10 my-14 overflow-hidden"
         id="about"
       >
+        <FloatingIcons className="hidden opacity-60 lg:block" />
         <div className="mx-auto max-w-[48rem] space-y-4 text-center sm:text-left">
+          <SectionLabel index="01" label="About" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-5xl text-center"
@@ -216,10 +205,12 @@ export default function IndexPage() {
       </AnimatedSection>
       <AnimatedSection
         direction="up"
-        className="container space-y-6 bg-muted py-10 my-14"
+        className="relative container space-y-6 bg-muted py-10 my-14"
         id="projects"
       >
+        <HudCorners size="sm" className="absolute inset-3 sm:inset-6 hidden md:block" />
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <SectionLabel index="02" label="Projects" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
@@ -262,6 +253,7 @@ export default function IndexPage() {
         id="experience"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <SectionLabel index="03" label="Experience" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
@@ -301,6 +293,7 @@ export default function IndexPage() {
         id="contributions"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <SectionLabel index="04" label="Contributions" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
@@ -330,6 +323,7 @@ export default function IndexPage() {
         id="blogs"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <SectionLabel index="05" label="Blogs" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
@@ -366,10 +360,12 @@ export default function IndexPage() {
       </AnimatedSection>
       <AnimatedSection
         direction="up"
-        className="container space-y-6 bg-muted py-10 my-14"
+        className="relative container space-y-6 bg-muted py-10 my-14"
         id="skills"
       >
+        <HudCorners size="sm" className="absolute inset-3 sm:inset-6 hidden md:block" />
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <SectionLabel index="06" label="Skills" />
           <AnimatedText
             as="h2"
             className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
