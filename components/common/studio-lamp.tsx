@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -19,14 +19,25 @@ interface StudioLampProps {
  */
 export function StudioLamp({ src, alt, className }: StudioLampProps) {
   const [on, setOn] = useState(true);
+  const [flicker, setFlicker] = useState(false);
+
+  // Brief power-up flicker whenever the light switches on (including the
+  // initial mount, so the lamp "boots up" once the page loads).
+  useEffect(() => {
+    if (!on) return;
+    setFlicker(true);
+    const t = setTimeout(() => setFlicker(false), 360);
+    return () => clearTimeout(t);
+  }, [on]);
 
   return (
     <div className={cn("relative flex flex-col items-center", className)}>
       {/* ---------- LED bar ---------- */}
       <div
         className={cn(
-          "relative z-20 h-[3px] w-[11rem] rounded-full transition-all duration-500 sm:w-[13rem]",
-          on ? "bg-primary" : "bg-muted-foreground/25"
+          "relative z-20 h-[3px] w-[11rem] rounded-full transition-colors duration-300 sm:w-[13rem]",
+          on ? "bg-primary" : "bg-muted-foreground/25",
+          flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
         )}
         style={
           on
@@ -42,8 +53,8 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
       {/* ---------- Diffuse wash of light (soft-edged, no hard cone) ---------- */}
       <div
         className={cn(
-          "pointer-events-none absolute left-1/2 top-0 z-0 h-[26rem] w-[30rem] -translate-x-1/2 transition-opacity duration-700",
-          on ? "opacity-100" : "opacity-0"
+          "pointer-events-none absolute left-1/2 top-0 z-0 h-[26rem] w-[30rem] -translate-x-1/2 transition-opacity",
+          on ? "opacity-100 duration-500 delay-150" : "opacity-0 duration-300"
         )}
         style={{
           background:
@@ -56,10 +67,10 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
       <div className="relative z-10 mt-9 w-[15rem] sm:w-[17.5rem]">
         <div
           className={cn(
-            "relative overflow-hidden rounded-lg border transition-all duration-700",
+            "relative overflow-hidden rounded-lg border transition-all",
             on
-              ? "border-primary/40 shadow-2xl shadow-primary/20"
-              : "border-border shadow-md"
+              ? "border-primary/40 shadow-2xl shadow-primary/20 duration-700 delay-300"
+              : "border-border shadow-md duration-300"
           )}
         >
           <Image
@@ -68,8 +79,10 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
             height={525}
             sizes="(max-width: 640px) 60vw, 17.5rem"
             className={cn(
-              "aspect-[4/5] w-full object-cover transition-all duration-700",
-              on ? "brightness-105" : "brightness-[0.55] saturate-50"
+              "aspect-[4/5] w-full object-cover transition-all",
+              on
+                ? "brightness-105 duration-700 delay-300"
+                : "brightness-[0.55] saturate-50 duration-300"
             )}
             alt={alt}
             priority
@@ -77,8 +90,10 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
           {/* Light falling across the top of the portrait */}
           <div
             className={cn(
-              "pointer-events-none absolute inset-x-0 top-0 h-1/2 transition-opacity duration-700",
-              on ? "opacity-100" : "opacity-0"
+              "pointer-events-none absolute inset-x-0 top-0 h-1/2 transition-opacity",
+              on
+                ? "opacity-100 duration-500 delay-200"
+                : "opacity-0 duration-200"
             )}
             style={{
               background:
@@ -96,7 +111,7 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
         aria-checked={on}
         aria-label="Toggle the portrait light"
         onClick={() => setOn((v) => !v)}
-        className="relative z-20 mt-7 flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2 shadow-sm transition-colors hover:border-primary/50"
+        className="relative z-20 mt-7 flex items-center gap-3 rounded-full border border-border bg-card px-4 py-2 shadow-sm transition-all duration-150 hover:border-primary/50 active:scale-95"
       >
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
           Light
@@ -109,7 +124,7 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
         >
           <span
             className={cn(
-              "absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all duration-300",
+              "absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all duration-300 ease-out",
               on ? "left-[1.125rem]" : "left-0.5"
             )}
           />

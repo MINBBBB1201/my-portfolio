@@ -125,6 +125,27 @@
   }
 }
 
+@keyframes lamp-flicker {
+  0% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0.15;
+  }
+  55% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .card {
   position: relative;
   display: flex;
