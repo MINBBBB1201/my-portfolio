@@ -12,10 +12,10 @@ interface StudioLampProps {
 }
 
 /**
- * A single slim LED bar suspended above the portrait, with a soft toggle.
- * Deliberately minimal — one thin emitter, one diffuse wash of light, no
- * housing detail — so the effect reads as lighting rather than as an
- * illustrated object.
+ * A single LED light bar suspended above the portrait: a slim dark bezel
+ * housing a frosted diffuser lens, with a soft toggle. Kept to just the
+ * bar itself (no arms, vents, or mount hardware) so it reads as a real,
+ * compact fixture rather than an illustrated object.
  */
 export function StudioLamp({ src, alt, className }: StudioLampProps) {
   const [on, setOn] = useState(true);
@@ -33,21 +33,35 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
   return (
     <div className={cn("relative flex flex-col items-center", className)}>
       {/* ---------- LED bar ---------- */}
+      {/* Outer housing: a slim dark bezel, like the body of a real LED light bar */}
       <div
         className={cn(
-          "relative z-20 h-[7px] w-[12rem] rounded-full transition-all duration-300 sm:h-2 sm:w-[14rem]",
-          flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
+          "relative z-20 w-[13rem] rounded-full p-[2.5px] transition-colors duration-300 sm:w-[15rem]",
+          on ? "bg-slate-800/90 dark:bg-slate-950/90" : "bg-slate-700/50 dark:bg-slate-900/60"
         )}
         style={{
-          background: on
-            ? "linear-gradient(180deg, hsl(var(--primary) / 0.9) 0%, hsl(var(--primary)) 42%, hsl(var(--primary) / 0.7) 100%)"
-            : "linear-gradient(180deg, hsl(var(--muted-foreground) / 0.4) 0%, hsl(var(--muted-foreground) / 0.22) 100%)",
           boxShadow: on
-            ? "inset 0 1px 1px hsl(0 0% 100% / 0.55), inset 0 -1.5px 2px hsl(var(--primary) / 0.65), 0 0 14px 2px hsl(var(--primary) / 0.75), 0 0 50px 16px hsl(var(--primary) / 0.3)"
-            : "inset 0 1px 1px hsl(0 0% 100% / 0.08)",
+            ? "0 0 16px 3px hsl(var(--primary) / 0.7), 0 0 55px 18px hsl(var(--primary) / 0.32), 0 1px 2px hsl(0 0% 0% / 0.3)"
+            : "0 1px 2px hsl(0 0% 0% / 0.2)",
         }}
-        aria-hidden="true"
-      />
+      >
+        {/* Diffuser lens: the actual emitting surface */}
+        <div
+          className={cn(
+            "h-[9px] rounded-full transition-all duration-300 sm:h-[11px]",
+            flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
+          )}
+          style={{
+            background: on
+              ? "linear-gradient(180deg, hsl(0 0% 100% / 0.95) 0%, hsl(var(--primary)) 40%, hsl(var(--primary) / 0.8) 100%)"
+              : "linear-gradient(180deg, hsl(var(--muted-foreground) / 0.35) 0%, hsl(var(--muted-foreground) / 0.18) 100%)",
+            boxShadow: on
+              ? "inset 0 1.5px 1px hsl(0 0% 100% / 0.65), inset 0 -2px 2.5px hsl(var(--primary) / 0.6)"
+              : "inset 0 1px 1px hsl(0 0% 100% / 0.06)",
+          }}
+          aria-hidden="true"
+        />
+      </div>
 
       {/* ---------- Diffuse wash of light (soft-edged, no hard cone) ---------- */}
       <div
