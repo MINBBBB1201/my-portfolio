@@ -116,6 +116,15 @@
   }
 }
 
+@keyframes orbit-move {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
 .card {
   position: relative;
   display: flex;

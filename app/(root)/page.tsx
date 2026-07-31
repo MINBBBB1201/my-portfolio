@@ -10,7 +10,9 @@ import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { FloatingIcons } from "@/components/common/floating-icons";
 import { HudCorners } from "@/components/common/hud-corners";
 import { Icons } from "@/components/common/icons";
+import { ParticleNetwork } from "@/components/common/particle-network";
 import { SectionLabel } from "@/components/common/section-label";
+import { TiltCard } from "@/components/common/tilt-card";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
@@ -57,6 +59,11 @@ export default function IndexPage() {
       />
 
       <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center overflow-hidden">
+        <ParticleNetwork
+          className="absolute inset-0"
+          density={0.055}
+          maxParticles={110}
+        />
         <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
         <FloatingIcons className="hidden sm:block" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
@@ -66,9 +73,28 @@ export default function IndexPage() {
               Aerospace + AI Engineering Portfolio
             </span>
           </AnimatedText>
-          <div className="relative mb-2 flex items-center justify-center py-6">
+          <TiltCard className="relative mb-2 flex items-center justify-center py-6">
             <div
               className="absolute h-full w-full rounded-2xl bg-primary/20 blur-3xl"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_10px_2px]"
+              style={{
+                offsetPath: "circle(54% at 50% 50%)",
+                animation: "orbit-move 9s linear infinite",
+                boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.7)",
+              }}
+              aria-hidden="true"
+            />
+            <div
+              className="absolute h-1.5 w-1.5 rounded-full bg-primary/70"
+              style={{
+                offsetPath: "circle(54% at 50% 50%)",
+                offsetDistance: "42%",
+                animation: "orbit-move 9s linear infinite",
+                animationDelay: "-3s",
+              }}
               aria-hidden="true"
             />
             <div className="relative w-[75%] max-w-[19rem] sm:max-w-[21rem]">
@@ -83,7 +109,7 @@ export default function IndexPage() {
               />
               <HudCorners size="sm" className="absolute -inset-3" />
             </div>
-          </div>
+          </TiltCard>
           <AnimatedText
             as="h1"
             delay={0.2}
@@ -208,6 +234,11 @@ export default function IndexPage() {
         className="relative container space-y-6 bg-muted py-10 my-14"
         id="projects"
       >
+        <ParticleNetwork
+          className="absolute inset-0 hidden md:block"
+          density={0.02}
+          maxParticles={45}
+        />
         <HudCorners size="sm" className="absolute inset-3 sm:inset-6 hidden md:block" />
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <SectionLabel index="02" label="Projects" />
@@ -363,6 +394,11 @@ export default function IndexPage() {
         className="relative container space-y-6 bg-muted py-10 my-14"
         id="skills"
       >
+        <ParticleNetwork
+          className="absolute inset-0 hidden md:block"
+          density={0.02}
+          maxParticles={45}
+        />
         <HudCorners size="sm" className="absolute inset-3 sm:inset-6 hidden md:block" />
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
           <SectionLabel index="06" label="Skills" />
