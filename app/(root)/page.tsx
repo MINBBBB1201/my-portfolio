@@ -97,15 +97,36 @@ export default function IndexPage() {
               }}
               aria-hidden="true"
             />
-            <div className="relative w-[75%] max-w-[19rem] sm:max-w-[21rem]">
+            <div className="relative w-[85%] max-w-[22rem] sm:max-w-[25rem]">
+              {/* Spotlight fixture, mounted just above the frame's top edge */}
+              <div
+                className="absolute -top-7 left-1/2 h-2 w-20 -translate-x-1/2 rounded-full bg-primary"
+                style={{ boxShadow: "0 0 24px 6px hsl(var(--primary) / 0.8)" }}
+                aria-hidden="true"
+              />
+              {/* Light cone shining down onto the top edge (painted behind the photo) */}
+              <div
+                className="absolute -top-7 left-1/2 h-36 w-[150%] -translate-x-1/2"
+                style={{
+                  background:
+                    "linear-gradient(180deg, hsl(var(--primary) / 0.45), transparent 85%)",
+                  clipPath: "polygon(46% 0%, 54% 0%, 100% 100%, 0% 100%)",
+                }}
+                aria-hidden="true"
+              />
               <Image
                 src={profileImg}
-                height={420}
-                width={420}
+                height={500}
+                width={400}
                 sizes="100vw"
-                className="aspect-square w-full rounded-2xl border-2 border-primary object-cover shadow-xl shadow-primary/20"
+                className="relative aspect-[4/5] w-full rounded-2xl border-2 border-primary object-cover shadow-xl shadow-primary/20"
                 alt="Minchan Kim Portfolio"
                 priority
+              />
+              {/* Glow where the light falls on the photo's surface */}
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-1/4 rounded-t-2xl bg-gradient-to-b from-primary/30 to-transparent"
+                aria-hidden="true"
               />
               <HudCorners size="sm" className="absolute -inset-3" />
             </div>
