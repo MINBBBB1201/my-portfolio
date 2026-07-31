@@ -35,18 +35,17 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
       {/* ---------- LED bar ---------- */}
       <div
         className={cn(
-          "relative z-20 h-[3px] w-[11rem] rounded-full transition-colors duration-300 sm:w-[13rem]",
-          on ? "bg-primary" : "bg-muted-foreground/25",
+          "relative z-20 h-[7px] w-[12rem] rounded-full transition-all duration-300 sm:h-2 sm:w-[14rem]",
           flicker && on && "animate-[lamp-flicker_360ms_steps(3,end)]"
         )}
-        style={
-          on
-            ? {
-                boxShadow:
-                  "0 0 12px 1px hsl(var(--primary) / 0.75), 0 0 40px 10px hsl(var(--primary) / 0.3)",
-              }
-            : undefined
-        }
+        style={{
+          background: on
+            ? "linear-gradient(180deg, hsl(var(--primary) / 0.9) 0%, hsl(var(--primary)) 42%, hsl(var(--primary) / 0.7) 100%)"
+            : "linear-gradient(180deg, hsl(var(--muted-foreground) / 0.4) 0%, hsl(var(--muted-foreground) / 0.22) 100%)",
+          boxShadow: on
+            ? "inset 0 1px 1px hsl(0 0% 100% / 0.55), inset 0 -1.5px 2px hsl(var(--primary) / 0.65), 0 0 14px 2px hsl(var(--primary) / 0.75), 0 0 50px 16px hsl(var(--primary) / 0.3)"
+            : "inset 0 1px 1px hsl(0 0% 100% / 0.08)",
+        }}
         aria-hidden="true"
       />
 
