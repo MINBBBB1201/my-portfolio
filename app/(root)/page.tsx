@@ -7,6 +7,7 @@ import BlogCard from "@/components/blogs/blog-card";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
+import { HudCorners } from "@/components/common/hud-corners";
 import { Icons } from "@/components/common/icons";
 import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
@@ -53,8 +54,15 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
+      <section className="relative space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
+        <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
+          <AnimatedText
+            delay={0}
+            className="font-mono text-xs sm:text-sm tracking-[0.3em] text-primary uppercase"
+          >
+            // Aerospace + AI Engineering Portfolio
+          </AnimatedText>
           <Image
             src={profileImg}
             height={100}

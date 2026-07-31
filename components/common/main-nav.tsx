@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Norican } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
@@ -15,13 +14,6 @@ interface MainNavProps {
   items?: any[];
   children?: React.ReactNode;
 }
-
-const norican = Norican({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 // Animation variants for the navigation items
 const navItemVariants = {
@@ -53,8 +45,9 @@ export function MainNav({ items, children }: MainNavProps) {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <span className={cn(norican.className, "text-2xl")}>
+        <Link href="/" className="hidden items-center gap-2 md:flex">
+          <span className="h-5 w-[3px] bg-primary" aria-hidden="true" />
+          <span className="font-heading text-xl tracking-tight text-foreground">
             {siteConfig.authorName}
           </span>
         </Link>
