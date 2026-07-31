@@ -1,8 +1,22 @@
 # Minchan Kim — Portfolio
 
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://minchankim-portfolio.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Personal portfolio site for Minchan Kim, a 12th-grade student at Qingdao Daewon School studying Aviation, Aeronautics, and Aerospace Science and Technology. The site showcases hands-on engineering work — a rocket motor thrust test stand, an open-circuit wind tunnel, an F-22-inspired RC aircraft research project, and a dual-turret drone-tracking system — alongside software projects, experience, and contributions.
 
 **Live site:** [minchankim-portfolio.vercel.app](https://minchankim-portfolio.vercel.app/)
+
+## Highlights
+
+- **Rocket Motor Thrust Test Stand** — Designed, built, and instrumented a static-fire test stand for a student-made solid rocket motor, logging real thrust-time data (190N peak thrust)
+- **Open-Circuit Wind Tunnel** — Directing the CAD design and fabrication of an open-circuit wind tunnel for flow visualization and aerodynamic validation testing (in progress)
+- **F-22-Inspired RC Aircraft** — Designed, built, and flight-tested a hand-built RC aircraft; the resulting research paper won 1st place in the Physics Division of the school's research competition
+- **Dual-Turret Drone-Tracking System** — Built an OpenCV/YOLO-based dual-turret camera tracking system
+- Founder and lead of **COSMOS**, a 10-member student aero-engineering club
 
 ## Features
 
