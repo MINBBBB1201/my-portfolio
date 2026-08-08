@@ -9,7 +9,7 @@ export const communityInvolvement: CommunityInterface[] = [
   {
     name: "Qingdao Tonghang House",
     role: "Volunteer (Intellectual Disability Welfare Facility)",
-    period: "2025 – Present",
+    period: "October 2025 – Present",
     description: [
       "Facilitated daily structured activities for residents and provided operational support to facility staff for ongoing programs.",
       "Supported daily care, learning, and social development for children with special needs at the facility.",
