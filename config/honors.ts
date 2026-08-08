@@ -52,14 +52,14 @@ export const honors: HonorInterface[] = [
     type: "Research",
   },
   {
-    title: "Vice President, Student Council",
+    title: "Planning Department Vice President, Student Council",
     issuer: "Qingdao Daewon School",
     date: "2025 – 2026",
     type: "Leadership",
   },
   {
     title:
-      '2nd Place, School-wide Writing Contest (백일장) — Top Excellence Award, prose essay on "What I\'d Want to Tell My 8-Year-Old Self"',
+      '2nd Place, School-wide Writing Contest — Top Excellence Award, prose essay on "What I\'d Want to Tell My 8-Year-Old Self"',
     issuer: "Qingdao Daewon School",
     date: "G10, 2024",
     type: "Award",

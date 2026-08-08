@@ -43,13 +43,13 @@ export const experiences: ExperienceInterface[] = [
     endDate: "Present",
     description: [
       "Founded and led a 10-member aerospace engineering club through full theory to design to fabrication to test-validation project cycles.",
-      "Directed the Solid Propellant Rocket Thrust Test Stand project: two static-fire test iterations, diagnosed and resolved a data-logging failure between tests.",
-      "Analyzed thrust-time data to derive peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s), cross-validated against theoretical predictions from a solid rocket internal ballistics simulator.",
+      "Directed the Solid Propellant Rocket Thrust Test Stand project: two static-fire test iterations, diagnosing and resolving a data-logging failure between tests, then deriving peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s) from the results.",
+      "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
     ],
     achievements: [
-      "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
-      "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
-      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy; directing fabrication and assembly, with final integration and airflow testing planned for next semester.",
+      "Cross-validated rocket thrust-stand results against theoretical predictions from a solid rocket internal ballistics simulator.",
+      "Identified and corrected a design-to-fabrication dimensional error in the wind tunnel through direct measurement and recalculation.",
+      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign the wind tunnel's support structures for improved flow accuracy; directing fabrication and assembly, with final integration and airflow testing planned for next semester.",
     ],
     skills: ["FreeCAD", "OpenSCAD", "Arduino", "System Architecture"],
     companyUrl: "https://github.com/COSMOS-Aero-Engineering",

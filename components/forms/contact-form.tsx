@@ -55,18 +55,30 @@ export function ContactForm() {
         body: JSON.stringify(values),
       });
 
-      form.reset();
-
       if (response.status === 200) {
+        form.reset();
         storeModal.onOpen({
           title: "Thankyou!",
           description:
             "Your message has been received! I appreciate your contact and will get back to you shortly.",
           icon: Icons.successAnimated,
         });
+      } else {
+        storeModal.onOpen({
+          title: "Something went wrong",
+          description:
+            "Your message couldn't be sent. Please try again, or reach out directly via email.",
+          icon: Icons.warning,
+        });
       }
     } catch (err) {
       console.log("Err!", err);
+      storeModal.onOpen({
+        title: "Something went wrong",
+        description:
+          "Your message couldn't be sent. Please try again, or reach out directly via email.",
+        icon: Icons.warning,
+      });
     }
   }
 

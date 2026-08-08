@@ -17,11 +17,11 @@ export const communityInvolvement: CommunityInterface[] = [
   },
   {
     name: "Student Council",
-    role: "Planning Department → Vice President",
+    role: "Planning Department Vice President",
     period: "2025 – Present",
     description: [
       "Organized joint domestic/international student events as part of the Planning Department, coordinating cross-department logistics and program design.",
-      "Currently serving as Vice President of the Student Council.",
+      "Currently serving as Vice President of the Planning Department.",
     ],
   },
   {
@@ -45,7 +45,7 @@ export const communityInvolvement: CommunityInterface[] = [
   },
   {
     name: "Support Group",
-    role: "Group Leader (조장)",
+    role: "Group Leader",
     period: "2024 – 2026 (4 semesters through G11)",
     description: [
       "Participated in the school's semesterly Support Group program all four times offered through 11th grade, a small-group peer mentoring initiative run each semester.",

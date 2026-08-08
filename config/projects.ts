@@ -38,7 +38,7 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "Flight booking web app comparing lowest fares, fastest routes, and delay risk, built with Next.js, the Duffel API, and React Three Fiber.",
     websiteLink: "https://flytern.site",
-    githubLink: "", // 저장소가 private(.env에 API 키 있음)이라 비워둠 — public으로 바뀌면 링크 추가
+    githubLink: "https://github.com/MINBBBB1201/Tern",
     techStack: ["Next.js", "Typescript", "React Three Fiber", "GSAP", "APIs"],
     startDate: new Date("2026-03-01"),
     endDate: new Date("2026-08-15"),
@@ -64,7 +64,7 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "Led a 10-member team to design, build, and test a custom rocket motor thrust test stand, deriving peak thrust, total impulse, and specific impulse from live sensor data.",
     githubLink:
-      "https://github.com/COSMOS-Aero-Engineering/Rocket-Thrust-Test-Stand",
+      "https://github.com/MINBBBB1201/Rocket-Thrust-Test-Stand",
     techStack: ["Arduino", "System Architecture", "Python"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-06-01"), // TODO: 정확한 완료 시점 확인
@@ -123,7 +123,7 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "Directing the parametric CAD design and fabrication of an open-circuit suction wind tunnel to compare airflow over multiple NACA airfoil profiles — in progress, continuing next semester.",
     githubLink:
-      "https://github.com/COSMOS-Aero-Engineering/COSMOS-Aeroview-Windtunnel",
+      "https://github.com/MINBBBB1201/COSMOS-Aeroview-Windtunnel",
     techStack: ["FreeCAD", "OpenSCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-12-01"), // 다음 학기(2학기)에 이어서 진행 예정 — 아직 미완성
@@ -180,6 +180,7 @@ export const Projects: ProjectInterface[] = [
     category: ["Hardware/Robotics"],
     shortDescription:
       "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
+    githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
     techStack: ["Arduino", "Python", "System Architecture"],
     startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
     endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
@@ -256,21 +257,21 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Flight Test",
         description:
-          "Outdoor flight test used to validate the design predictions from wind tunnel data against real flight behavior.",
+          "Outdoor flight test used to validate the aircraft's design predictions against real flight behavior.",
         imgArr: [],
         videoArr: ["/projects/wind-tunnel-rc-aircraft/03-flight-test.mp4"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Built a functional wind tunnel to run empirical aerodynamic testing and flow visualization, then applied fundamental principles of flight and fluid dynamics to design, manufacture, and flight-test a custom F-22-inspired RC aircraft.",
-        "The aircraft itself is a hand-built foam-board test article — built for generating real flight data to validate against wind tunnel predictions, not as a polished scale model.",
+        "Applied fundamental principles of flight and fluid dynamics, along with theoretical and simulation-based aerodynamic analysis, to design, manufacture, and flight-test a custom F-22-inspired RC aircraft.",
+        "The aircraft itself is a hand-built foam-board test article — built for generating real flight data to validate against the paper's aerodynamic predictions, not as a polished scale model.",
         "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
         "The paper won 1st place in the Physics Division of the school's research paper competition.",
       ],
       bullets: [
-        "Analyzed lift and drag performance data from wind tunnel testing to optimize the design, stability, and control configuration of the RC aircraft.",
-        "Optimized wingspan, wing profile, and structural stability based on empirical aerodynamic data.",
+        "Applied theoretical aerodynamic principles and simulation data to optimize wingspan, wing profile, and structural stability.",
+        "Modeled lift and drag characteristics to guide the design, stability, and control configuration of the RC aircraft.",
         "Flight-tested the finished aircraft to validate performance against design predictions and documented findings in a formal research paper.",
       ],
     },
