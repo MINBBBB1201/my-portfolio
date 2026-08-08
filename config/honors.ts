@@ -15,6 +15,18 @@ export interface HonorInterface {
 
 export const honors: HonorInterface[] = [
   {
+    title: "Aerospace Work Experience — Airbus",
+    issuer: "Springpod",
+    date: "March 2026",
+    type: "Certification",
+  },
+  {
+    title: "Claude Development & AI Fluency",
+    issuer: "Anthropic",
+    date: "July 2026",
+    type: "Certification",
+  },
+  {
     title: "SAT",
     issuer: "The College Board",
     date: "March 2026",

@@ -16,6 +16,46 @@ export interface ExperienceInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
+    id: "kau-aerospace-camp",
+    position: "Aerospace & Space Camp Participant",
+    company: "Korea Aerospace University",
+    location: "Goyang, South Korea",
+    startDate: new Date("2026-08-01"),
+    endDate: "Present",
+    description: [
+      "Participating in an intensive aerospace program covering flight simulation (FTD), air traffic control (ATC), cube satellite design, and autonomous drone systems.",
+      "Recognized for strong performance in the FTD and ATC simulation exercises.",
+    ],
+    achievements: [
+      "Visited Korean Air and Asiana Airlines headquarters, touring aircraft hangars and completing evacuation slide and safety training.",
+      "Gained hands-on exposure to how AI and autonomous systems are integrated into modern aerospace engineering and urban air mobility (UAM).",
+    ],
+    skills: [],
+    companyUrl: "",
+    logo: "",
+  },
+  {
+    id: "cosmos",
+    position: "Founder & President",
+    company: "COSMOS (Aero-Engineering Club)",
+    location: "Qingdao Daewon School",
+    startDate: new Date("2025-09-01"),
+    endDate: "Present",
+    description: [
+      "Founded and led a 10-member aerospace engineering club through full theory to design to fabrication to test-validation project cycles.",
+      "Directed the Solid Propellant Rocket Thrust Test Stand project: two static-fire test iterations, diagnosed and resolved a data-logging failure between tests.",
+      "Analyzed thrust-time data to derive peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s), cross-validated against theoretical predictions from a solid rocket internal ballistics simulator.",
+    ],
+    achievements: [
+      "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
+      "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
+      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy; directing fabrication and assembly, with final integration and airflow testing planned for next semester.",
+    ],
+    skills: ["FreeCAD", "OpenSCAD", "Arduino", "System Architecture"],
+    companyUrl: "https://github.com/COSMOS-Aero-Engineering",
+    logo: "",
+  },
+  {
     id: "tern",
     position: "Founder & Developer",
     company: "Tern",
@@ -52,27 +92,6 @@ export const experiences: ExperienceInterface[] = [
     ],
     skills: ["Digital Logic", "Next.js", "React", "Firebase", "Three.js"],
     companyUrl: "",
-    logo: "",
-  },
-  {
-    id: "cosmos",
-    position: "Founder & President",
-    company: "COSMOS (Aero-Engineering Club)",
-    location: "Qingdao Daewon School",
-    startDate: new Date("2025-09-01"),
-    endDate: "Present",
-    description: [
-      "Founded and led a 10-member aerospace engineering club through full theory to design to fabrication to test-validation project cycles.",
-      "Directed the Solid Propellant Rocket Thrust Test Stand project: two static-fire test iterations, diagnosed and resolved a data-logging failure between tests.",
-      "Analyzed thrust-time data to derive peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s), cross-validated against theoretical predictions from a solid rocket internal ballistics simulator.",
-    ],
-    achievements: [
-      "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
-      "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
-      "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy; directing fabrication and assembly, with final integration and airflow testing planned for next semester.",
-    ],
-    skills: ["FreeCAD", "OpenSCAD", "Arduino", "System Architecture"],
-    companyUrl: "https://github.com/COSMOS-Aero-Engineering",
     logo: "",
   },
   {
