@@ -18,11 +18,18 @@ interface StudioLampProps {
  * compact fixture rather than an illustrated object.
  */
 export function StudioLamp({ src, alt, className }: StudioLampProps) {
-  const [on, setOn] = useState(true);
+  const [on, setOn] = useState(false);
   const [flicker, setFlicker] = useState(false);
 
+  // Starts off, then powers on shortly after the page loads — visitors
+  // land on a dark lamp and watch it switch on.
+  useEffect(() => {
+    const powerOn = setTimeout(() => setOn(true), 500);
+    return () => clearTimeout(powerOn);
+  }, []);
+
   // Brief power-up flicker whenever the light switches on (including the
-  // initial mount, so the lamp "boots up" once the page loads).
+  // delayed initial power-on above).
   useEffect(() => {
     if (!on) return;
     setFlicker(true);
