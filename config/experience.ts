@@ -21,9 +21,9 @@ export const experiences: ExperienceInterface[] = [
     company: "Korea Aerospace University",
     location: "Goyang, South Korea",
     startDate: new Date("2026-08-01"),
-    endDate: "Present",
+    endDate: new Date("2026-08-31"),
     description: [
-      "Participating in an intensive aerospace program covering flight simulation (FTD), air traffic control (ATC), cube satellite design, and autonomous drone systems.",
+      "Participated in an intensive aerospace program covering flight simulation (FTD), air traffic control (ATC), cube satellite design, and autonomous drone systems.",
       "Recognized for strong performance in the FTD and ATC simulation exercises.",
     ],
     achievements: [
