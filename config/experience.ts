@@ -85,12 +85,12 @@ export const experiences: ExperienceInterface[] = [
     endDate: "Present",
     description: [
       "Designed and built a 4-bit Ripple Carry Adder from scratch — researched binary arithmetic, logic gates (AND/OR/XOR), and half-/full-adder theory, then implemented and verified the circuit on a breadboard with logic gate ICs and LED indicators.",
-      "Conceived and am building SmartFlight, a flight booking web app (Next.js 16, React 19, Firebase, Three.js) with flight search, seat selection, and reservation features, using AI-assisted development workflows while maintaining engineering rigor.",
+      "Conceived the initial concept for a flight-booking web app within the club, which I later took further and built independently as Tern (see the Tern project).",
     ],
     achievements: [
       "Combined circuit-level hardware understanding with software engineering, bridging low-level digital logic and applied product development.",
     ],
-    skills: ["Digital Logic", "Next.js", "React", "Firebase", "Three.js"],
+    skills: ["Digital Logic", "Next.js", "React"],
     companyUrl: "",
     logo: "",
   },
