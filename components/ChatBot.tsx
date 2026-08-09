@@ -14,7 +14,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "안녕하세요! Minchan의 프로젝트에 대해 궁금한 걸 물어보세요.",
+      content: "Hi! Ask me anything about Minchan's projects.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -48,7 +48,7 @@ export default function ChatBot() {
       if (!res.ok) {
         const errText = await res.text();
         console.error("API error:", res.status, errText);
-        throw new Error("응답 실패");
+        throw new Error("Request failed");
       }
 
       const data = await res.json();
@@ -56,7 +56,7 @@ export default function ChatBot() {
       // Azure OpenAI(GPT-5.6) Chat Completions 응답 형식
       const reply =
         data?.choices?.[0]?.message?.content ??
-        "답변을 가져오지 못했어요. 다시 시도해주세요.";
+        "Couldn't get a response. Please try again.";
 
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
@@ -65,7 +65,7 @@ export default function ChatBot() {
         ...prev,
         {
           role: "assistant",
-          content: "오류가 발생했어요. 잠시 후 다시 시도해주세요.",
+          content: "Something went wrong. Please try again in a moment.",
         },
       ]);
     } finally {
@@ -78,10 +78,10 @@ export default function ChatBot() {
       {isOpen && (
         <div className="flex flex-col w-[90vw] max-w-md h-[420px] rounded-xl border border-border bg-background shadow-xl overflow-hidden">
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
-            <span className="text-sm font-semibold">프로젝트 챗봇</span>
+            <span className="text-sm font-semibold">Project Chatbot</span>
             <button
               onClick={() => setIsOpen(false)}
-              aria-label="닫기"
+              aria-label="Close"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <X className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function ChatBot() {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="rounded-lg px-3 py-2 text-sm bg-muted text-muted-foreground animate-pulse">
-                  생각 중...
+                  Thinking...
                 </div>
               </div>
             )}
@@ -121,7 +121,7 @@ export default function ChatBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSend()}
-              placeholder="프로젝트에 대해 물어보세요..."
+              placeholder="Ask about the projects..."
               className="flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm outline-none"
               disabled={isLoading}
             />
@@ -130,7 +130,7 @@ export default function ChatBot() {
               disabled={isLoading}
               className="rounded-md bg-primary px-3 py-2 text-sm text-primary-foreground disabled:opacity-50"
             >
-              전송
+              Send
             </button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function ChatBot() {
 
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={isOpen ? "챗봇 닫기" : "챗봇 열기"}
+        aria-label={isOpen ? "Close chatbot" : "Open chatbot"}
         className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover:opacity-90 transition-opacity"
       >
         {isOpen ? (
