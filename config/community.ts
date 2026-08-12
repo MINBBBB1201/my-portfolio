@@ -52,4 +52,13 @@ export const communityInvolvement: CommunityInterface[] = [
       "Served as group leader for every Support Group iteration in 11th grade, facilitating group discussions and helping the group meet its goals.",
     ],
   },
+  {
+    name: "Kkumnamu Youth Billiards Tournament",
+    role: "Participant",
+    period: "July 2026",
+    description: [
+      "Competed in the Goyang City Billiards Federation's youth ('Kkumnamu') tournament, hosted at the International Billiards Academy in Ilsanseo-gu, Goyang — eliminated in the first round.",
+      "A regular hobby outside academics; reading angle, spin, and momentum transfer at the table overlaps more than expected with the intuition I use in aerodynamics and mechanics work.",
+    ],
+  },
 ];
