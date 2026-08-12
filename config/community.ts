@@ -57,8 +57,8 @@ export const communityInvolvement: CommunityInterface[] = [
     role: "Participant",
     period: "July 2026",
     description: [
-      "Competed in the Goyang City Billiards Federation's youth ('Kkumnamu') tournament, hosted at the International Billiards Academy in Ilsanseo-gu, Goyang — eliminated in the first round.",
-      "A regular hobby outside academics; reading angle, spin, and momentum transfer at the table overlaps more than expected with the intuition I use in aerodynamics and mechanics work.",
+      "A personal hobby since middle school, mostly playing four-ball carom — competed in the Goyang City Billiards Federation's youth ('Kkumnamu') tournament, hosted at the International Billiards Academy in Ilsanseo-gu, Goyang, which runs on the three-ball format.",
+      "Stepped outside my usual game to build skill in an unfamiliar discipline; reading angle, spin, and momentum transfer at the table draws on the same intuition I use in aerodynamics and mechanics work.",
     ],
   },
 ];
