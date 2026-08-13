@@ -53,12 +53,12 @@ export const communityInvolvement: CommunityInterface[] = [
     ],
   },
   {
-    name: "Kkumnamu Youth Billiards Tournament",
+    name: "Goyang Mayor's Cup Kkumnamu Three-Cushion Billiards Tournament",
     role: "Participant",
     period: "July 2026",
     description: [
-      "A personal hobby since middle school, mostly playing four-ball carom — competed in the Goyang City Billiards Federation's youth ('Kkumnamu') tournament, hosted at the International Billiards Academy in Ilsanseo-gu, Goyang, which runs on the three-ball format.",
-      "Stepped outside my usual game to build skill in an unfamiliar discipline; reading angle, spin, and momentum transfer at the table draws on the same intuition I use in aerodynamics and mechanics work.",
+      "A personal hobby since middle school, mostly playing four-ball carom — competed in this three-cushion tournament hosted by the Goyang City Billiards Federation, stepping outside my usual game into a more geometrically demanding discipline.",
+      "Three-cushion play is largely about reading angle, spin, and momentum transfer before every shot — the same intuition I lean on in aerodynamics and mechanics work.",
     ],
   },
 ];
