@@ -2,7 +2,7 @@ export const academicStats = {
   school: "Qingdao Daewon School",
   gpa: "3.94 / 4.0",
   gpaType: "Unweighted",
-  gradeLevel: "12th Grade",
+  gradeLevel: "Senior",
   major: "Aviation, Aeronautics/Aerospace Science and Technology",
 };
 
@@ -54,7 +54,7 @@ export const honors: HonorInterface[] = [
   {
     title: "Planning Department Vice President, Student Council",
     issuer: "Qingdao Daewon School",
-    date: "2025 – 2026",
+    date: "2025 – March 2026",
     type: "Leadership",
   },
   {

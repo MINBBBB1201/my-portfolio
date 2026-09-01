@@ -9,7 +9,7 @@ export const communityInvolvement: CommunityInterface[] = [
   {
     name: "Qingdao Tonghang House",
     role: "Volunteer (Intellectual Disability Welfare Facility)",
-    period: "October 2025 – Present",
+    period: "October 2025 – November 2025",
     description: [
       "Facilitated daily structured activities for residents and provided operational support to facility staff for ongoing programs.",
       "Supported daily care, learning, and social development for children with special needs at the facility.",
@@ -18,16 +18,16 @@ export const communityInvolvement: CommunityInterface[] = [
   {
     name: "Student Council",
     role: "Planning Department Vice President",
-    period: "2025 – Present",
+    period: "2025 – March 2026",
     description: [
       "Organized joint domestic/international student events as part of the Planning Department, coordinating cross-department logistics and program design.",
-      "Currently serving as Vice President of the Planning Department.",
+      "Served as Vice President of the Planning Department.",
     ],
   },
   {
     name: "PSYCHOFISH",
     role: "Member",
-    period: "2024 – Present",
+    period: "2024 – 2025",
     description: [
       "Ran an anonymous peer-counseling channel over KakaoTalk open chat, listening to classmates' concerns and offering thoughtful responses.",
       "Wrote analytical pieces for a club magazine on inter-Korean conflict resolution and on the leadership philosophy of Jeff Bezos.",
