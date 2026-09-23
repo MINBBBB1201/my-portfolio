@@ -1,6 +1,6 @@
 export const academicStats = {
   school: "Qingdao Daewon School",
-  gpa: "3.94 / 4.0",
+  gpa: "3.984 / 4.0",
   gpaType: "Unweighted",
   gradeLevel: "Senior",
   major: "Aviation, Aeronautics/Aerospace Science and Technology",

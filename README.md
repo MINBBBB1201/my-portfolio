@@ -68,4 +68,4 @@ Open [http://localhost:3000](http://localhost:3000).
 
 MIT — see [LICENSE](LICENSE).
 
-This project started from [namanbarkiya/minimal-next-portfolio](https://github.com/namanbarkiya/minimal-next-portfolio), an open-source Next.js portfolio template, and has since been substantially rewritten: new theme and design system, new content and data layer, an AI chatbot, and several custom components.
+This project started from [namanbarkiya/minimal-next-portfolio](https://github.com/namanbarkiya/minimal-next-portfolio), an open-source Next.js portfolio template, and has since been substantially rewritten: new theme and design system, new content and data layer, an AI chatbot, and several custom components. 
