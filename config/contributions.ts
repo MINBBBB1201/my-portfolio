@@ -48,6 +48,13 @@ export const contributionsUnsorted: contributionsInterface[] = [
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/Ndless",
   },
+  {
+    repo: "DAEMUN-III",
+    contibutionDescription:
+      "Contributed admin panel features (team management, per-committee resolution publishing, delegate upload flow) and chatbot improvements to Daewon Model UN's conference website, a Next.js/Hono/Postgres monorepo.",
+    repoOwner: "junwonkim07",
+    link: "https://github.com/junwonkim07/DAEMUN-III",
+  },
 ];
 
 export const featuredContributions: contributionsInterface[] =
