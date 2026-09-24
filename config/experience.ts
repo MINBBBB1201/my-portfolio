@@ -77,6 +77,26 @@ export const experiences: ExperienceInterface[] = [
     logo: "",
   },
   {
+    id: "daemun-iii",
+    position: "Deputy Head of Technology",
+    company: "DAEMUN III (Daewon Model UN)",
+    location: "Qingdao Daewon School",
+    startDate: new Date("2026-08-01"),
+    endDate: "Present",
+    description: [
+      "Serving as Deputy Head of Technology for DAEMUN III, contributing to the conference website's Next.js/Hono/PostgreSQL monorepo alongside the project lead and technology team.",
+      "Built the admin Teams screen and a per-committee 'publish approved resolutions' workflow, replacing an all-or-nothing publish step.",
+      "Built the delegate-facing account flow, letting team leads view their team roster and upload documents directly.",
+    ],
+    achievements: [
+      "Expanded the site's support chatbot to roughly 103 beginner-focused FAQ entries and tuned its conversational handling so it responds naturally to greetings instead of refusing them.",
+      "Fixed broken Secretariat and Committee photo paths left over from a pre-upload-pipeline data migration, and connected the homepage's displayed dates to the live conference record.",
+    ],
+    skills: ["Next.js", "Typescript", "PostgreSQL", "APIs"],
+    companyUrl: "https://github.com/junwonkim07/DAEMUN-III",
+    logo: "",
+  },
+  {
     id: "mechanics-club",
     position: "Vice President",
     company: "Mechanics Club",
