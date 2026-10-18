@@ -3,6 +3,7 @@ export const academicStats = {
   gpa: "3.984 / 4.0",
   gpaType: "Unweighted",
   gradeLevel: "Senior",
+  expectedGraduation: "2027",
   major: "Aviation, Aeronautics/Aerospace Science and Technology",
 };
 

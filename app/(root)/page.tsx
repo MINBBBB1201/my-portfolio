@@ -154,9 +154,10 @@ export default function IndexPage() {
           <AnimatedText as="p" delay={0.3} className="text-muted-foreground leading-relaxed">
             That same build-it-and-measure-it instinct carries into software:
             I built and maintain Tern, a flight-booking app that started as a
-            concept in my school's Mechanics club. Outside the lab, I serve on
-            Student Council and run an anonymous peer-support channel through
-            PSYCHOFISH.
+            concept in my school's Mechanics club. Outside the lab, I served as
+            Planning Department Vice President on Student Council through March
+            2026 and ran an anonymous peer-support channel through PSYCHOFISH
+            during 2024 and 2025.
           </AnimatedText>
         </div>
       </AnimatedSection>

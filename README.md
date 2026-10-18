@@ -51,6 +51,21 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Portfolio chatbot
+
+The server reads published projects, experience, academics, honors, and community data from `config/*.ts`. Set `GROQ_API_KEY` in local and Vercel environments. `GROQ_MODEL` is optional and defaults to `openai/gpt-oss-20b`. If a configured model becomes unavailable, the route retries once with the default. The API key stays server-side. Run `npm test` for request validation, model fallback, and provider-failure checks.
+
+## Update the resume
+
+`public/resume.pdf` is served by the Resume button. After changing portfolio content, run:
+
+```bash
+python -m pip install reportlab
+npm run resume
+```
+
+The generator reads the published config files and writes a two-page PDF. Set `PDF_PYTHON` to a Python executable if needed. Review both pages before committing the regenerated PDF. Scores and unlisted activities are not inferred.
+
 ## Project Structure
 
 | Section            | File Location              |

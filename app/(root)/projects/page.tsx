@@ -9,6 +9,7 @@ import { Projects } from "@/config/projects";
 export const metadata: Metadata = {
   title: pagesConfig.projects.metadata.title,
   description: pagesConfig.projects.metadata.description,
+  alternates: { canonical: "/projects" },
 };
 
 const renderContent = (tabVal: string) => {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -16,6 +17,23 @@ interface ProjectPageProps {
   params: Promise<{
     projectId: string;
   }>;
+}
+
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { projectId } = await params;
+  const project = Projects.find((item) => item.id === projectId);
+  if (!project) return {};
+  return {
+    title: project.companyName,
+    description: project.shortDescription,
+    alternates: { canonical: `/projects/${project.id}` },
+    openGraph: {
+      title: project.companyName,
+      description: project.shortDescription,
+      url: `${siteConfig.url}/projects/${project.id}`,
+      images: [{ url: project.companyLogoImg }],
+    },
+  };
 }
 
 export default async function Project({ params }: ProjectPageProps) {

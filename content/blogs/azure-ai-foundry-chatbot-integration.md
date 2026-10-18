@@ -1,11 +1,21 @@
 ---
-title: "Wiring a Project Chatbot into My Portfolio with Azure AI Foundry"
+title: "Portfolio Chatbot Integration Notes: Azure Prototype and Groq"
 date: "2026-07-30"
-description: "A debugging log: connecting a visitor-facing chatbot to GPT-5.6-Sol through Azure AI Foundry, and the control-plane vs. data-plane endpoint mistake that broke it."
+description: "The current Groq-based portfolio assistant, with historical notes from the earlier Azure AI Foundry prototype."
 tags: ["Next.js", "TypeScript", "APIs"]
 readingTime: 4
 featured: true
 ---
+
+## Current implementation (October 18, 2026)
+
+The portfolio now calls Groq from the server-side `/api/chat` route. It defaults to `openai/gpt-oss-20b`; `GROQ_MODEL` can select another model. If that configured model is unavailable, the route retries once with the default model. Authentication, rate-limit, and network failures return a temporary-unavailability message instead of exposing provider details to visitors.
+
+The server loads the published projects, experience, academic information, honors, and community activities directly from `config/*.ts`. Visitors send only their question. The assistant is instructed to use these facts, acknowledge missing information, and reply in the question's language. This grounding reduces unsupported answers; it does not guarantee that every generated response is accurate.
+
+The notes below describe the earlier Azure prototype, not the current deployment.
+
+## Historical Azure prototype
 
 I wanted a small chatbot on this site that visitors could ask about my projects — grounded in real project data instead of a generic model with no context. The plan: a `ChatBot` component that sends the visitor's question plus my project data to a Next.js API route, which calls an Azure AI Foundry deployment of GPT-5.6-Sol server-side, so the API key never touches the browser.
 

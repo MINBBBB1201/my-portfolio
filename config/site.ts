@@ -4,7 +4,7 @@ export const siteConfig = {
   username: "MINBBBB1201",
   description:
     "Minchan Kim - High school student building at the intersection of software engineering and aerospace, from flight-booking web apps to rocket propulsion test stands. Explore my projects, experience, and contributions.",
-  url: "https://TODO_YOUR_DOMAIN.com",
+  url: "https://minchankim-portfolio.vercel.app",
   links: {
     linkedin: "https://www.linkedin.com/in/minchan-kim-6490313ba/",
     github: "https://github.com/MINBBBB1201",

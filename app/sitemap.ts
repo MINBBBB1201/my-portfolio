@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
+import { Projects } from "@/config/projects";
+import { experiences } from "@/config/experience";
 import { getAllBlogsMeta } from "@/lib/blogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -67,5 +69,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...blogRoutes];
+  const detailRoutes: MetadataRoute.Sitemap = [
+    ...Projects.map((project) => ({ url: `${baseUrl}/projects/${project.id}` })),
+    ...experiences.map((experience) => ({ url: `${baseUrl}/experience/${experience.id}` })),
+    { url: `${baseUrl}/community` },
+  ];
+
+  return [...routes, ...blogRoutes, ...detailRoutes];
 }
