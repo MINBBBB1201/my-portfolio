@@ -8,6 +8,7 @@ import { pagesConfig } from "@/config/pages";
 export const metadata: Metadata = {
   title: pagesConfig.community.metadata.title,
   description: pagesConfig.community.metadata.description,
+  alternates: { canonical: "/community" },
 };
 
 export default function CommunityPage() {

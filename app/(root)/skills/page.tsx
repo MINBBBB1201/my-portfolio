@@ -8,6 +8,7 @@ import { skills } from "@/config/skills";
 export const metadata: Metadata = {
   title: pagesConfig.skills.metadata.title,
   description: pagesConfig.skills.metadata.description,
+  alternates: { canonical: "/skills" },
 };
 
 export default function SkillsPage() {

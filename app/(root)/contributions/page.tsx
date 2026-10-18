@@ -9,6 +9,7 @@ import { pagesConfig } from "@/config/pages";
 export const metadata: Metadata = {
   title: pagesConfig.contributions.metadata.title,
   description: pagesConfig.contributions.metadata.description,
+  alternates: { canonical: "/contributions" },
 };
 
 export default function ContributonsPage() {

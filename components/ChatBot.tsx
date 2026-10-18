@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
-import { Projects } from "@/config/projects";
 
 type Message = {
   role: "user" | "assistant";
@@ -14,7 +13,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! Ask me anything about Minchan's projects.",
+      content: "Hi! Ask me about Minchan's projects, experience, or community activities.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -41,7 +40,6 @@ export default function ChatBot() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: userMessage.content,
-          projectContext: Projects,
         }),
       });
 
@@ -53,7 +51,6 @@ export default function ChatBot() {
 
       const data = await res.json();
 
-      // Azure OpenAI(GPT-5.6) Chat Completions 응답 형식
       const reply =
         data?.choices?.[0]?.message?.content ??
         "Couldn't get a response. Please try again.";
@@ -65,7 +62,7 @@ export default function ChatBot() {
         ...prev,
         {
           role: "assistant",
-          content: "Something went wrong. Please try again in a moment.",
+          content: "The chatbot is temporarily unavailable. Please try again shortly, or use the Contact page.",
         },
       ]);
     } finally {
@@ -78,7 +75,7 @@ export default function ChatBot() {
       {isOpen && (
         <div className="flex flex-col w-[90vw] max-w-md h-[420px] rounded-xl border border-border bg-background shadow-xl overflow-hidden">
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
-            <span className="text-sm font-semibold">Project Chatbot</span>
+            <span className="text-sm font-semibold">Portfolio Chatbot</span>
             <button
               onClick={() => setIsOpen(false)}
               aria-label="Close"
@@ -87,7 +84,7 @@ export default function ChatBot() {
               <X className="w-4 h-4" />
             </button>
           </div>
-          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+          <div className="flex-1 overflow-y-auto p-4 space-y-3" role="log" aria-live="polite" aria-label="Chat messages">
             {messages.map((m, i) => (
               <div
                 key={i}
@@ -120,9 +117,11 @@ export default function ChatBot() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
-              placeholder="Ask about the projects..."
-              className="flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm outline-none"
+              onKeyDown={(e) => e.key === "Enter" && !e.nativeEvent.isComposing && handleSend()}
+              placeholder="Ask about Minchan..."
+              aria-label="Your question"
+              maxLength={2000}
+              className="min-w-0 flex-1 rounded-md border border-border bg-background px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
               disabled={isLoading}
             />
             <button

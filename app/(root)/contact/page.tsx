@@ -8,6 +8,7 @@ import { pagesConfig } from "@/config/pages";
 export const metadata: Metadata = {
   title: pagesConfig.contact.metadata.title,
   description: pagesConfig.contact.metadata.description,
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
