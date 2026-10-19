@@ -50,8 +50,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-muted-foreground">
               <span className="font-medium">{experience.company}</span>
-              <span className="hidden sm:inline">•</span>
-              <span>{experience.location}</span>
+              {experience.location && <><span className="hidden sm:inline">•</span><span>{experience.location}</span></>}
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">

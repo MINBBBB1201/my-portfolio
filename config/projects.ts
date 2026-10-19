@@ -57,6 +57,66 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
+    id: "ciws-drone-tracking-turret",
+    status: "Completed",
+    companyName: "Automated CIWS Drone Tracking Turret",
+    type: "Personal",
+    category: ["Computer Vision", "Hardware/Robotics"],
+    shortDescription:
+      "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
+    githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
+    techStack: ["Arduino", "Python", "System Architecture"],
+    startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
+    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
+    companyLogoImg:
+      "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+    pagesInfoArr: [
+      {
+        title: "Components & Circuit Design",
+        description:
+          "Sourced servos, a camera module, and control electronics, and prototyped the pan-tilt control circuit before physical assembly.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/01-parts-kit.jpg",
+          "/projects/ciws-drone-tracking-turret/02-circuit-diagram.jpg",
+          "/projects/ciws-drone-tracking-turret/03-servo-bracket.jpg",
+          "/projects/ciws-drone-tracking-turret/05-servo-mount-closeup.jpg",
+        ],
+      },
+      {
+        title: "Assembly",
+        description:
+          "Built up a single-axis pan-tilt prototype first, then integrated the camera module and status LED indicator before scaling to a dual-turret setup.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/04-single-axis-build.jpg",
+          "/projects/ciws-drone-tracking-turret/06-led-power-module.jpg",
+          "/projects/ciws-drone-tracking-turret/07-camera-servo-assembled.jpg",
+          "/projects/ciws-drone-tracking-turret/08-camera-module-closeup.jpg",
+        ],
+      },
+      {
+        title: "Dual-Turret Tracking Demo",
+        description:
+          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+          "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
+          "/projects/ciws-drone-tracking-turret/11-live-tracking-demo.jpg",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
+        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
+      ],
+      bullets: [
+        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
+        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
+        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
+      ],
+    },
+  },
+  {
     id: "jsl-logistics",
     companyName: "JSL Logistics: AI Tools & Web Platform",
     type: "Professional",
@@ -251,66 +311,6 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
-    id: "ciws-drone-tracking-turret",
-    status: "Completed",
-    companyName: "Automated CIWS Drone Tracking Turret",
-    type: "Personal",
-    category: ["Computer Vision", "Hardware/Robotics"],
-    shortDescription:
-      "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
-    githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
-    techStack: ["Arduino", "Python", "System Architecture"],
-    startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
-    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
-    companyLogoImg:
-      "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
-    pagesInfoArr: [
-      {
-        title: "Components & Circuit Design",
-        description:
-          "Sourced servos, a camera module, and control electronics, and prototyped the pan-tilt control circuit before physical assembly.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/01-parts-kit.jpg",
-          "/projects/ciws-drone-tracking-turret/02-circuit-diagram.jpg",
-          "/projects/ciws-drone-tracking-turret/03-servo-bracket.jpg",
-          "/projects/ciws-drone-tracking-turret/05-servo-mount-closeup.jpg",
-        ],
-      },
-      {
-        title: "Assembly",
-        description:
-          "Built up a single-axis pan-tilt prototype first, then integrated the camera module and status LED indicator before scaling to a dual-turret setup.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/04-single-axis-build.jpg",
-          "/projects/ciws-drone-tracking-turret/06-led-power-module.jpg",
-          "/projects/ciws-drone-tracking-turret/07-camera-servo-assembled.jpg",
-          "/projects/ciws-drone-tracking-turret/08-camera-module-closeup.jpg",
-        ],
-      },
-      {
-        title: "Dual-Turret Tracking Demo",
-        description:
-          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
-          "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
-          "/projects/ciws-drone-tracking-turret/11-live-tracking-demo.jpg",
-        ],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
-        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
-      ],
-      bullets: [
-        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
-        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
-        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
-      ],
-    },
-  },
-  {
     id: "wind-tunnel-rc-aircraft",
     status: "Completed",
     companyName: "F-22-Inspired RC Aircraft: Aerodynamic Design & Flight Stability Research",
@@ -355,6 +355,7 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+
 ];
 
 const featuredProjectIds = ["cosmos-tvc-hopper", "ciws-drone-tracking-turret", "jsl-logistics"];

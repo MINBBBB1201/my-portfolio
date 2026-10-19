@@ -17,6 +17,7 @@ function data(file) {
 test("selected AI projects have explicit state and team roles without guessed dates", () => {
   const { Projects, featuredProjects } = data("config/projects.ts");
   assert.deepEqual(Array.from(featuredProjects, (p) => p.id), ["cosmos-tvc-hopper", "ciws-drone-tracking-turret", "jsl-logistics"]);
+  assert.deepEqual(Array.from(Projects.slice(0, 3), (p) => p.id), Array.from(featuredProjects, (p) => p.id));
   for (const project of Projects) assert.ok(["In progress", "Completed"].includes(project.status));
   assert.equal(Projects.find((p) => p.id === "cosmos-tvc-hopper").endDate, undefined);
   assert.equal(Projects.find((p) => p.id === "jsl-logistics").startDate, undefined);

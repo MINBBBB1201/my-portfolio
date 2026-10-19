@@ -37,7 +37,7 @@ export const experiences: ExperienceInterface[] = [
     endDate: "Completed",
     description: [
       "Completed an internship at Mintech.",
-      "The onboarding material covered manufacturing-quality fundamentals (4M), workplace organization (3 Jeong and 5S), and workplace safety.",
+      "The onboarding material covered manufacturing-quality fundamentals (4M), workplace organization (5S), and workplace safety.",
     ],
     achievements: [],
     skills: [],
