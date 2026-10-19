@@ -69,7 +69,7 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "DAEMUN-III",
     contibutionDescription:
-      "Contributed admin panel features (team management, per-committee resolution publishing, delegate upload flow) and chatbot improvements to Daewon Model UN's conference website, a Next.js/Hono/Postgres monorepo.",
+      "Built the first Roger AI assistant with FAQ retrieval and Q&A logs, admin editing screens, and versioned delegate submissions with committee-level publishing in DAEMUN III's shared Next.js/Hono/Postgres codebase.",
     repoOwner: "junwonkim07",
     link: "https://github.com/junwonkim07/DAEMUN-III",
   },
