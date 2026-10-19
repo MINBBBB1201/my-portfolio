@@ -6,7 +6,7 @@
   <g font-family="Arial, sans-serif">
     <text x="90" y="100" fill="#d4b77a" font-size="20" letter-spacing="4">DAEMUN III / SUBMISSION WORKFLOW</text>
     <text x="90" y="165" fill="#fff" font-size="43" font-weight="bold">A draft, with a record of what happened.</text>
-    <text x="90" y="211" fill="#b7c4da" font-size="22">My implementation within the team's conference platform</text>
+    <text x="90" y="211" fill="#b7c4da" font-size="22">Co-developed by Junwon Kim and Minchan Kim</text>
     <g stroke="#8797b6" stroke-width="3" fill="none" marker-end="url(#arrow)">
       <path d="M 450 360 H 525"/><path d="M 915 360 H 990"/><path d="M 1160 450 V 640 H 915"/><path d="M 525 640 H 450"/>
     </g>

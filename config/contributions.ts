@@ -69,7 +69,7 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "DAEMUN-III",
     contibutionDescription:
-      "Built the first Roger AI assistant with FAQ retrieval and Q&A logs, admin editing screens, and versioned delegate submissions with committee-level publishing in DAEMUN III's shared Next.js/Hono/Postgres codebase.",
+      "Co-developed the full DAEMUN III platform with Junwon Kim: the public website, Roger AI assistant with context grounding and streaming, shared backend and admin tools, versioned submissions, deployment, and document diagnostics.",
     repoOwner: "junwonkim07",
     link: "https://github.com/junwonkim07/DAEMUN-III",
   },
