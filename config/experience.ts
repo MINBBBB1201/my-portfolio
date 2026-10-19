@@ -112,13 +112,13 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2026-08-01"),
     endDate: "Completed",
     description: [
-      "Served as Deputy Head of Technology for DAEMUN III, contributing to the conference website's Next.js/Hono/PostgreSQL monorepo alongside the project lead and technology team.",
-      "Built the admin Teams screen and a per-committee 'publish approved resolutions' workflow, replacing an all-or-nothing publish step.",
-      "Built the delegate-facing account flow, letting team leads view their team roster and upload documents directly.",
+      "Served as Deputy Head of Technology for DAEMUN III, building the first Roger AI assistant and admin/delegate workflows within the team's Next.js, Hono, and PostgreSQL codebase.",
+      "Implemented FAQ retrieval, a Gemini chat endpoint, the website widget, and organizer-facing question-and-answer logs; documented retrieval limitations and evaluation questions.",
+      "Built team assignment and lead-only submissions, upload version history, team notifications, and committee-level publishing controls.",
     ],
     achievements: [
-      "Expanded the site's support chatbot to roughly 103 beginner-focused FAQ entries and tuned its conversational handling so it responds naturally to greetings instead of refusing them.",
-      "Fixed broken Secretariat and Committee photo paths left over from a pre-upload-pipeline data migration, and connected the homepage's displayed dates to the live conference record.",
+      "Expanded the beginner-focused FAQ seed document to 103 entries and refined the chatbot's handling of greetings and missing information.",
+      "Extended direct-to-storage uploads to delegates to handle files beyond the function request-body limit, and developed admin content-editing screens.",
     ],
     skills: ["Next.js", "Typescript", "PostgreSQL", "APIs"],
     companyUrl: "https://github.com/junwonkim07/DAEMUN-III",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { Icons } from "@/components/common/icons";
+import DaemunCaseStudy from "@/components/projects/daemun-case-study";
 import ProjectDescription from "@/components/projects/project-description";
 import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
@@ -118,12 +119,14 @@ export default async function Project({ params }: ProjectPageProps) {
         <Image
           src={project.companyLogoImg}
           alt={project.companyName}
-          width={720}
-          height={405}
+          width={project.id === "daemun-iii" ? 1234 : 720}
+          height={project.id === "daemun-iii" ? 1000 : 405}
           className="my-8 w-full h-auto rounded-md border bg-muted transition-colors"
           priority
         />
       )}
+
+      {project.id === "daemun-iii" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">Local source preview with bundled default content. The conference project is completed; this image is not a live deployment.</p>}
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
@@ -132,7 +135,7 @@ export default async function Project({ params }: ProjectPageProps) {
         <ChipContainer textArr={project.techStack} />
       </div>
 
-      <div className="mb-7 ">
+      {project.id === "daemun-iii" ? <DaemunCaseStudy /> : <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Description
         </h2>
@@ -141,7 +144,7 @@ export default async function Project({ params }: ProjectPageProps) {
           paragraphs={project.descriptionDetails.paragraphs}
           bullets={project.descriptionDetails.bullets}
         />
-      </div>
+      </div>}
 
       {project.paperLink && (
         <div className="mb-7 rounded-lg border bg-muted/40 p-5">
@@ -162,7 +165,7 @@ export default async function Project({ params }: ProjectPageProps) {
         </div>
       )}
 
-      <div className="mb-7 ">
+      {project.pagesInfoArr.length > 0 && <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
           Page Info
         </h2>
@@ -200,7 +203,7 @@ export default async function Project({ params }: ProjectPageProps) {
             </div>
           </div>
         ))}
-      </div>
+      </div>}
 
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
