@@ -71,6 +71,9 @@ export type ValidSkills =
   | "Digital Logic";
 
 export type ValidCategory =
+  | "AI & Machine Learning"
+  | "Computer Vision"
+  | "Reinforcement Learning"
   | "Full Stack"
   | "Frontend"
   | "Backend"

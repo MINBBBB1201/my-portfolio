@@ -19,7 +19,7 @@ import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { featuredContributions } from "@/config/contributions";
-import { experiences } from "@/config/experience";
+import { featuredExperiences } from "@/config/experience";
 import { pagesConfig } from "@/config/pages";
 import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
@@ -30,8 +30,7 @@ import profileImg from "@/public/profile-img.jpg";
 
 export const metadata: Metadata = {
   title: `${pagesConfig.home.metadata.title}`,
-  description:
-    "Minchan Kim - High school student building at the intersection of software engineering and aerospace. Explore my projects, experience, and contributions.",
+  description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,
   },
@@ -46,7 +45,7 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Student / Aspiring AI & Aerospace Engineer",
+    jobTitle: siteConfig.headline,
     sameAs: [siteConfig.links.github, siteConfig.links.linkedin],
   };
 
@@ -84,13 +83,13 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Student / Aspiring AI & Aerospace Engineer
+            {siteConfig.headline}
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Building at the intersection of software engineering and
-              aerospace — from flight-booking web apps to rocket propulsion
-              test stands.
+              Exploring AI through computer vision, reinforcement learning,
+              and software that connects intelligent systems with real
+              engineering problems.
             </p>
           </div>
 
@@ -144,20 +143,19 @@ export default function IndexPage() {
             About
           </AnimatedText>
           <AnimatedText as="p" delay={0.2} className="text-muted-foreground leading-relaxed">
-            I'm a 12th grader at Qingdao Daewon School studying Aviation,
-            Aeronautics, and Aerospace Science and Technology. A physics-class
-            RC aircraft project — and the 1st-place research paper it
-            produced — led me to found COSMOS, our school's aero-engineering
-            club, where I've led a 10-member team through a rocket motor
-            thrust test stand and an open-circuit wind tunnel.
+            I'm a 12th grader at Qingdao Daewon School interested in studying
+            artificial intelligence. I explore how AI systems perceive the
+            world, make decisions, and interact with physical systems. My work
+            spans a computer-vision tracking project and ongoing reinforcement
+            learning and control work with COSMOS, the engineering club I founded.
           </AnimatedText>
           <AnimatedText as="p" delay={0.3} className="text-muted-foreground leading-relaxed">
-            That same build-it-and-measure-it instinct carries into software:
-            I built and maintain Tern, a flight-booking app that started as a
-            concept in my school's Mechanics club. Outside the lab, I served as
-            Planning Department Vice President on Student Council through March
-            2026 and ran an anonymous peer-support channel through PSYCHOFISH
-            during 2024 and 2025.
+            Engineering gives me a way to test ideas beyond a model or a screen.
+            I am currently working on the COSMOS TVC-Hopper project and a JSL
+            Logistics internship project. I also contributed to the DAEMUN III
+            conference platform and built Tern, a flight-booking web app.
+            These projects connect my interest in AI with software, robotics,
+            and the practical constraints of building something people can use.
           </AnimatedText>
         </div>
       </AnimatedSection>
@@ -232,7 +230,7 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
         <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
-          {experiences.slice(0, 3).map((experience, index) => (
+          {featuredExperiences.map((experience, index) => (
             <AnimatedSection
               key={experience.id}
               delay={0.1 * (index + 1)}

@@ -8,22 +8,8 @@ import { HoverGlow } from "@/components/common/hover-glow";
 import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
+import { getDurationText } from "@/lib/experience-dates";
 
-// Helper function to extract year from date
-const getYearFromDate = (date: Date): string => {
-  return new Date(date).getFullYear().toString();
-};
-
-// Helper function to get duration text
-const getDurationText = (
-  startDate: Date,
-  endDate: Date | "Present"
-): string => {
-  const startYear = getYearFromDate(startDate);
-  const endYear =
-    typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
-  return `${startYear} - ${endYear}`;
-};
 
 interface ExperienceCardProps {
   experience: ExperienceInterface;
@@ -64,8 +50,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-muted-foreground">
               <span className="font-medium">{experience.company}</span>
-              <span className="hidden sm:inline">•</span>
-              <span>{experience.location}</span>
+              {experience.location && <><span className="hidden sm:inline">•</span><span>{experience.location}</span></>}
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">

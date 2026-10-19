@@ -22,16 +22,151 @@ export interface ProjectInterface {
   githubLink?: string;
   paperLink?: string;
   techStack: ValidSkills[];
-  startDate: Date;
-  endDate: Date;
-  companyLogoImg: any;
+  startDate?: Date;
+  endDate?: Date;
+  status?: "In progress" | "Completed";
+  role?: string;
+  companyLogoImg?: string;
   descriptionDetails: DescriptionDetailsInterface;
   pagesInfoArr: PagesInfoInterface[];
 }
 
 export const Projects: ProjectInterface[] = [
   {
+    id: "cosmos-tvc-hopper",
+    companyName: "COSMOS TVC-Hopper: Reinforcement Learning & Control",
+    type: "Personal",
+    category: ["Reinforcement Learning", "Aerospace Engineering", "Hardware/Robotics"],
+    status: "In progress",
+    role: "COSMOS Founder & President; project coordination",
+    shortDescription: "An ongoing COSMOS project connecting reinforcement learning, simulation, and an EDF-powered attitude-control test platform. The team is developing comparisons with conventional controllers; physical validation is still in progress.",
+    githubLink: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
+    techStack: ["Python", "PyTorch", "FreeCAD", "System Architecture"],
+    pagesInfoArr: [],
+    descriptionDetails: {
+      paragraphs: [
+        "As COSMOS founder and president, I coordinate an ongoing team project exploring how learned control policies can interact with a physical engineering system.",
+        "The team is developing an EDF-powered hopper with thrust-vectoring vanes, a simulation environment, and a web interface for comparing and replaying controller behavior. The research question is whether reinforcement learning offers useful differences from conventional PID/LQR control under comparable conditions, not an assumption that it is better.",
+        "The repository includes a PPO training pipeline and simulation checks. Some physical parameters are provisional, so current simulation runs are pipeline-development evidence, not validated real-world flight performance.",
+      ],
+      bullets: [
+        "Connect mechanical design, avionics, simulation, and software work across the club team.",
+        "Develop controller comparisons using shared test conditions and measures such as recovery time, overshoot, and steady-state error.",
+        "Continue hardware integration and measurement before drawing conclusions about physical performance.",
+      ],
+    },
+  },
+  {
+    id: "ciws-drone-tracking-turret",
+    status: "Completed",
+    companyName: "Automated CIWS Drone Tracking Turret",
+    type: "Personal",
+    category: ["Computer Vision", "Hardware/Robotics"],
+    shortDescription:
+      "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
+    githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
+    techStack: ["Arduino", "Python", "System Architecture"],
+    startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
+    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
+    companyLogoImg:
+      "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+    pagesInfoArr: [
+      {
+        title: "Components & Circuit Design",
+        description:
+          "Sourced servos, a camera module, and control electronics, and prototyped the pan-tilt control circuit before physical assembly.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/01-parts-kit.jpg",
+          "/projects/ciws-drone-tracking-turret/02-circuit-diagram.jpg",
+          "/projects/ciws-drone-tracking-turret/03-servo-bracket.jpg",
+          "/projects/ciws-drone-tracking-turret/05-servo-mount-closeup.jpg",
+        ],
+      },
+      {
+        title: "Assembly",
+        description:
+          "Built up a single-axis pan-tilt prototype first, then integrated the camera module and status LED indicator before scaling to a dual-turret setup.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/04-single-axis-build.jpg",
+          "/projects/ciws-drone-tracking-turret/06-led-power-module.jpg",
+          "/projects/ciws-drone-tracking-turret/07-camera-servo-assembled.jpg",
+          "/projects/ciws-drone-tracking-turret/08-camera-module-closeup.jpg",
+        ],
+      },
+      {
+        title: "Dual-Turret Tracking Demo",
+        description:
+          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
+        imgArr: [
+          "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
+          "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
+          "/projects/ciws-drone-tracking-turret/11-live-tracking-demo.jpg",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
+        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
+      ],
+      bullets: [
+        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
+        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
+        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
+      ],
+    },
+  },
+  {
+    id: "jsl-logistics",
+    companyName: "JSL Logistics: AI Tools & Web Platform",
+    type: "Professional",
+    category: ["AI & Machine Learning", "Full Stack", "UI/UX"],
+    status: "In progress",
+    role: "Intern; website and software development",
+    shortDescription: "Ongoing internship work on a logistics platform with retrieval-backed support, image-assisted damage inspection, and operational web tools. A separate 3D design prototype supports the public-facing site redesign.",
+    githubLink: "https://github.com/MINBBBB1201/jsl-project",
+    techStack: ["Next.js", "Typescript", "Node.js", "MongoDB"],
+    pagesInfoArr: [],
+    descriptionDetails: {
+      paragraphs: [
+        "During my ongoing JSL internship, I am working on a logistics website and software platform, connecting frontend design with backend application structure.",
+        "The codebase includes a retrieval-backed support chatbot, image-assisted damage-inspection endpoints, shipment workflows, and trade-document tools. It uses Next.js and TypeScript with an Express and MongoDB backend. The internship and integration work are ongoing; code presence is not a claim of production performance.",
+        "A separate design-prototype archive contains reproducible 3D scene and Blender rendering work for a road-to-sea-to-air website sequence. These are design and motion studies, not finished production integration or measured business outcomes.",
+      ],
+      bullets: [
+        "Develop the website's page structure, visual design, and user interfaces.",
+        "Connect AI-assisted support and inspection interfaces with logistics workflows.",
+        "Develop multilingual pages and a 3D visual direction while preserving the existing application contracts.",
+      ],
+    },
+  },
+  {
+    id: "daemun-iii",
+    companyName: "DAEMUN III: Conference Platform & Support Chatbot",
+    type: "Professional",
+    category: ["Full Stack", "Web Dev"],
+    status: "Completed",
+    role: "Deputy Head of Technology; team contributor",
+    startDate: new Date("2026-08-01"),
+    githubLink: "https://github.com/junwonkim07/DAEMUN-III",
+    techStack: ["Next.js", "Typescript", "PostgreSQL", "APIs"],
+    pagesInfoArr: [],
+    shortDescription: "Completed team contributions to a Model UN conference platform: admin team management, committee-specific resolution publishing, delegate document uploads, and support-chatbot improvements.",
+    descriptionDetails: {
+      paragraphs: [
+        "As Deputy Head of Technology for DAEMUN III, I contributed to the conference website alongside the project lead and technology team. My work was part of a shared Next.js, Hono, and PostgreSQL codebase.",
+        "I built the admin Teams screen, a per-committee resolution-publishing workflow, and delegate-facing account and document-upload flows. I also expanded the support chatbot's FAQ content and improved its handling of greetings.",
+      ],
+      bullets: [
+        "Replace an all-or-nothing resolution-publishing step with committee-level controls.",
+        "Let team leads view their roster and upload documents directly.",
+        "Expand beginner-focused support to roughly 103 FAQ entries, and correct photo paths and conference-date display issues.",
+      ],
+    },
+  },
+  {
     id: "tern",
+    status: "In progress",
     companyName: "Tern",
     type: "Personal",
     category: ["Full Stack", "Web Dev", "UI/UX"],
@@ -58,6 +193,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-rocket-thrust-stand",
+    status: "Completed",
     companyName: "Solid Propellant Rocket Thrust Test Stand",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
@@ -117,6 +253,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-aeroview-windtunnel",
+    status: "In progress",
     companyName: "Project AEROVIEW — Open-Circuit Suction Wind Tunnel",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
@@ -174,66 +311,8 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
-    id: "ciws-drone-tracking-turret",
-    companyName: "Automated CIWS Drone Tracking Turret",
-    type: "Personal",
-    category: ["Hardware/Robotics"],
-    shortDescription:
-      "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
-    githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
-    techStack: ["Arduino", "Python", "System Architecture"],
-    startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
-    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
-    companyLogoImg:
-      "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
-    pagesInfoArr: [
-      {
-        title: "Components & Circuit Design",
-        description:
-          "Sourced servos, a camera module, and control electronics, and prototyped the pan-tilt control circuit before physical assembly.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/01-parts-kit.jpg",
-          "/projects/ciws-drone-tracking-turret/02-circuit-diagram.jpg",
-          "/projects/ciws-drone-tracking-turret/03-servo-bracket.jpg",
-          "/projects/ciws-drone-tracking-turret/05-servo-mount-closeup.jpg",
-        ],
-      },
-      {
-        title: "Assembly",
-        description:
-          "Built up a single-axis pan-tilt prototype first, then integrated the camera module and status LED indicator before scaling to a dual-turret setup.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/04-single-axis-build.jpg",
-          "/projects/ciws-drone-tracking-turret/06-led-power-module.jpg",
-          "/projects/ciws-drone-tracking-turret/07-camera-servo-assembled.jpg",
-          "/projects/ciws-drone-tracking-turret/08-camera-module-closeup.jpg",
-        ],
-      },
-      {
-        title: "Dual-Turret Tracking Demo",
-        description:
-          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
-        imgArr: [
-          "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
-          "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
-          "/projects/ciws-drone-tracking-turret/11-live-tracking-demo.jpg",
-        ],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
-        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
-      ],
-      bullets: [
-        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
-        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
-        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
-      ],
-    },
-  },
-  {
     id: "wind-tunnel-rc-aircraft",
+    status: "Completed",
     companyName: "F-22-Inspired RC Aircraft: Aerodynamic Design & Flight Stability Research",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
@@ -276,6 +355,8 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+
 ];
 
-export const featuredProjects = Projects.slice(0, 3);
+const featuredProjectIds = ["cosmos-tvc-hopper", "ciws-drone-tracking-turret", "jsl-logistics"];
+export const featuredProjects = featuredProjectIds.map((id) => Projects.find((project) => project.id === id)!);

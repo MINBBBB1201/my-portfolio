@@ -6,7 +6,7 @@
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://minchankim-portfolio.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Personal portfolio site for Minchan Kim, a 12th-grade student at Qingdao Daewon School studying Aviation, Aeronautics, and Aerospace Science and Technology. The site showcases hands-on engineering work — a rocket motor thrust test stand, an open-circuit wind tunnel, an F-22-inspired RC aircraft research project, and a dual-turret drone-tracking system — alongside software projects, experience, and contributions.
+Personal portfolio site for Minchan Kim, a 12th-grade student at Qingdao Daewon School interested in AI-related degree programs. The site connects computer vision, ongoing reinforcement-learning work, and AI-assisted software with engineering projects and internship experience.
 
 **Live site:** [minchankim-portfolio.vercel.app](https://minchankim-portfolio.vercel.app/)
 
@@ -67,6 +67,12 @@ npm run resume
 The generator reads the published config files and writes a two-page PDF. Set `PDF_PYTHON` to a Python executable if needed. Review both pages before committing the regenerated PDF. Scores and unlisted activities are not inferred.
 
 ## Project Structure
+
+### Project selection
+
+The home page features three projects selected for their connection to AI, not by repository order. Projects contains substantial, distinct work with a clear role and evidence; related repositories belong to one project. In-progress work is labeled explicitly and simulation or prototype work is not described as validated production performance. Contributions is a broader repository index, not a claim that every repository is a flagship project.
+
+TVC-Hopper and JSL remain in progress. DAEMUN III is a completed team contribution. Mintech is listed as completed internship experience; only internship completion and onboarding topics are supported by the supplied information. Dates are omitted when unconfirmed. The private JSL design archive is not linked publicly, and this update does not regenerate the resume.
 
 | Section            | File Location              |
 | ------------------ | --------------------------- |

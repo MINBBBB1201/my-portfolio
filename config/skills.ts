@@ -91,4 +91,6 @@ export const skills = skillsUnsorted
   .slice()
   .sort((a, b) => b.rating - a.rating);
 
-export const featuredSkills = skills.slice(0, 6);
+export const featuredSkills = ["Python", "APIs", "System Architecture", "Arduino", "Next.js", "TypeScript"].map(
+  (name) => skills.find((skill) => skill.name === name)!
+);

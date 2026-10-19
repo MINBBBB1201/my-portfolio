@@ -1,9 +1,10 @@
 export const siteConfig = {
-  name: "Minchan Kim - Aspiring AI & Aerospace Engineer",
+  name: "Minchan Kim - AI & Engineering",
+  headline: "Student | Artificial Intelligence & Engineering",
   authorName: "Minchan Kim",
   username: "MINBBBB1201",
   description:
-    "Minchan Kim - High school student building at the intersection of software engineering and aerospace, from flight-booking web apps to rocket propulsion test stands. Explore my projects, experience, and contributions.",
+    "Minchan Kim - A high school student exploring artificial intelligence through computer vision, reinforcement learning, software, and engineering projects. Explore ongoing work, completed projects, and internship experience.",
   url: "https://minchankim-portfolio.vercel.app",
   links: {
     linkedin: "https://www.linkedin.com/in/minchan-kim-6490313ba/",
