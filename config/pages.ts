@@ -23,7 +23,7 @@ export const pagesConfig: PagesConfig = {
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description: "Tools I use across AI-related work, software development, and engineering projects.",
     metadata: {
       title: "Skills",
       description:
@@ -32,11 +32,11 @@ export const pagesConfig: PagesConfig = {
   },
   projects: {
     title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    description: "Selected work in AI, software, and engineering, with ongoing development and completed contributions shown separately.",
     metadata: {
       title: "Projects",
       description:
-        "Minchan Kim's projects spanning web development and aerospace engineering.",
+        "Minchan Kim's selected AI, software, and engineering projects, including current development and completed team contributions.",
     },
   },
   contact: {
@@ -75,11 +75,11 @@ export const pagesConfig: PagesConfig = {
   },
   experience: {
     title: "Experience",
-    description: "Journey across software and aerospace engineering.",
+    description: "Internships, team contributions, and engineering leadership behind my interest in AI.",
     metadata: {
       title: "Experience",
       description:
-        "Minchan Kim's journey across software and aerospace engineering.",
+        "Minchan Kim's internships, software contributions, and engineering leadership.",
     },
   },
   community: {

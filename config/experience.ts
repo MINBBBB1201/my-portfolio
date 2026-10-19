@@ -5,8 +5,8 @@ export interface ExperienceInterface {
   position: string;
   company: string;
   location: string;
-  startDate: Date;
-  endDate: Date | "Present";
+  startDate?: Date;
+  endDate: Date | "Present" | "Completed";
   description: string[];
   achievements: string[];
   skills: ValidSkills[];
@@ -15,6 +15,33 @@ export interface ExperienceInterface {
 }
 
 export const experiences: ExperienceInterface[] = [
+  {
+    id: "jsl-logistics",
+    position: "Intern",
+    company: "JSL Logistics",
+    location: "",
+    endDate: "Present",
+    description: [
+      "Working on an ongoing logistics software project spanning AI-assisted tools, operational interfaces, and the public-facing website.",
+      "The codebase includes retrieval-backed support, image-assisted damage inspection, shipment workflows, and trade-document tools. Current design work includes multilingual interfaces and a separate 3D motion prototype.",
+    ],
+    achievements: [],
+    skills: ["Next.js", "Typescript", "Node.js", "MongoDB", "APIs"],
+    companyUrl: "https://github.com/MINBBBB1201/jsl-project",
+  },
+  {
+    id: "mintech",
+    position: "Intern",
+    company: "Mintech",
+    location: "",
+    endDate: "Completed",
+    description: [
+      "Completed an internship at Mintech.",
+      "The onboarding material covered manufacturing-quality fundamentals (4M), workplace organization (3 Jeong and 5S), and workplace safety.",
+    ],
+    achievements: [],
+    skills: [],
+  },
   {
     id: "kau-aerospace-camp",
     position: "Aerospace & Space Camp Participant",
@@ -45,6 +72,7 @@ export const experiences: ExperienceInterface[] = [
       "Founded and led a 10-member aerospace engineering club through full theory to design to fabrication to test-validation project cycles.",
       "Directed the Solid Propellant Rocket Thrust Test Stand project: two static-fire test iterations, diagnosing and resolving a data-logging failure between tests, then deriving peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s) from the results.",
       "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
+      "Currently coordinating the TVC-Hopper project, bringing together reinforcement learning, conventional control, simulation, avionics, and mechanical design. Hardware integration and physical validation are ongoing.",
     ],
     achievements: [
       "Cross-validated rocket thrust-stand results against theoretical predictions from a solid rocket internal ballistics simulator.",
@@ -82,9 +110,9 @@ export const experiences: ExperienceInterface[] = [
     company: "DAEMUN III (Daewon Model UN)",
     location: "Qingdao Daewon School",
     startDate: new Date("2026-08-01"),
-    endDate: "Present",
+    endDate: "Completed",
     description: [
-      "Serving as Deputy Head of Technology for DAEMUN III, contributing to the conference website's Next.js/Hono/PostgreSQL monorepo alongside the project lead and technology team.",
+      "Served as Deputy Head of Technology for DAEMUN III, contributing to the conference website's Next.js/Hono/PostgreSQL monorepo alongside the project lead and technology team.",
       "Built the admin Teams screen and a per-committee 'publish approved resolutions' workflow, replacing an all-or-nothing publish step.",
       "Built the delegate-facing account flow, letting team leads view their team roster and upload documents directly.",
     ],
@@ -133,3 +161,6 @@ export const experiences: ExperienceInterface[] = [
     logo: "",
   },
 ];
+
+const featuredExperienceIds = ["jsl-logistics", "cosmos", "daemun-iii"];
+export const featuredExperiences = featuredExperienceIds.map((id) => experiences.find((experience) => experience.id === id)!);

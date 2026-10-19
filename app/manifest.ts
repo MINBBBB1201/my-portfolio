@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Minchan Kim | Student Portfolio",
     short_name: "Minchan Kim",
     description:
-      "Minchan Kim - High school student building at the intersection of software engineering and aerospace.",
+      "Minchan Kim - Student exploring AI through computer vision, reinforcement learning, software, and engineering.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

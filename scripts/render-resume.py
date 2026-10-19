@@ -27,7 +27,7 @@ def p(value, style="Detail"):
     return Paragraph(clean(value), styles[style])
 
 def month(value):
-    if value == "Present": return value
+    if value in ("Present", "Completed"): return value
     from datetime import datetime
     return datetime.fromisoformat(value.replace("Z", "+00:00")).strftime("%b %Y")
 

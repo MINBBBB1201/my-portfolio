@@ -7,6 +7,24 @@ export interface contributionsInterface {
 
 export const contributionsUnsorted: contributionsInterface[] = [
   {
+    repo: "COSMOS-TVC-Hopper",
+    contibutionDescription: "Ongoing COSMOS team project connecting reinforcement-learning control, simulation, avionics, and an EDF test platform. Physical validation remains in progress.",
+    repoOwner: "COSMOS-Aero-Engineering",
+    link: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
+  },
+  {
+    repo: "jsl-project",
+    contibutionDescription: "Ongoing internship work on a logistics platform with AI-assisted support and inspection tools, operational workflows, and website development.",
+    repoOwner: "MINBBBB1201",
+    link: "https://github.com/MINBBBB1201/jsl-project",
+  },
+  {
+    repo: "housing-base",
+    contibutionDescription: "Supporting engineering archive: laptop base-cover CAD, measurements, research, and verification records.",
+    repoOwner: "MINBBBB1201",
+    link: "https://github.com/MINBBBB1201/housing-base",
+  },
+  {
     repo: "Rocket-Thrust-Test-Stand",
     contibutionDescription:
       "Led design, fabrication, and testing of a solid propellant rocket motor thrust test stand as COSMOS club president.",
@@ -37,7 +55,7 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "my-portfolio",
     contibutionDescription:
-      "This personal engineering portfolio, built with Next.js, TypeScript, and Tailwind CSS.",
+      "This AI and engineering portfolio, built with Next.js, TypeScript, and Tailwind CSS.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/my-portfolio",
   },
@@ -57,5 +75,6 @@ export const contributionsUnsorted: contributionsInterface[] = [
   },
 ];
 
-export const featuredContributions: contributionsInterface[] =
-  contributionsUnsorted.slice(0, 3);
+export const featuredContributions = ["COSMOS-TVC-Hopper", "jsl-project", "DAEMUN-III"].map(
+  (repo) => contributionsUnsorted.find((item) => item.repo === repo)!
+);

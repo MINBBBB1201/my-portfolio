@@ -4,7 +4,7 @@ export const academicStats = {
   gpaType: "Unweighted",
   gradeLevel: "Senior",
   expectedGraduation: "2027",
-  major: "Aviation, Aeronautics/Aerospace Science and Technology",
+  major: "Artificial Intelligence and related fields",
 };
 
 export interface HonorInterface {

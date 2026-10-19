@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 
 const renderContent = (tabVal: string) => {
   let projectArr = Projects;
-  if (tabVal === "personal") {
-    projectArr = projectArr.filter((val) => val.type === "Personal");
-  } else if (tabVal === "professional") {
-    projectArr = projectArr.filter((val) => val.type === "Professional");
+  if (tabVal === "ongoing") {
+    projectArr = projectArr.filter((val) => val.status === "In progress");
+  } else if (tabVal === "completed") {
+    projectArr = projectArr.filter((val) => val.status === "Completed");
   }
 
   return (
@@ -37,14 +37,14 @@ export default function ProjectsPage() {
       content: renderContent("all"),
     },
     {
-      value: "personal",
-      label: "Personal",
-      content: renderContent("personal"),
+      value: "ongoing",
+      label: "In progress",
+      content: renderContent("ongoing"),
     },
     {
-      value: "professional",
-      label: "Professional",
-      content: renderContent("professional"),
+      value: "completed",
+      label: "Completed",
+      content: renderContent("completed"),
     },
   ];
 

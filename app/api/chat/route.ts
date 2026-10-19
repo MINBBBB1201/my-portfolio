@@ -4,6 +4,7 @@ import { communityInvolvement } from "@/config/community";
 import { experiences } from "@/config/experience";
 import { academicStats, honors } from "@/config/honors";
 import { Projects } from "@/config/projects";
+import { siteConfig } from "@/config/site";
 
 const GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
 const FALLBACK_MODEL = "openai/gpt-oss-20b";
@@ -13,6 +14,7 @@ const requestSchema = z.object({
 
 // Use the published source data, never portfolio facts supplied by a visitor.
 const portfolioContext = JSON.stringify({
+  profile: { headline: siteConfig.headline, description: siteConfig.description },
   academics: academicStats,
   experience: experiences,
   honors,
@@ -20,6 +22,8 @@ const portfolioContext = JSON.stringify({
   projects: Projects.map((project) => ({
     name: project.companyName,
     summary: project.shortDescription,
+    status: project.status,
+    role: project.role,
     details: project.descriptionDetails,
     skills: project.techStack,
     website: project.websiteLink,

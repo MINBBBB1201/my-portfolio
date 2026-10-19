@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       title: project.companyName,
       description: project.shortDescription,
       url: `${siteConfig.url}/projects/${project.id}`,
-      images: [{ url: project.companyLogoImg }],
+      images: [{ url: project.companyLogoImg || siteConfig.ogImage }],
     },
   };
 }
@@ -56,12 +56,14 @@ export default async function Project({ params }: ProjectPageProps) {
         All Projects
       </Link>
       <div>
-        <time
-          dateTime={Date.now().toString()}
+        {project.startDate && <time
+          dateTime={project.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
           {formatDateFromObj(project.startDate)}
-        </time>
+        </time>}
+        {project.status && <p className="my-3 text-sm font-semibold text-primary">{project.status}</p>}
+        {project.role && <p className="mb-3 text-sm text-muted-foreground">{project.role}</p>}
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
           <div className="flex items-center">
