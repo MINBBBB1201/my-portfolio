@@ -45,6 +45,8 @@ test("an unavailable configured model falls back using server-owned portfolio fa
   assert.deepEqual(calls.map((call) => call.model), ["retired-model", "openai/gpt-oss-20b"]);
   assert.match(calls[1].messages[0].content, /Deputy Head of Technology/);
   assert.match(calls[1].messages[0].content, /3\.984/);
+  assert.match(calls[1].messages[0].content, /"github":"https:\/\/github.com\/MINBBBB1201"/);
+  assert.match(calls[1].messages[0].content, /"name":"Minchan Kim"/);
   assert.match(calls[1].messages[0].content, /PSYCHOFISH/);
   assert.doesNotMatch(calls[1].messages[0].content, /invented/);
   assert.equal((await res.json()).choices[0].message.content, "Deputy Head of Technology");

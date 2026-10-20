@@ -8,10 +8,9 @@ import DaemunCaseStudy from "@/components/projects/daemun-case-study";
 import ProjectDescription from "@/components/projects/project-description";
 import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
-import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 
 interface ProjectPageProps {
@@ -39,7 +38,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
-  let project = Projects.find((val) => val.id === projectId);
+  const project = Projects.find((val) => val.id === projectId);
   if (!project) {
     redirect("/projects");
   }
@@ -61,36 +60,18 @@ export default async function Project({ params }: ProjectPageProps) {
           dateTime={project.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
-          {formatDateFromObj(project.startDate)}
+          Started {new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" }).format(project.startDate)}
         </time>}
+        {project.period && <p className="text-sm text-muted-foreground">{project.period}</p>}
         {project.status && <p className="my-3 text-sm font-semibold text-primary">{project.status}</p>}
         {project.role && <p className="mb-3 text-sm text-muted-foreground">{project.role}</p>}
-        <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
-          {project.companyName}
-          <div className="flex items-center">
-            {project.githubLink && (
-              <CustomTooltip text="Link to the source code.">
-                <Link href={project.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
-                </Link>
-              </CustomTooltip>
-            )}
-            {project.websiteLink && (
-              <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
-                <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
-                </Link>
-              </CustomTooltip>
-            )}
-            {project.paperLink && (
-              <CustomTooltip text="Read the research paper (PDF).">
-                <Link href={project.paperLink} target="_blank">
-                  <Icons.research className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
-                </Link>
-              </CustomTooltip>
-            )}
-          </div>
-        </h1>
+        <h1 className="mt-2 font-heading text-3xl leading-tight sm:text-4xl lg:text-5xl">{project.companyName}</h1>
+        <p className="my-5 text-lg leading-relaxed text-muted-foreground">{project.shortDescription}</p>
+        <div className="mb-5 flex flex-wrap gap-3">
+          {project.githubLink && <Link href={project.githubLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.gitHub className="mr-2 h-4 w-4" />Source code</Link>}
+          {project.websiteLink && <Link href={project.websiteLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.externalLink className="mr-2 h-4 w-4" />Open project</Link>}
+          {project.paperLink && <Link href={project.paperLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.research className="mr-2 h-4 w-4" />Research paper</Link>}
+        </div>
         <ChipContainer textArr={project.category} />
         <div className="mt-4 flex space-x-4">
           <Link

@@ -99,7 +99,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                         {experience.position}
                       </h3>
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-primary/10 text-primary border border-primary/20 w-fit">
-                        {getDurationText(
+                        {experience.period ?? getDurationText(
                           experience.startDate,
                           experience.endDate
                         )}

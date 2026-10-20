@@ -14,6 +14,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
           <CustomTooltip icon={item.icon} text={item.username} key={ind}>
             <Link
               href={item.link}
+              aria-label={item.name}
               target="_blank"
               className={cn(
                 buttonVariants({

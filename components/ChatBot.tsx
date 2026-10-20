@@ -2,6 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const ChatMessage = dynamic(() => import("@/components/chat-message"));
 
 type Message = {
   role: "user" | "assistant";
@@ -73,7 +76,7 @@ export default function ChatBot() {
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       {isOpen && (
-        <div className="flex flex-col w-[90vw] max-w-md h-[420px] rounded-xl border border-border bg-background shadow-xl overflow-hidden">
+        <div className="flex flex-col w-[90vw] max-w-md h-[min(500px,75dvh)] rounded-xl border border-border bg-background shadow-xl overflow-hidden">
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
             <span className="text-sm font-semibold">Portfolio Chatbot</span>
             <button
@@ -93,13 +96,13 @@ export default function ChatBot() {
                 }`}
               >
                 <div
-                  className={`max-w-[80%] rounded-lg px-3 py-2 text-sm whitespace-pre-wrap ${
+                  className={`max-w-[95%] min-w-0 rounded-lg px-3 py-2 text-sm ${
                     m.role === "user"
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground"
                   }`}
                 >
-                  {m.content}
+                  {m.role === "assistant" ? <ChatMessage content={m.content} /> : <p className="whitespace-pre-wrap break-words">{m.content}</p>}
                 </div>
               </div>
             ))}
@@ -113,6 +116,7 @@ export default function ChatBot() {
             <div ref={scrollRef} />
           </div>
 
+          <p className="px-4 pb-2 text-xs text-muted-foreground">AI answers may be incomplete. Check the linked project pages.</p>
           <div className="flex items-center gap-2 border-t border-border p-3">
             <input
               value={input}
@@ -126,7 +130,7 @@ export default function ChatBot() {
             />
             <button
               onClick={handleSend}
-              disabled={isLoading}
+              disabled={isLoading || !input.trim()}
               className="rounded-md bg-primary px-3 py-2 text-sm text-primary-foreground disabled:opacity-50"
             >
               Send

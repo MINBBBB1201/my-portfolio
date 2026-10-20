@@ -19,14 +19,6 @@ export default function DaemunCaseStudy() {
               <h2 className="font-heading text-3xl">{copy.label}</h2>
               <p className="text-lg leading-relaxed">{copy.intro}</p>
             </section>
-            {copy.sections.map((section) => (
-              <section key={section.title} className="space-y-4">
-                <h2 className="font-heading text-2xl">{section.title}</h2>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="leading-relaxed">{paragraph}</p>
-                ))}
-              </section>
-            ))}
             <section className="space-y-6">
               <h2 className="font-heading text-3xl">{copy.galleryTitle}</h2>
               {[
@@ -39,6 +31,14 @@ export default function DaemunCaseStudy() {
                 </figure>
               ))}
             </section>
+            {copy.sections.map((section) => (
+              <section key={section.title} className="space-y-4">
+                <h2 className="font-heading text-2xl">{section.title}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="leading-relaxed">{paragraph}</p>
+                ))}
+              </section>
+            ))}
             <section className="space-y-3 rounded-lg border p-5">
               <h2 className="font-heading text-2xl">{copy.evidenceTitle}</h2>
               <p className="text-sm text-muted-foreground">{copy.evidenceNote}</p>

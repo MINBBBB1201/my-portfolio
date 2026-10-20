@@ -9,6 +9,7 @@ interface StudioLampProps {
   src: StaticImageData;
   alt: string;
   className?: string;
+  compact?: boolean;
 }
 
 /**
@@ -17,7 +18,7 @@ interface StudioLampProps {
  * bar itself (no arms, vents, or mount hardware) so it reads as a real,
  * compact fixture rather than an illustrated object.
  */
-export function StudioLamp({ src, alt, className }: StudioLampProps) {
+export function StudioLamp({ src, alt, className, compact = false }: StudioLampProps) {
   const [on, setOn] = useState(false);
   const [flicker, setFlicker] = useState(false);
 
@@ -104,7 +105,7 @@ export function StudioLamp({ src, alt, className }: StudioLampProps) {
       />
 
       {/* ---------- Portrait ---------- */}
-      <div className="relative z-10 mt-9 w-[15rem] sm:w-[17.5rem]">
+      <div className={cn("relative z-10 mt-9", compact ? "w-44 lg:w-52" : "w-[15rem] sm:w-[17.5rem]")}>
         <div
           className={cn(
             "relative overflow-hidden rounded-lg border transition-all",

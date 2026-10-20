@@ -54,7 +54,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             </div>
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-                {getDurationText(experience.startDate, experience.endDate)}
+                {experience.period ?? getDurationText(experience.startDate, experience.endDate)}
               </span>
             </div>
           </div>

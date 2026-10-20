@@ -16,6 +16,6 @@ export function getDurationText(
 
 export function experienceSortDate(experience: ExperienceInterface): number {
   if (experience.endDate === "Present") return Number.MAX_SAFE_INTEGER;
-  if (experience.endDate === "Completed") return experience.startDate?.getTime() ?? 0;
+  if (experience.endDate === "Completed") return experience.startDate?.getTime() ?? (experience.startMonth ? Date.parse(`${experience.startMonth}-01T00:00:00Z`) : 0);
   return experience.endDate.getTime();
 }

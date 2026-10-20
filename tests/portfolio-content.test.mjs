@@ -16,8 +16,10 @@ function data(file) {
 
 test("selected AI projects have explicit state and team roles without guessed dates", () => {
   const { Projects, featuredProjects } = data("config/projects.ts");
-  assert.deepEqual(Array.from(featuredProjects, (p) => p.id), ["cosmos-tvc-hopper", "ciws-drone-tracking-turret", "jsl-logistics"]);
-  assert.deepEqual(Array.from(Projects.slice(0, 3), (p) => p.id), Array.from(featuredProjects, (p) => p.id));
+  assert.deepEqual(Array.from(featuredProjects, (p) => p.id), ["daemun-iii", "cosmos-tvc-hopper", "jsl-logistics"]);
+  assert.ok(featuredProjects.some((p) => p.status === "Completed"));
+  assert.ok(featuredProjects.some((p) => p.status === "In progress"));
+  for (const project of featuredProjects) assert.ok(project.role);
   for (const project of Projects) assert.ok(["In progress", "Completed"].includes(project.status));
   assert.equal(Projects.find((p) => p.id === "cosmos-tvc-hopper").endDate, undefined);
   assert.equal(Projects.find((p) => p.id === "jsl-logistics").startDate, undefined);
@@ -31,6 +33,9 @@ test("completed experience is not represented as current, and unknown dates stay
   const mintech = experiences.find((e) => e.id === "mintech");
   assert.equal(mintech.endDate, "Completed");
   assert.equal(mintech.startDate, undefined);
+  assert.equal(mintech.startMonth, "2026-08");
+  assert.equal(mintech.period, "August to September 2026 (one month)");
+  assert.equal(experiences.find((e) => e.id === "jsl-logistics").period, "August 2026 to present");
   assert.equal(mintech.achievements.length, 0);
   assert.equal(experiences.find((e) => e.id === "jsl-logistics").endDate, "Present");
 });
