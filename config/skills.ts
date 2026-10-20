@@ -11,77 +11,77 @@ export const skillsUnsorted: skillsInterface[] = [
   {
     name: "Next.js",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "Build pages, server routes, and shared layouts for Tern, DAEMUN III, and this portfolio.",
     rating: 5,
     icon: Icons.nextjs,
   },
   {
     name: "TypeScript",
     description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "Define data types and check the interfaces between pages, APIs, and shared packages.",
     rating: 5,
     icon: Icons.typescript,
   },
   {
     name: "React",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+      "Build reusable components for search results, dashboards, forms, and chat interfaces.",
     rating: 4,
     icon: Icons.react,
   },
   {
     name: "React Three Fiber",
     description:
-      "Build interactive 3D scenes and visualizations declaratively on top of Three.js and React.",
+      "Create Tern's 3D landing-page scenes inside the React component tree.",
     rating: 4,
     icon: Icons.threejs,
   },
   {
     name: "GSAP",
     description:
-      "Choreograph smooth scroll-driven and interactive animations with ScrollTrigger.",
+      "Coordinate scroll-based camera movement and transitions in Tern's landing page.",
     rating: 3,
     icon: Icons.gsap,
   },
   {
     name: "Python",
     description:
-      "Analyze data, automate workflows, and prototype logic across engineering and software projects.",
+      "Work with computer-vision tracking scripts, engineering data analysis, and the COSMOS reinforcement-learning project.",
     rating: 3,
     icon: Icons.python,
   },
   {
     name: "System Architecture",
     description:
-      "Design maintainable, scalable structures for full-stack applications and hardware systems alike.",
+      "Connect web applications, APIs, databases, and the sensing and control parts of engineering projects.",
     rating: 3,
     icon: Icons.settings,
   },
   {
     name: "APIs",
     description:
-      "Integrate and design REST APIs to connect real-time data sources into applications.",
+      "Connect flight search, weather, AI providers, and document workflows to web interfaces.",
     rating: 4,
     icon: Icons.link,
   },
   {
     name: "Tailwind CSS",
     description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
+      "Style responsive pages and reusable components across my web projects.",
     rating: 4,
     icon: Icons.tailwindcss,
   },
   {
     name: "Arduino",
     description:
-      "Prototype and control hardware systems with microcontrollers for real-time sensing and actuation.",
+      "Translate camera-based tracking into servo movement and collect sensor data for physical experiments.",
     rating: 3,
     icon: Icons.arduino,
   },
   {
     name: "FreeCAD",
     description:
-      "Design parametric CAD models for fabrication, from wind tunnels to structural components.",
+      "Model wind-tunnel components and mechanical parts with dimensions that can be revised before fabrication.",
     rating: 3,
     icon: Icons.freecad,
   },

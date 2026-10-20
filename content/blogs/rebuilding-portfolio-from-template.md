@@ -1,29 +1,32 @@
 ---
-title: "From Template to Real Site: Rebuilding My Portfolio's Content"
+title: "Rebuilding My Portfolio's Content and Data"
 date: "2026-07-30"
-description: "Notes on turning a cloned open-source portfolio template into an actual application hub — replacing placeholder content, pulling real project data, and fixing the bugs that came with it."
+description: "Replacing template content, handling incomplete project data, and keeping the pages and chatbot connected to the same records."
 tags: ["Next.js", "TypeScript"]
-readingTime: 4
+readingTime: 3
 featured: false
 ---
 
-I started this site from an open-source Next.js portfolio template rather than building the layout from zero — the goal was to spend my time on content and the Tern devlog, not on rebuilding a component library that already existed. That trade-off worked, but it came with a cost I underestimated: a cloned template doesn't just give you structure, it gives you someone else's entire identity baked into the data layer.
+*Updated October 20, 2026.*
 
-## The cleanup
+I started this site from an open-source Next.js portfolio template. It gave me a layout and components, but its project records, work history, and metadata still described the original author. I needed to replace those records before the site could represent my own work.
 
-Every config file — projects, experience, skills, site metadata, even the blog posts themselves — was still populated with the original author's real work history, GitHub links, and bio. None of it was placeholder text; it was someone else's actual resume, which meant a careless copy-paste could have put another person's professional history on an application document. Going through it meant rebuilding, file by file:
+## Updating the data behind the pages
 
-- **Projects** — swapped a list of unrelated web-dev projects for the ones that are actually mine: Tern, and the COSMOS aerospace builds (thrust test stand, wind tunnel, drone tracking turret, RC aircraft).
-- **Experience and skills** — pulled directly from my own LinkedIn profile rather than reusing the template's fields, so the data was accurate rather than just restyled.
-- **Site metadata, structured data (JSON-LD), and the PWA manifest** — all still had the original author's name and job title hardcoded in places the config files didn't cover.
+Most of the content lives in `config/*.ts`: projects, experience, skills, honors, and community activities. I replaced the template records with my own projects and checked names, roles, dates, and links against my activity notes and project files.
 
-## Bugs that came along with the template
+Some identity information was outside the config files. The homepage, structured data, metadata, and web app manifest also needed attention. A correct heading on the page did not mean every search preview or machine-readable record was correct.
 
-A few things broke or looked wrong along the way, worth noting for anyone doing the same thing:
+## Letting incomplete records stay incomplete
 
-- Components that render an image or link from config data need to handle the case where that field is legitimately empty — a project without a public repo yet, for example. A few components rendered `<Image src="">` or `<Link href="">` unconditionally, which crashes or throws a console error.
-- A "star this repo" badge and a "like this template?" card were both wired to the original template's own repository — harmless in the original context, actively confusing on a personal site.
+A project may have no public image or exact start date. Components need to handle those cases without an empty image URL, broken link, or invented value.
 
-## Where the data came from
+The project cards now show a status and, where available, my role. The project list separates ongoing and completed work. The homepage selects featured items by ID, so changing the order of the full data array does not silently change every preview.
 
-Rather than writing project descriptions from memory, I pulled real detail — dates, metrics, project descriptions — from my own LinkedIn profile, so the site reflects what's already documented elsewhere instead of introducing a second, slightly-different version of the same facts.
+Experience dates use a shared formatter. An internship with a confirmed completion status and no exact dates can display “Completed.” That is more useful than filling in a month just to satisfy the layout.
+
+## One set of records for pages and chat
+
+The portfolio assistant loads the published configuration on the server. That keeps its source material connected to the same project and experience records visitors can read on the site.
+
+Content checks cover project status, selected homepage items, and missing dates. They help catch inconsistencies in the data; they cannot establish that a biographical claim is true. That still requires checking the underlying records.

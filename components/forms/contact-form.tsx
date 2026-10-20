@@ -22,9 +22,9 @@ const formSchema = z.object({
   name: z.string().min(3, {
     message: "Name must contain at least 3 characters.",
   }),
-  email: z.string().email("Please enter a valid email."),
+  email: z.string().email("Enter a valid email address."),
   message: z.string().min(10, {
-    message: "Please write something more descriptive.",
+    message: "Write at least 10 characters.",
   }),
   social: z.string().url().optional().or(z.literal("")),
 });
@@ -58,9 +58,9 @@ export function ContactForm() {
       if (response.status === 200) {
         form.reset();
         storeModal.onOpen({
-          title: "Thankyou!",
+          title: "Message sent",
           description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
+            "Thanks for your message. I'll reply to the email address you provided.",
           icon: Icons.successAnimated,
         });
       } else {
@@ -135,9 +135,9 @@ export function ContactForm() {
           name="social"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Social (optional)</FormLabel>
+              <FormLabel>Profile link (optional)</FormLabel>
               <FormControl>
-                <Input placeholder="Link for social account" {...field} />
+                <Input placeholder="LinkedIn, GitHub, or another profile URL" {...field} />
               </FormControl>
               {/* <FormDescription>
                                 This is your public display name.
@@ -146,7 +146,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Send message</Button>
       </form>
     </Form>
   );

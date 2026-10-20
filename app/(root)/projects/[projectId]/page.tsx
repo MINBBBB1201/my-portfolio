@@ -126,7 +126,7 @@ export default async function Project({ params }: ProjectPageProps) {
         />
       )}
 
-      {project.id === "daemun-iii" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">Local source preview with bundled default content. The conference project is completed; this image is not a live deployment.</p>}
+      {project.id === "daemun-iii" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">Conference-site preview running locally with bundled content. DAEMUN III is completed; the image shows the interface, not a current live service.</p>}
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
@@ -137,7 +137,7 @@ export default async function Project({ params }: ProjectPageProps) {
 
       {project.id === "daemun-iii" ? <DaemunCaseStudy /> : <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Description
+          About the project
         </h2>
         {/* {<project.descriptionComponent />} */}
         <ProjectDescription
@@ -167,7 +167,7 @@ export default async function Project({ params }: ProjectPageProps) {
 
       {project.pagesInfoArr.length > 0 && <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
+          Project gallery
         </h2>
         {project.pagesInfoArr.map((page, ind) => (
           <div key={ind}>
