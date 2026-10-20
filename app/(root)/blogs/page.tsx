@@ -45,7 +45,7 @@ export default function BlogsPage() {
   const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${siteConfig.authorName} — Blog`,
+    name: `${siteConfig.authorName}: Blog`,
     description: pagesConfig.blogs.metadata.description,
     url: `${siteConfig.url}/blogs`,
     isPartOf: {
@@ -129,7 +129,7 @@ export default function BlogsPage() {
               No posts yet
             </h3>
             <p className="text-muted-foreground text-sm">
-              Check back soon — posts are coming.
+              No posts have been published yet.
             </p>
           </div>
         ) : (

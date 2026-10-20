@@ -1,32 +1,32 @@
 ---
-title: "Building Tern: A Flight Booking App with Next.js, Duffel, and React Three Fiber"
+title: "Building Tern: Flight Search, Booking, and 3D Interfaces"
 date: "2026-08-15"
-description: "How I built Tern — a flight search app that compares fares by price, duration, and delay risk — from the Duffel API integration to a custom glassmorphism design system and 3D scroll interactions."
+description: "How I connected Duffel flight offers, multilingual booking pages, and a scroll-based 3D landing page in Tern."
 tags: ["Next.js", "TypeScript", "React Three Fiber", "GSAP", "APIs"]
-readingTime: 5
+readingTime: 3
 featured: true
 ---
 
-Tern started from a simple annoyance: every flight search tool ranks results by price alone, even when a slightly more expensive flight is an hour shorter or far less likely to be delayed. I wanted a search experience that surfaced all three factors at once.
+*Updated October 20, 2026.*
 
-## Why the Duffel API
+Tern began as a flight-booking concept in Mechanics Club. I continued it as a personal project because I wanted to compare a fare with the time and connections that came with it. That meant working on the search interface, the booking flow, and the information around each itinerary.
 
-Duffel gives direct access to live fare and schedule data without needing individual airline integrations. The trade-off is that the raw response is dense — a single search returns nested offer, slice, and segment objects that needed to be flattened into something a UI component could actually render (layover duration, airline logos, per-leg delay signals).
+## Turning flight offers into readable results
 
-## Civil Twilight — the design system
+Duffel supplies the flight offers. Its response contains nested offers, slices, and segments, while a traveler needs a readable price, departure time, journey duration, and connection summary. I mapped that data into flight cards with airline details and layover badges, and added airport weather alongside the itinerary.
 
-Rather than reach for a generic component library, I built a small custom design system called **Civil Twilight**: a glassmorphism aesthetic (frosted panels, soft gradients evoking the sky at dusk) applied consistently across search results, flight cards, and the booking flow. Keeping it as a real system — shared tokens for blur, opacity, and border treatment — made it much faster to add new screens without the UI drifting.
+Tern also includes a schedule-risk score. It uses rules for the number of stops, late departures, and short connections. It is a comparison aid, not a trained prediction model or a measured probability that a flight will be delayed.
 
-## From Three.js to React Three Fiber
+## Civil Twilight
 
-The landing page includes a 3D scene that reacts to scroll. I started with raw Three.js, but manually managing the render loop and scene graph inside a React component fought the framework at every step. Migrating to **React Three Fiber** let the 3D scene live inside the normal React tree — state, props, and hooks all worked as expected — and pairing it with **GSAP ScrollTrigger** made scroll-driven camera movement and object transitions dramatically smoother than my original manual scroll-listener approach.
+I called the visual system Civil Twilight. It uses translucent panels, soft gradients, and shared styles for blur, opacity, and borders. Reusing those styles across search results and booking screens gives new pages a consistent appearance.
 
-## Small details that mattered
+The landing page has a 3D scene tied to scrolling. I moved it from raw Three.js to React Three Fiber so the scene could use React's component and state structure. GSAP ScrollTrigger coordinates the camera movement and transitions with the page.
 
-- **Real-time airport weather and layover badges** — small signals, but they're exactly the kind of context that's normally buried in a fifth click.
-- **next-intl for English/Korean support** — since the people most likely to use this are bilingual, this wasn't optional.
-- **Instagram Story polls for user research** — before building a feature, I ran quick polls asking what people actually cared about when picking a flight. It's not a formal research method, but it kept me from building things nobody wanted.
+## Language through the booking flow
 
-## What's next
+The app now has English, Korean, Japanese, and Chinese routes through next-intl. Language support includes dates, number formatting, and the return from the external booking flow. A traveler returning to the app should keep the language they selected before leaving it.
 
-Tern is live at [flytern.site](https://flytern.site). The current focus is tightening the delay-risk model and cleaning up the codebase before making the repository public.
+I also used informal Instagram Story polls to help prioritize features. I treated those responses as informal feedback, rather than a representative survey.
+
+Tern is available at [flytern.site](https://flytern.site), and development is ongoing. The current code is in the public [Tern repository](https://github.com/MINBBBB1201/Tern).

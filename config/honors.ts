@@ -16,7 +16,7 @@ export interface HonorInterface {
 
 export const honors: HonorInterface[] = [
   {
-    title: "Aerospace Work Experience — Airbus",
+    title: "Aerospace Work Experience with Airbus",
     issuer: "Springpod",
     date: "March 2026",
     type: "Certification",
@@ -28,39 +28,27 @@ export const honors: HonorInterface[] = [
     type: "Certification",
   },
   {
-    title: "SAT",
-    issuer: "The College Board",
-    date: "March 2026",
-    type: "Certification",
-  },
-  {
-    title: "TOEFL iBT",
-    issuer: "ETS",
-    date: "July 2026",
-    type: "Certification",
-  },
-  {
     title: "1st Place, School Science Fair",
     issuer: "Qingdao Daewon School",
-    date: "2025 – 2026",
+    date: "2025 to 2026",
     type: "Award",
   },
   {
     title:
-      '1st Place (Physics Division), School Research Paper Competition — "Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft"',
+      '1st Place (Physics Division), School Research Paper Competition: "Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft"',
     issuer: "Qingdao Daewon School",
-    date: "G11, 2025 – 2026",
+    date: "G11, 2025 to 2026",
     type: "Research",
   },
   {
     title: "Planning Department Vice President, Student Council",
     issuer: "Qingdao Daewon School",
-    date: "2025 – March 2026",
+    date: "2025 to March 2026",
     type: "Leadership",
   },
   {
     title:
-      '2nd Place, School-wide Writing Contest — Top Excellence Award, prose essay on "What I\'d Want to Tell My 8-Year-Old Self"',
+      '2nd Place, School-wide Writing Contest: Top Excellence Award, prose essay on "What I\'d Want to Tell My 8-Year-Old Self"',
     issuer: "Qingdao Daewon School",
     date: "G10, 2024",
     type: "Award",

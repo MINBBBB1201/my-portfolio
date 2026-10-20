@@ -15,24 +15,24 @@ type PagesConfig = {
 export const pagesConfig: PagesConfig = {
   home: {
     title: "Home",
-    description: "Welcome to my portfolio website.",
+    description: "AI, software, and engineering projects by Minchan Kim.",
     metadata: {
       title: "Home",
-      description: "Minchan Kim's portfolio website.",
+      description: "Minchan Kim's projects, internships, and school activities.",
     },
   },
   skills: {
     title: "Skills",
-    description: "Tools I use across AI-related work, software development, and engineering projects.",
+    description: "The tools I use and how I use them in my projects.",
     metadata: {
       title: "Skills",
       description:
-        "Minchan Kim's key skills that define his professional identity.",
+        "Tools Minchan Kim uses for AI projects, web development, and engineering.",
     },
   },
   projects: {
     title: "Projects",
-    description: "Selected work in AI, software, and engineering, with ongoing development and completed contributions shown separately.",
+    description: "AI experiments, web applications, and engineering builds. Each project includes its current status and my role.",
     metadata: {
       title: "Projects",
       description:
@@ -41,7 +41,7 @@ export const pagesConfig: PagesConfig = {
   },
   contact: {
     title: "Contact",
-    description: "Let's connect and explore collaborations.",
+    description: "Have a question about a project or want to work together? Send me a message.",
     metadata: {
       title: "Contact",
       description: "Contact Minchan Kim.",
@@ -49,10 +49,10 @@ export const pagesConfig: PagesConfig = {
   },
   contributions: {
     title: "Contributions",
-    description: "Open-source projects and community involvement.",
+    description: "Repositories I build, contribute to, or explore. Each entry describes my involvement.",
     metadata: {
       title: "Contributions",
-      description: "Minchan Kim's open-source projects and community involvement.",
+      description: "Minchan Kim's software and engineering repositories, with his role in each.",
     },
   },
   resume: {
@@ -70,12 +70,12 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Blogs",
       description:
-        "Minchan Kim's devlogs — building Tern and other engineering projects.",
+        "Minchan Kim's development notes on Tern, AI integrations, and engineering projects.",
     },
   },
   experience: {
     title: "Experience",
-    description: "Internships, team contributions, and engineering leadership behind my interest in AI.",
+    description: "My work in internships, school clubs, and software teams.",
     metadata: {
       title: "Experience",
       description:
@@ -85,7 +85,7 @@ export const pagesConfig: PagesConfig = {
   community: {
     title: "Community & Leadership",
     description:
-      "Student council, peer support, and school community involvement beyond engineering.",
+      "Student council, peer support, Model UN, and activities outside my technical projects.",
     metadata: {
       title: "Community & Leadership",
       description:

@@ -4,7 +4,7 @@ export const siteConfig = {
   authorName: "Minchan Kim",
   username: "MINBBBB1201",
   description:
-    "Minchan Kim - A high school student exploring artificial intelligence through computer vision, reinforcement learning, software, and engineering projects. Explore ongoing work, completed projects, and internship experience.",
+    "Minchan Kim is a high school senior interested in AI. His portfolio covers computer vision, reinforcement learning, web applications, and engineering projects, alongside internships and school activities.",
   url: "https://minchankim-portfolio.vercel.app",
   links: {
     linkedin: "https://www.linkedin.com/in/minchan-kim-6490313ba/",

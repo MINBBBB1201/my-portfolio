@@ -87,9 +87,9 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Exploring AI through computer vision, reinforcement learning,
-              and software that connects intelligent systems with real
-              engineering problems.
+              Working on computer vision, reinforcement learning, and
+              AI tools, with engineering projects that let me test ideas
+              in software and hardware.
             </p>
           </div>
 
@@ -143,19 +143,19 @@ export default function IndexPage() {
             About
           </AnimatedText>
           <AnimatedText as="p" delay={0.2} className="text-muted-foreground leading-relaxed">
-            I'm a 12th grader at Qingdao Daewon School interested in studying
-            artificial intelligence. I explore how AI systems perceive the
-            world, make decisions, and interact with physical systems. My work
-            spans a computer-vision tracking project and ongoing reinforcement
-            learning and control work with COSMOS, the engineering club I founded.
+            I'm a senior at Qingdao Daewon School planning to study AI.
+            My projects range from a camera-based tracking rig to an AI
+            assistant for a Model UN conference. In COSMOS, the engineering
+            club I founded, our team is developing an EDF hopper to compare
+            reinforcement learning with conventional control.
           </AnimatedText>
           <AnimatedText as="p" delay={0.3} className="text-muted-foreground leading-relaxed">
-            Engineering gives me a way to test ideas beyond a model or a screen.
-            I am currently working on the COSMOS TVC-Hopper project and a JSL
-            Logistics internship project. I also contributed to the DAEMUN III
-            conference platform and built Tern, a flight-booking web app.
-            These projects connect my interest in AI with software, robotics,
-            and the practical constraints of building something people can use.
+            I'm also developing logistics tools during my JSL internship,
+            including document-based AI support and a 3D cargo planner.
+            I co-developed DAEMUN III with Junwon Kim and continue to build
+            Tern, my flight-search and booking app. Each project gives me
+            a different problem to work through, from deciding which information
+            an AI answer can use to checking what a physical test actually measured.
           </AnimatedText>
         </div>
       </AnimatedSection>

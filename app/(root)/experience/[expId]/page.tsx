@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   return {
     title: `${experience.position} at ${experience.company} | Experience`,
-    description: `Detailed information about my role as ${experience.position} at ${experience.company}.`,
+    description: experience.description[0],
     alternates: {
       canonical: `${siteConfig.url}/experience/${expId}`,
     },
@@ -60,7 +60,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Role Summary
+              My role
             </h3>
             <ul className="space-y-3">
               {experience.description.map((desc, idx) => (
@@ -79,12 +79,12 @@ export default async function ExperienceDetailPage({
     },
     {
       value: "achievements",
-      label: "Achievements",
+      label: "Work highlights",
       content: (
         <AnimatedSection delay={0.3}>
           <div>
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Key Achievements
+              Work highlights
             </h3>
             <ul className="space-y-3">
               {experience.achievements.map((achievement, idx) => (
@@ -112,8 +112,7 @@ export default async function ExperienceDetailPage({
             </h3>
             <ChipContainer textArr={experience.skills} />
             <p className="mt-4 text-sm text-muted-foreground">
-              These are the primary technologies and skills utilized during my
-              time at {experience.company}.
+              Tools I used at {experience.company}.
             </p>
           </div>
         </AnimatedSection>

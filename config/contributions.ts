@@ -8,19 +8,19 @@ export interface contributionsInterface {
 export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "COSMOS-TVC-Hopper",
-    contibutionDescription: "Ongoing COSMOS team project connecting reinforcement-learning control, simulation, avionics, and an EDF test platform. Physical validation remains in progress.",
+    contibutionDescription: "Coordinate an ongoing COSMOS team project comparing learned and conventional control for an EDF hopper. Simulation calibration and physical validation are in progress.",
     repoOwner: "COSMOS-Aero-Engineering",
     link: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
   },
   {
     repo: "jsl-project",
-    contibutionDescription: "Ongoing internship work on a logistics platform with AI-assisted support and inspection tools, operational workflows, and website development.",
+    contibutionDescription: "Develop logistics staff tools during my internship: document-based AI support, photo-assisted inspection, cargo-loading visualization, and shipment interfaces.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/jsl-project",
   },
   {
     repo: "housing-base",
-    contibutionDescription: "Supporting engineering archive: laptop base-cover CAD, measurements, research, and verification records.",
+    contibutionDescription: "Laptop base-cover CAD project with dimensional measurements, design research, and verification records.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/housing-base",
   },
@@ -41,14 +41,14 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "Tern",
     contibutionDescription:
-      "Flight booking web app comparing fares, routes, and delay risk — built with Next.js, the Duffel API, and React Three Fiber.",
+      "Build Tern, a flight-search and booking app with fare comparisons, route details, and a rule-based schedule-risk score.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/Tern",
   },
   {
     repo: "CIWS-drone-tracking-turret",
     contibutionDescription:
-      "Built an automated dual-turret system that detects and tracks moving drone targets using YOLOv5 and Arduino-driven servos.",
+      "Built a camera-and-servo tracking rig with YOLOv5 experiments and a separate color-tracking dual-turret demonstration.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
   },
@@ -69,7 +69,7 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "DAEMUN-III",
     contibutionDescription:
-      "Co-developed the full DAEMUN III platform with Junwon Kim: the public website, Roger AI assistant with context grounding and streaming, shared backend and admin tools, versioned submissions, deployment, and document diagnostics.",
+      "Co-developed DAEMUN III with Junwon Kim, including Roger AI support, conference pages, organizer tools, versioned submissions, and deployment.",
     repoOwner: "junwonkim07",
     link: "https://github.com/junwonkim07/DAEMUN-III",
   },

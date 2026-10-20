@@ -39,20 +39,20 @@ export const Projects: ProjectInterface[] = [
     category: ["Reinforcement Learning", "Aerospace Engineering", "Hardware/Robotics"],
     status: "In progress",
     role: "COSMOS Founder & President; project coordination",
-    shortDescription: "An ongoing COSMOS project connecting reinforcement learning, simulation, and an EDF-powered attitude-control test platform. The team is developing comparisons with conventional controllers; physical validation is still in progress.",
+    shortDescription: "An ongoing COSMOS project comparing reinforcement learning with conventional attitude control for an electric-ducted-fan hopper. We are building the simulation and hardware; physical validation is still in progress.",
     githubLink: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
     techStack: ["Python", "PyTorch", "FreeCAD", "System Architecture"],
     pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [
-        "As COSMOS founder and president, I coordinate an ongoing team project exploring how learned control policies can interact with a physical engineering system.",
-        "The team is developing an EDF-powered hopper with thrust-vectoring vanes, a simulation environment, and a web interface for comparing and replaying controller behavior. The research question is whether reinforcement learning offers useful differences from conventional PID/LQR control under comparable conditions, not an assumption that it is better.",
-        "The repository includes a PPO training pipeline and simulation checks. Some physical parameters are provisional, so current simulation runs are pipeline-development evidence, not validated real-world flight performance.",
+        "I coordinate TVC-Hopper as founder and president of COSMOS. Our team is building a small electric-ducted-fan (EDF) hopper whose four exhaust vanes control its attitude. The project asks how a learned controller compares with conventional control on the same physical task.",
+        "The main track combines a PPO reinforcement-learning pipeline, a simulation environment, avionics, and a web interface for comparing and replaying controller behavior. Planned comparisons with PID/LQR use common test conditions and measures such as recovery time, overshoot, and steady-state error.",
+        "An extension explores policy networks with connectivity inspired by the fruit-fly connectome, alongside a shuffled-network control. Some simulator constants still need physical measurements. Calibration and hardware integration must come before conclusions about controller performance.",
       ],
       bullets: [
-        "Connect mechanical design, avionics, simulation, and software work across the club team.",
-        "Develop controller comparisons using shared test conditions and measures such as recovery time, overshoot, and steady-state error.",
-        "Continue hardware integration and measurement before drawing conclusions about physical performance.",
+        "Coordinate the mechanical, avionics, simulation, and software work across the club team.",
+        "Use shared evaluation code to compare controllers under the same disturbances and measurement definitions.",
+        "Develop reproducible setup instructions and simulation checks so teammates can work with the same environment.",
       ],
     },
   },
@@ -63,11 +63,9 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Computer Vision", "Hardware/Robotics"],
     shortDescription:
-      "Engineered an automated Close-In Weapon System (CIWS) style turret that autonomously detects and tracks moving drone targets.",
+      "Built a science-fair tracking rig with a camera, Python, and Arduino-driven servos. The project includes YOLOv5 detection experiments and a color-tracking dual-turret demonstration.",
     githubLink: "https://github.com/MINBBBB1201/CIWS-drone-tracking-turret",
     techStack: ["Arduino", "Python", "System Architecture"],
-    startDate: new Date("2025-01-01"), // TODO: 정확한 기간 확인
-    endDate: new Date("2025-06-01"), // TODO: 정확한 기간 확인
     companyLogoImg:
       "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
     pagesInfoArr: [
@@ -96,7 +94,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Dual-Turret Tracking Demo",
         description:
-          "Final dual-turret rig with battery power, running a live OpenCV/YOLO-based tracking script that follows a target in real time and drives both turrets' servo angles.",
+          "The assembled dual-turret rig and its tracking demonstration. The color-tracking script drives one turret toward the detected position and the second toward a fixed offset, making the difference visible.",
         imgArr: [
           "/projects/ciws-drone-tracking-turret/09-dual-turret-assembly.jpg",
           "/projects/ciws-drone-tracking-turret/10-dual-turret-battery.jpg",
@@ -106,13 +104,13 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "Designed and engineered an automated turret system inspired by Close-In Weapon Systems (CIWS), built to autonomously detect and follow moving drone targets.",
-        "Built up from a single-servo pan-tilt prototype to a dual-turret rig, driven by an OpenCV/YOLO-based Python vision pipeline running on an Arduino-controlled servo mount.",
+        "I built a camera-based tracking system for a school science-fair project. Python turns a target's position in the image into pan and tilt angles, then sends them over serial to Arduino-controlled servos.",
+        "The project grew from a single pan-tilt mount into a dual-turret demonstration. I worked with YOLOv5 object detection and a separate HSV color-tracking mode. In the dual color-tracking mode, one turret follows the detected position while the other follows a fixed offset; that offset demonstrates a leading target without estimating its future motion.",
       ],
       bullets: [
-        "Developed real-time tracking algorithms and targeting logic using OpenCV and a YOLO object-detection model.",
-        "Integrated hardware control systems with an Arduino microcontroller to process real-time positioning data and drive dual pan-tilt turrets.",
-        "Debugged environment and dependency issues (PyTorch model loading, missing packages) to get the vision pipeline running reliably end-to-end.",
+        "Used OpenCV to read camera frames, locate a target, and map image coordinates to servo angles.",
+        "Connected Python tracking scripts to Arduino over serial and smoothed angle changes to reduce abrupt servo movement.",
+        "Worked through Python environment and PyTorch model-loading issues; added scripts to log tracking coordinates and analyze error and frame rate.",
       ],
     },
   },
@@ -123,20 +121,20 @@ export const Projects: ProjectInterface[] = [
     category: ["AI & Machine Learning", "Full Stack", "UI/UX"],
     status: "In progress",
     role: "Intern; website and software development",
-    shortDescription: "Ongoing internship work on a logistics platform with retrieval-backed support, image-assisted damage inspection, and operational web tools. A separate 3D design prototype supports the public-facing site redesign.",
+    shortDescription: "Ongoing JSL internship work on a logistics platform: document-based AI support, photo-assisted damage review, a 3D cargo-loading planner, and shipment and trade-document tools.",
     githubLink: "https://github.com/MINBBBB1201/jsl-project",
     techStack: ["Next.js", "Typescript", "Node.js", "MongoDB"],
     pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [
-        "During my ongoing JSL internship, I am working on a logistics website and software platform, connecting frontend design with backend application structure.",
-        "The codebase includes a retrieval-backed support chatbot, image-assisted damage-inspection endpoints, shipment workflows, and trade-document tools. It uses Next.js and TypeScript with an Express and MongoDB backend. The internship and integration work are ongoing; code presence is not a claim of production performance.",
-        "A separate design-prototype archive contains reproducible 3D scene and Blender rendering work for a road-to-sea-to-air website sequence. These are design and motion studies, not finished production integration or measured business outcomes.",
+        "During my JSL internship, I am developing a logistics platform with a Next.js and TypeScript frontend and an Express and MongoDB backend. My work covers tools for staff as well as the public website. Development and integration are ongoing.",
+        "For the support chatbot, the backend retrieves relevant knowledge-base documents, supplies them to the model, and asks it to cite the document titles. Korean query expansion handles common word endings, and marked sample documents are excluded from retrieval. When information is missing, the assistant is directed to refer the question to the responsible staff. A separate image-review workflow returns structured damage descriptions for human review.",
+        "The 3D cargo planner places boxes within container dimensions while checking rotation, support, and payload constraints. It also checks the resulting center of gravity and flags imbalance; it does not optimize the load for balance. Other work includes shipment interfaces, versioned trade documents, and multilingual pages. The public-site redesign includes separate Blender motion studies of road, sea, and air transport.",
       ],
       bullets: [
-        "Develop the website's page structure, visual design, and user interfaces.",
-        "Connect AI-assisted support and inspection interfaces with logistics workflows.",
-        "Develop multilingual pages and a 3D visual direction while preserving the existing application contracts.",
+        "Build staff interfaces that connect AI-assisted tools with shipment and document workflows.",
+        "Keep retrieved documents and AI-generated inspection suggestions visible for staff to review.",
+        "Develop cargo-loading visualization and public-site motion studies alongside the existing application.",
       ],
     },
   },
@@ -152,7 +150,7 @@ export const Projects: ProjectInterface[] = [
     techStack: ["Next.js", "Typescript", "PostgreSQL", "APIs", "Vercel", "Docker", "CI/CD", "System Architecture"],
     companyLogoImg: "/projects/daemun-iii/01-conference-preview.webp",
     pagesInfoArr: [],
-    shortDescription: "Co-developed DAEMUN III with Junwon Kim: a conference website, source-grounded AI assistant, organizer dashboard, and delegate submission platform, from shared backend architecture to deployment and diagnostics.",
+    shortDescription: "Co-developed DAEMUN III with Junwon Kim: a conference website, AI assistant using conference information, organizer dashboard, and delegate submission platform, from shared backend architecture to deployment and diagnostics.",
     descriptionDetails: {
       paragraphs: [
         "As Deputy Head of Technology, I co-developed the full DAEMUN III platform with Junwon Kim, working across the public website, Roger AI assistant, Hono API, PostgreSQL data model, organizer dashboard, and delegate submissions.",
@@ -172,23 +170,22 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Full Stack", "Web Dev", "UI/UX"],
     shortDescription:
-      "Flight booking web app comparing lowest fares, fastest routes, and delay risk, built with Next.js, the Duffel API, and React Three Fiber.",
+      "A flight-search and booking app that compares fares and journey duration, with weather, layover details, and a rule-based schedule-risk score.",
     websiteLink: "https://flytern.site",
     githubLink: "https://github.com/MINBBBB1201/Tern",
     techStack: ["Next.js", "Typescript", "React Three Fiber", "GSAP", "APIs"],
     startDate: new Date("2026-03-01"),
-    endDate: new Date("2026-08-15"),
     companyLogoImg: "/projects/tern/logo.png",
     pagesInfoArr: [],
     descriptionDetails: {
       paragraphs: [
-        "Tern is a flight booking platform that compares fares by more than just price — factoring in trip duration and delay risk — built with Next.js, the Duffel API, and React Three Fiber.",
-        "Designed and implemented \"Civil Twilight,\" a custom glassmorphism design system, and migrated 3D visualizations from raw Three.js to React Three Fiber with GSAP ScrollTrigger for smoother scroll interactions.",
+        "I started Tern as a flight-booking concept in Mechanics Club and continued it as a personal project. Duffel provides flight offers; the interface brings together price, duration, stops, and connection details so travelers can compare the trade-offs.",
+        "I designed Civil Twilight, a visual system of translucent panels and shared styles, and moved the landing-page 3D scenes from raw Three.js into React Three Fiber. GSAP ScrollTrigger coordinates the scene with scrolling. The app now has English, Korean, Japanese, and Chinese locale routes.",
       ],
       bullets: [
-        "Integrated real-time airport weather, layover badges, and airline logo overlays via third-party APIs.",
-        "Added English/Korean internationalization support with next-intl.",
-        "Conducted user research through Instagram Story polls to guide feature prioritization.",
+        "Connect flight offers with airport weather, layover details, and airline information.",
+        "Use next-intl for language-specific pages and preserve the selected language through the booking return flow.",
+        "Used informal Instagram Story polls to help prioritize features. The schedule-risk score uses rules for stops, late departures, and short connections; it is not a measured probability of delay.",
       ],
     },
   },
@@ -199,12 +196,11 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Led a 10-member team to design, build, and test a custom rocket motor thrust test stand, deriving peak thrust, total impulse, and specific impulse from live sensor data.",
+      "Led a 10-member COSMOS team to build a rocket thrust stand, recover from a recording failure, and analyze the second static-fire test.",
     githubLink:
       "https://github.com/MINBBBB1201/Rocket-Thrust-Test-Stand",
     techStack: ["Arduino", "System Architecture", "Python"],
     startDate: new Date("2025-09-01"),
-    endDate: new Date("2026-06-01"), // TODO: 정확한 완료 시점 확인
     companyLogoImg: "/projects/cosmos-rocket-thrust-stand/01-hero-static-fire.png",
     pagesInfoArr: [
       {
@@ -232,7 +228,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Static-Fire Test & Results",
         description:
-          "Live static-fire footage alongside the thrust-time curve logged during the test, from which peak thrust, total impulse, and specific impulse were derived.",
+          "Static-fire footage and the recorded thrust-time curve. The second test produced a peak of about 190 N and a reported total impulse of 270.6 N·s.",
         imgArr: [
           "/projects/cosmos-rocket-thrust-stand/10-ready-for-test.png",
           "/projects/cosmos-rocket-thrust-stand/11-thrust-time-graph.png",
@@ -242,35 +238,34 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "As founder and president of COSMOS, the school's aero-engineering club, I led a 10-member team through a full theory to design to fabrication to test-validation cycle to build a solid/liquid rocket motor thrust test stand.",
-        "The stand logs live thrust data during static-fire tests, enabling direct comparison between experimental results and theoretical predictions.",
+        "As founder and president of COSMOS, I led a 10-member team building a test stand for a solid-propellant rocket motor. We combined a mechanical frame, a load cell, and a microcontroller-based data logger to record force during a static-fire test.",
+        "Before firing, we added and removed known loads to check the sensor response and its return to zero. The first test burned successfully but did not save the thrust data. We reviewed the recording sequence and storage logic, then captured a continuous record during the second test.",
       ],
       bullets: [
-        "Directed two static-fire test iterations and diagnosed and resolved a data-logging failure between the first and second test.",
-        "Analyzed thrust-time data to derive peak thrust (190N), total impulse (270.6 N·s), and specific impulse (95.2s).",
-        "Cross-validated experimental results against theoretical predictions from a solid rocket internal ballistics simulator.",
+        "Led two static-fire tests and worked with the team to correct the recording failure between them.",
+        "Converted load-cell readings to force and analyzed the thrust-time curve: about 190 N peak thrust and a reported total impulse of 270.6 N·s.",
+        "Compared the experimental results with an internal-ballistics simulation and used the test record to review the measurement setup.",
       ],
     },
   },
   {
     id: "cosmos-aeroview-windtunnel",
     status: "In progress",
-    companyName: "Project AEROVIEW — Open-Circuit Suction Wind Tunnel",
+    companyName: "Project AEROVIEW: Open-Circuit Suction Wind Tunnel",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Directing the parametric CAD design and fabrication of an open-circuit suction wind tunnel to compare airflow over multiple NACA airfoil profiles — in progress, continuing next semester.",
+      "An ongoing wind-tunnel build for comparing NACA airfoil profiles. I lead the parametric CAD design and fabrication; final integration and airflow measurements are still pending.",
     githubLink:
       "https://github.com/MINBBBB1201/COSMOS-Aeroview-Windtunnel",
     techStack: ["FreeCAD", "OpenSCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
-    endDate: new Date("2026-12-01"), // 다음 학기(2학기)에 이어서 진행 예정 — 아직 미완성
     companyLogoImg: "/projects/cosmos-aeroview-windtunnel/01-hero-full-assembly.jpg",
     pagesInfoArr: [
       {
         title: "Parametric CAD Design",
         description:
-          "Modeled every subsystem parametrically — fan box, wing/airfoil mount, and flow-straightener honeycomb panel — in FreeCAD and OpenSCAD before fabrication.",
+          "Parametric FreeCAD and OpenSCAD models of the fan box, airfoil mount, and honeycomb flow straightener, prepared before fabrication.",
         imgArr: [
           "/projects/cosmos-aeroview-windtunnel/02-cad-full-assembly-render.png",
           "/projects/cosmos-aeroview-windtunnel/03-cad-fan-box.png",
@@ -292,7 +287,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Flow Visualization & Current Status",
         description:
-          "Set up a fog-machine flow visualization rig and built the clear acrylic test section for airfoil comparison. The tunnel is still under construction — final assembly and airflow testing are planned for next semester.",
+          "The fog-machine setup and clear acrylic test section prepared for flow visualization. Final integration and airflow measurements are still pending.",
         imgArr: [
           "/projects/cosmos-aeroview-windtunnel/10-smoke-flow-visualization-setup.jpg",
           "/projects/cosmos-aeroview-windtunnel/11-test-section.png",
@@ -302,12 +297,12 @@ export const Projects: ProjectInterface[] = [
     descriptionDetails: {
       paragraphs: [
         "Directed the parametric CAD design (FreeCAD, OpenSCAD) and fabrication of an open-circuit suction wind tunnel to compare airflow over NACA 0012, 2412, and 4412 airfoils.",
-        "Managed the project across a six-week physical build cycle, from structural design through final assembly. The tunnel is still under construction as of this writing — final assembly and airflow data collection are planned for next semester.",
+        "Over a six-week build period, we worked from CAD dimensions to the frame, fan box, and test-section components. A mismatch between the drawings and fabricated parts required direct measurement and recalculation. The tunnel remains under construction, with final integration and airflow data collection still pending.",
       ],
       bullets: [
         "Identified and corrected a design-to-fabrication dimensional error through direct measurement and recalculation.",
-        "Computed blockage ratios (1.4%–14% across angle of attack) to redesign support structures for improved flow accuracy.",
-        "Directing fabrication and assembly of the fan box, diffuser, and flow-visualization test section, with final integration and airflow testing planned for next semester.",
+        "Calculated blockage ratios of 1.4% to 14% across angles of attack and used them to revise the support design. Airflow testing is needed to assess the change.",
+        "Coordinate fabrication of the fan box, diffuser, and test section before final assembly and airflow measurements.",
       ],
     },
   },
@@ -318,7 +313,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Designed, built, and flight-tested an F-22-inspired RC aircraft, then wrote a research paper on the correlation between its aerodynamic design variables and flight stability — 1st place, Physics Division, school research paper competition.",
+      "Designed, built, and flight-tested an F-22-inspired foam-board RC aircraft. The accompanying paper on aerodynamic design and flight stability won first place in the school research competition's Physics Division.",
     techStack: ["FreeCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-01-31"),
@@ -328,7 +323,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "The Test Aircraft",
         description:
-          "A hand-built, hand-painted foam-board test article — not a scale showpiece, but a functional platform for gathering real flight data. Motors, control surfaces, and wiring are all scratch-built.",
+          "The foam-board aircraft I assembled and painted for the project, with its propulsion components, control surfaces, and wiring visible in the build photographs.",
         imgArr: [
           "/projects/wind-tunnel-rc-aircraft/01-hero-aircraft-topdown.jpg",
           "/projects/wind-tunnel-rc-aircraft/02-aircraft-build-detail.jpg",
@@ -337,22 +332,22 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Flight Test",
         description:
-          "Outdoor flight test used to validate the aircraft's design predictions against real flight behavior.",
+          "Outdoor flight-test footage used to observe the aircraft's stability and control response.",
         imgArr: [],
         videoArr: ["/projects/wind-tunnel-rc-aircraft/03-flight-test.mp4"],
       },
     ],
     descriptionDetails: {
       paragraphs: [
-        "Applied fundamental principles of flight and fluid dynamics, along with theoretical and simulation-based aerodynamic analysis, to design, manufacture, and flight-test a custom F-22-inspired RC aircraft.",
-        "The aircraft itself is a hand-built foam-board test article — built for generating real flight data to validate against the paper's aerodynamic predictions, not as a polished scale model.",
+        "For a school physics research project, I designed and built an F-22-inspired RC aircraft and studied how its structure and wing geometry affected flight behavior. Lift, drag, and stability calculations informed the design.",
+        "I assembled the foam-board airframe, installed its components, and observed the finished aircraft in outdoor flight tests. The build photographs and video document the prototype and its flight behavior.",
         "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
         "The paper won 1st place in the Physics Division of the school's research paper competition.",
       ],
       bullets: [
-        "Applied theoretical aerodynamic principles and simulation data to optimize wingspan, wing profile, and structural stability.",
+        "Used aerodynamic calculations and simulation references to guide wing geometry and structural choices.",
         "Modeled lift and drag characteristics to guide the design, stability, and control configuration of the RC aircraft.",
-        "Flight-tested the finished aircraft to validate performance against design predictions and documented findings in a formal research paper.",
+        "Recorded flight observations and documented the design and analysis in a research paper.",
       ],
     },
   },
