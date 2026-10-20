@@ -23,6 +23,7 @@ export interface ProjectInterface {
   paperLink?: string;
   techStack: ValidSkills[];
   startDate?: Date;
+  period?: string;
   endDate?: Date;
   status?: "In progress" | "Completed";
   role?: string;
@@ -58,6 +59,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "ciws-drone-tracking-turret",
+    role: "Camera tracking and Arduino integration",
     status: "Completed",
     companyName: "Automated CIWS Drone Tracking Turret",
     type: "Personal",
@@ -116,6 +118,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "jsl-logistics",
+    period: "Since August 2026",
     companyName: "JSL Logistics: AI Tools & Web Platform",
     type: "Professional",
     category: ["AI & Machine Learning", "Full Stack", "UI/UX"],
@@ -165,6 +168,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "tern",
+    role: "Independent developer",
     status: "In progress",
     companyName: "Tern",
     type: "Personal",
@@ -191,6 +195,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-rocket-thrust-stand",
+    role: "COSMOS Founder & President; team lead",
     status: "Completed",
     companyName: "Solid Propellant Rocket Thrust Test Stand",
     type: "Personal",
@@ -250,6 +255,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-aeroview-windtunnel",
+    role: "COSMOS Founder & President; design and fabrication lead",
     status: "In progress",
     companyName: "Project AEROVIEW: Open-Circuit Suction Wind Tunnel",
     type: "Personal",
@@ -308,6 +314,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "wind-tunnel-rc-aircraft",
+    role: "Aircraft design, build, flight observations, and research paper",
     status: "Completed",
     companyName: "F-22-Inspired RC Aircraft: Aerodynamic Design & Flight Stability Research",
     type: "Personal",
@@ -354,5 +361,5 @@ export const Projects: ProjectInterface[] = [
 
 ];
 
-const featuredProjectIds = ["cosmos-tvc-hopper", "ciws-drone-tracking-turret", "jsl-logistics"];
+const featuredProjectIds = ["daemun-iii", "cosmos-tvc-hopper", "jsl-logistics"];
 export const featuredProjects = featuredProjectIds.map((id) => Projects.find((project) => project.id === id)!);

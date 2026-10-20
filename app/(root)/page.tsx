@@ -57,75 +57,33 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="relative space-y-6 pb-12 pt-24 mb-0 md:pb-16 md:py-24 lg:py-28 min-h-screen flex items-center overflow-hidden">
-        <ParticleNetwork
-          className="absolute inset-0"
-          density={0.03}
-          maxParticles={65}
-        />
+      <section className="relative overflow-hidden py-10 sm:py-14 lg:py-16">
         <AmbientGlow />
-        <HudCorners className="absolute inset-6 sm:inset-10 md:inset-16" />
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-          <StudioLamp
-            src={profileImg}
-            alt="Minchan Kim"
-            className="mb-4"
-          />
-          <AnimatedText
-            as="h1"
-            delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
-          >
-            Minchan Kim
-          </AnimatedText>
-          <AnimatedText
-            as="h3"
-            delay={0.4}
-            className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
-          >
-            {siteConfig.headline}
-          </AnimatedText>
-          <div className="mt-4 max-w-[42rem] text-center">
-            <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Working on computer vision, reinforcement learning, and
-              AI tools, with engineering projects that let me test ideas
-              in software and hardware.
+        <HudCorners className="absolute inset-4 sm:inset-8" />
+        <div className="container relative grid max-w-6xl items-center gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+          <div className="max-w-2xl space-y-5">
+            <p className="text-sm font-medium text-primary">Qingdao Daewon School · Class of 2027</p>
+            <h1 className="font-heading text-4xl leading-tight sm:text-6xl lg:text-7xl">Minchan Kim</h1>
+            <p className="text-xl font-semibold sm:text-2xl">Artificial intelligence, in software and hardware.</p>
+            <p className="max-w-xl leading-relaxed text-muted-foreground sm:text-lg">
+              I'm a high school senior planning to study AI. I build AI assistants
+              and computer-vision projects, and lead COSMOS, where our team is
+              exploring reinforcement learning for physical control.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-1">
+              <Link href="#projects" className={buttonVariants({ size: "lg" })}>
+                Selected projects <Icons.chevronRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link href={siteConfig.links.github} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "lg" })}>
+                <Icons.gitHub className="mr-2 h-4 w-4" /> GitHub
+              </Link>
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Start with <Link href="/projects/daemun-iii" className="font-medium text-primary underline underline-offset-4">DAEMUN III</Link>,
+              the completed conference platform Junwon Kim and I co-developed.
             </p>
           </div>
-
-          <div className="flex flex-col mt-6 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
-            <AnimatedText delay={0.6}>
-              <Link
-                href={"/resume"}
-                target="_blank"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "shadow-lg shadow-primary/25"
-                )}
-                aria-label="View resume"
-              >
-                <Icons.post className="w-4 h-4 mr-2" /> Resume
-              </Link>
-            </AnimatedText>
-            <AnimatedText delay={0.8}>
-              <Link
-                href={"/contact"}
-                rel="noreferrer"
-                className={cn(
-                  buttonVariants({
-                    variant: "outline",
-                    size: "lg",
-                  })
-                )}
-                aria-label="Contact Minchan Kim"
-              >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
-              </Link>
-            </AnimatedText>
-          </div>
-          <AnimatedText delay={1.2}>
-            <Icons.chevronDown className="h-6 w-6 mt-10" />
-          </AnimatedText>
+          <StudioLamp src={profileImg} alt="Minchan Kim" compact className="hidden md:flex" />
         </div>
       </section>
       <AnimatedSection

@@ -70,7 +70,6 @@ export const metadata = {
         alt: siteConfig.name,
       },
     ],
-    creator: `@${siteConfig.username}`,
   },
   icons: {
     icon: siteConfig.iconIco,

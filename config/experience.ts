@@ -6,6 +6,8 @@ export interface ExperienceInterface {
   company: string;
   location: string;
   startDate?: Date;
+  startMonth?: string;
+  period?: string;
   endDate: Date | "Present" | "Completed";
   description: string[];
   achievements: string[];
@@ -17,6 +19,8 @@ export interface ExperienceInterface {
 export const experiences: ExperienceInterface[] = [
   {
     id: "jsl-logistics",
+    startMonth: "2026-08",
+    period: "August 2026 to present",
     position: "Intern",
     company: "JSL Logistics",
     location: "",
@@ -31,6 +35,8 @@ export const experiences: ExperienceInterface[] = [
   },
   {
     id: "mintech",
+    startMonth: "2026-08",
+    period: "August to September 2026 (one month)",
     position: "Intern",
     company: "Mintech",
     location: "Asan, South Korea",
