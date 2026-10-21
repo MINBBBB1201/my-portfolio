@@ -73,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...Projects.map((project) => ({ url: `${baseUrl}/projects/${project.id}` })),
     ...experiences.map((experience) => ({ url: `${baseUrl}/experience/${experience.id}` })),
     { url: `${baseUrl}/community` },
+    { url: `${baseUrl}/demos/cargo-planner` },
   ];
 
   return [...routes, ...blogRoutes, ...detailRoutes];

@@ -29,6 +29,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>}
         </div>
         <div className="pt-5 space-y-3 flex flex-col flex-grow">
+          {project.context && <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{project.context}</p>}
           {project.status && <span className="w-fit rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">{project.status}</span>}
           <h3 className="text-2xl font-bold tracking-tight text-foreground">
             {project.companyName}
@@ -43,6 +44,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Link href={`/projects/${project.id}`} className={cn(buttonVariants(), "mt-2 w-fit")} aria-label={`Read about ${project.companyName}`}>
             Read project <Icons.chevronRight className="w-4 ml-1" />
           </Link>
+          {project.demoLink && <Link href={project.demoLink} className="w-fit text-sm font-medium text-primary underline underline-offset-4">Try the cargo planner demo</Link>}
         </div>
       </div>
     </HoverGlow>

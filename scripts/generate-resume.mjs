@@ -3,27 +3,11 @@ import { tmpdir } from "node:os";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import vm from "node:vm";
-import ts from "typescript";
+import { loadTypeScript } from "./load-typescript.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-function config(name) {
-  const source = readFileSync(join(root, "config", `${name}.ts`), "utf8");
-  const { outputText } = ts.transpileModule(source, {
-    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
-  });
-  // These data-only files have no runtime imports. Fail if that changes.
-  const exports = {};
-  vm.runInNewContext(outputText, { exports }, { timeout: 1000 });
-  return exports;
-}
-
 const data = {
-  ...config("site"),
-  ...config("honors"),
-  ...config("experience"),
-  ...config("community"),
-  ...config("projects"),
+  ...loadTypeScript(join(root, "lib/resume-data.ts"), root).getResumeData(),
   email: readFileSync(join(root, "config/socials.ts"), "utf8").match(/mailto:([^"\s]+)/)?.[1],
 };
 if (!data.email) throw new Error("No published contact email found");

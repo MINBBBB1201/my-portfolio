@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils";
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cn(className)}>
-      <div className="container flex items-center justify-center gap-8 mt-10 py-10 md:h-24">
+      <div className="container flex flex-wrap items-center justify-center gap-6 mt-10 py-10 md:min-h-24">
+        <Link href="/resume" className="text-sm text-muted-foreground underline underline-offset-4">Résumé</Link>
         {SocialLinks.filter((item) => !!item.link).map((item, ind) => (
           <CustomTooltip icon={item.icon} text={item.username} key={ind}>
             <Link
