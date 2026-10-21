@@ -137,7 +137,7 @@ export function planLoad(
   return {
     container,
     placed: result.placed,
-    unplaced: [...grouped.values()],
+    unplaced: Array.from(grouped.values()),
     usedVolumeM3: round(usedVolumeM3, 3),
     containerVolumeM3: round(totalVolumeM3, 3),
     volumeUtilizationPercent: round((usedVolumeM3 / totalVolumeM3) * 100, 2),

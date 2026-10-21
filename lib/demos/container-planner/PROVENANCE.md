@@ -1,6 +1,6 @@
 # Cargo planner source
 
-The six TypeScript math modules in this directory are copied unchanged from
+The six TypeScript math modules in this directory are copied from
 MINBBBB1201/jsl-project, commit c8c5489a662ae9aab354335483332116f1962072,
 `frontend/src/lib/container-planner/`.
 
@@ -11,6 +11,8 @@ records, documents, images, credentials or provider calls are included.
 The algorithm uses extreme-point placement with rotation, collision, support
 and payload checks. It reports center of gravity; it does not optimize balance.
 Container presets are approximate project configurations, not carrier advice.
+Two Map iterator spreads use `Array.from` for this portfolio's ES5 TypeScript
+target. The placement math is otherwise unchanged.
 
 The CAD gallery images under `public/projects/cosmos-tvc-hopper/` are unchanged
 design renders from COSMOS-Aero-Engineering/COSMOS-TVC-Hopper,

@@ -286,7 +286,7 @@ function refreshPoints(
   for (const p of born) next.set(pointKey(p), p)
 
   // 방금 놓은 박스가 삼켜 버린 후보점에는 이제 아무것도 놓을 수 없다.
-  return [...next.values()].filter((p) => !placed.some((b) => containsPoint(b, p)))
+  return Array.from(next.values()).filter((p) => !placed.some((b) => containsPoint(b, p)))
 }
 
 /** 점이 박스 내부(경계 제외)에 들어 있는가 */
