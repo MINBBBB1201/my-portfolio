@@ -26,7 +26,7 @@ function LoadingView({ plan }: { plan: LoadPlan }) {
       const [x,y,z] = box.positionCm, [dx,dy,dz] = box.sizeCm;
       const color = palette[box.boxId === "a" ? 0 : box.boxId === "b" ? 1 : 2];
       return <g key={box.instanceId} stroke="#111c2b" strokeWidth="0.7">
-        <title>{box.box.name} · {box.sizeCm.join(" × ")} cm · {box.weightKg} kg</title>
+        <title>{`${box.box.name} · ${box.sizeCm.join(" × ")} cm · ${box.weightKg} kg`}</title>
         <polygon points={polygon([[x,y,z],[x+dx,y,z],[x+dx,y,z+dz],[x,y,z+dz]])} fill={color} />
         <polygon points={polygon([[x+dx,y,z],[x+dx,y+dy,z],[x+dx,y+dy,z+dz],[x+dx,y,z+dz]])} fill={color} style={{ filter: "brightness(0.7)" }} />
         <polygon points={polygon([[x,y,z+dz],[x+dx,y,z+dz],[x+dx,y+dy,z+dz],[x,y+dy,z+dz]])} fill={color} style={{ filter: "brightness(1.2)" }} />
@@ -96,7 +96,7 @@ export default function CargoPlanner() {
         </div>
         <div className="flex flex-wrap gap-3 text-sm">{boxes.map((box,index) => <span key={box.id} className="flex items-center gap-2"><span className="h-3 w-3 rounded" style={{ background: palette[index] }} />{box.name}</span>)}</div>
         {plan.unplaced.length > 0 && <div className="rounded-lg border border-amber-500/40 p-4"><h2 className="font-semibold">Cargo left out</h2><ul className="mt-2 space-y-2 text-sm">{plan.unplaced.map((item) => <li key={`${item.boxId}-${item.reason}`}>{item.quantity} × {item.box.name}: {reasonText[item.reason]}</li>)}</ul></div>}
-        <p className="text-sm leading-relaxed text-muted-foreground">Center-of-gravity offset from the container center: length {plan.centerOfGravity.offsetPercent[0].toFixed(1)}%, width {plan.centerOfGravity.offsetPercent[1].toFixed(1)}%. {plan.centerOfGravity.withinTolerance ? "Within" : "Outside"} the project's ±10% diagnostic threshold. This threshold is not a shipping safety certification.</p>
+        <p className="text-sm leading-relaxed text-muted-foreground">{plan.placed.length === 0 ? "No packed cargo to calculate a cargo center of gravity." : <>Center-of-gravity offset from the container center: length {plan.centerOfGravity.offsetPercent[0].toFixed(1)}%, width {plan.centerOfGravity.offsetPercent[1].toFixed(1)}%. {plan.centerOfGravity.withinTolerance ? "Within" : "Outside"} the project's ±10% diagnostic threshold. This threshold is not a shipping safety certification.</>}</p>
       </section>
     </div>
   </div>;
