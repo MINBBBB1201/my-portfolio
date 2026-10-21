@@ -25,6 +25,8 @@ const portfolioContext = JSON.stringify({
     status: project.status,
     period: project.period,
     role: project.role,
+    context: project.context,
+    demo: project.demoLink,
     details: project.descriptionDetails,
     skills: project.techStack,
     website: project.websiteLink,

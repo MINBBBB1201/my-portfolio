@@ -56,6 +56,7 @@ export default async function Project({ params }: ProjectPageProps) {
         All Projects
       </Link>
       <div>
+        {project.context && <p className="mb-3 text-sm font-medium text-primary">{project.context}</p>}
         {project.startDate && <time
           dateTime={project.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
@@ -68,6 +69,7 @@ export default async function Project({ params }: ProjectPageProps) {
         <h1 className="mt-2 font-heading text-3xl leading-tight sm:text-4xl lg:text-5xl">{project.companyName}</h1>
         <p className="my-5 text-lg leading-relaxed text-muted-foreground">{project.shortDescription}</p>
         <div className="mb-5 flex flex-wrap gap-3">
+          {project.demoLink && <Link href={project.demoLink} className={buttonVariants({ size: "sm" })}>Try cargo planner demo</Link>}
           {project.githubLink && <Link href={project.githubLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.gitHub className="mr-2 h-4 w-4" />Source code</Link>}
           {project.websiteLink && <Link href={project.websiteLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.externalLink className="mr-2 h-4 w-4" />Open project</Link>}
           {project.paperLink && <Link href={project.paperLink} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "sm" })}><Icons.research className="mr-2 h-4 w-4" />Research paper</Link>}
@@ -108,6 +110,7 @@ export default async function Project({ params }: ProjectPageProps) {
       )}
 
       {project.id === "daemun-iii" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">Conference-site preview running locally with bundled content. DAEMUN III is completed; the image shows the interface, not a current live service.</p>}
+      {project.id === "cosmos-tvc-hopper" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">CAD design render. Hardware integration and physical validation are in progress.</p>}
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
@@ -163,7 +166,7 @@ export default async function Project({ params }: ProjectPageProps) {
                   <Image
                     src={img}
                     key={ind}
-                    alt={img}
+                    alt={`${page.title}, image ${ind + 1}`}
                     width={720}
                     height={405}
                     className="my-4 w-full h-auto rounded-md border bg-muted transition-colors"

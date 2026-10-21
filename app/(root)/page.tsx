@@ -77,6 +77,7 @@ export default function IndexPage() {
               <Link href={siteConfig.links.github} target="_blank" rel="noreferrer" className={buttonVariants({ variant: "outline", size: "lg" })}>
                 <Icons.gitHub className="mr-2 h-4 w-4" /> GitHub
               </Link>
+              <Link href="/resume" className={buttonVariants({ variant: "ghost", size: "lg" })}>Résumé</Link>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Start with <Link href="/projects/daemun-iii" className="font-medium text-primary underline underline-offset-4">DAEMUN III</Link>,

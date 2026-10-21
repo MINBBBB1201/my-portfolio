@@ -21,6 +21,8 @@ export interface ProjectInterface {
   websiteLink?: string;
   githubLink?: string;
   paperLink?: string;
+  demoLink?: string;
+  context?: string;
   techStack: ValidSkills[];
   startDate?: Date;
   period?: string;
@@ -35,6 +37,8 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
   {
     id: "cosmos-tvc-hopper",
+    context: "COSMOS club project",
+    companyLogoImg: "/projects/cosmos-tvc-hopper/preview_colored.png",
     companyName: "COSMOS TVC-Hopper: Reinforcement Learning & Control",
     type: "Personal",
     category: ["Reinforcement Learning", "Aerospace Engineering", "Hardware/Robotics"],
@@ -43,7 +47,11 @@ export const Projects: ProjectInterface[] = [
     shortDescription: "An ongoing COSMOS project comparing reinforcement learning with conventional attitude control for an electric-ducted-fan hopper. We are building the simulation and hardware; physical validation is still in progress.",
     githubLink: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
     techStack: ["Python", "PyTorch", "FreeCAD", "System Architecture"],
-    pagesInfoArr: [],
+    pagesInfoArr: [{
+      title: "CAD design preview",
+      description: "Current design renders from the COSMOS repository: the hopper assembly and a close-up of the four-vane ring. These are CAD models; calibration, hardware integration and physical validation are still in progress.",
+      imgArr: ["/projects/cosmos-tvc-hopper/preview_colored.png", "/projects/cosmos-tvc-hopper/vane_ring_closeup.png"],
+    }],
     descriptionDetails: {
       paragraphs: [
         "I coordinate TVC-Hopper as founder and president of COSMOS. Our team is building a small electric-ducted-fan (EDF) hopper whose four exhaust vanes control its attitude. The project asks how a learned controller compares with conventional control on the same physical task.",
@@ -59,6 +67,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "ciws-drone-tracking-turret",
+    context: "School science-fair project",
     role: "Camera tracking and Arduino integration",
     status: "Completed",
     companyName: "Automated CIWS Drone Tracking Turret",
@@ -118,6 +127,8 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "jsl-logistics",
+    context: "Internship project",
+    demoLink: "/demos/cargo-planner",
     period: "Since August 2026",
     companyName: "JSL Logistics: AI Tools & Web Platform",
     type: "Professional",
@@ -143,6 +154,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "daemun-iii",
+    context: "School conference team project",
     companyName: "DAEMUN III: AI Support & Conference Operations",
     type: "Professional",
     category: ["AI & Machine Learning", "Full Stack", "Web Dev"],
@@ -168,6 +180,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "tern",
+    context: "Independent project",
     role: "Independent developer",
     status: "In progress",
     companyName: "Tern",
@@ -195,6 +208,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-rocket-thrust-stand",
+    context: "COSMOS club project",
     role: "COSMOS Founder & President; team lead",
     status: "Completed",
     companyName: "Solid Propellant Rocket Thrust Test Stand",
@@ -255,6 +269,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "cosmos-aeroview-windtunnel",
+    context: "COSMOS club project",
     role: "COSMOS Founder & President; design and fabrication lead",
     status: "In progress",
     companyName: "Project AEROVIEW: Open-Circuit Suction Wind Tunnel",
@@ -314,6 +329,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "wind-tunnel-rc-aircraft",
+    context: "School physics research",
     role: "Aircraft design, build, flight observations, and research paper",
     status: "Completed",
     companyName: "F-22-Inspired RC Aircraft: Aerodynamic Design & Flight Stability Research",
