@@ -374,6 +374,33 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+  {
+    id: "autopilot-mechanism-study",
+    context: "School physics research",
+    role: "Author; literature and patent analysis, with guidance from teacher Hyojun Lee",
+    status: "Completed",
+    companyName: "Mechanism of Autopilot: How an Aircraft Holds Stability and Hands Back Control",
+    type: "Personal",
+    category: ["Aerospace Engineering"],
+    shortDescription:
+      "A physics research paper on how an autopilot keeps an aircraft stable in turbulence and returns control to the pilot. It draws on a control-systems paper and an Airbus patent. The PID curves are illustrative, not flight or hardware data.",
+    techStack: [],
+    descriptionDetails: {
+      paragraphs: [
+        "During my RC aircraft project, a sudden gust flipped the plane I had built. That made me wonder how an airliner holds its attitude in strong turbulence. Most sources I found cover normal flight, so I focused on the moment the system reaches its limit and the pilot takes over.",
+        "I read Donald McLean's overview of automatic flight control, which describes the sense, decide, and act loop: pitot and static pressure give speed and altitude, a PID algorithm acts on the error, and the elevator, aileron, and rudder carry out the correction. I then analyzed Airbus patent US7990285, which sounds a staged audible alert when the autopilot disengages so the pilot regains awareness quickly.",
+        "For the figures, I drew a flowchart of the transition from autopilot to manual control and built a comparison of P, PI, and PID error curves. I chose arbitrary parameter values, ran them through an open-source PID implementation, and put the results in a table and graph in Excel. These curves illustrate how the three controllers differ. They are not measurements from my aircraft or from any real flight.",
+        "The paper argues that even a well-designed autopilot needs a clear handover to the pilot. It is a literature-based study with no flight or hardware testing.",
+      ],
+      bullets: [
+        "Analyzed one control-systems paper and one Airbus patent on autopilot disengagement alerts.",
+        "Drew a flowchart of the autopilot-to-manual transition logic.",
+        "Compared P, PI, and PID error curves for illustrative parameter values, tabulated and plotted in Excel.",
+        "Wrote the paper with guidance from my teacher.",
+      ],
+    },
+    pagesInfoArr: [],
+  },
 
 ];
 

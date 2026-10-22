@@ -112,12 +112,12 @@ export default async function Project({ params }: ProjectPageProps) {
       {project.id === "daemun-iii" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">Conference-site preview running locally with bundled content. DAEMUN III is completed; the image shows the interface, not a current live service.</p>}
       {project.id === "cosmos-tvc-hopper" && <p className="-mt-5 mb-8 text-sm text-muted-foreground">CAD design render. Hardware integration and physical validation are in progress.</p>}
 
-      <div className="mb-7 ">
+      {project.techStack.length > 0 && <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Tech Stack
         </h2>
         <ChipContainer textArr={project.techStack} />
-      </div>
+      </div>}
 
       {project.id === "daemun-iii" ? <DaemunCaseStudy /> : <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
