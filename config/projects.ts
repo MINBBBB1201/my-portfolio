@@ -401,6 +401,31 @@ export const Projects: ProjectInterface[] = [
     },
     pagesInfoArr: [],
   },
+  {
+    id: "erau-esg-case-study",
+    context: "School environmental science paper",
+    role: "Author; case study based on the university's public materials",
+    status: "Completed",
+    companyName: "Environmental ESG Initiatives at Embry-Riddle Aeronautical University",
+    type: "Personal",
+    category: ["Aerospace Engineering"],
+    shortDescription:
+      "A short case-study paper on how Embry-Riddle Aeronautical University links aviation education with sustainability. It is based on the university's public pages and news, with no original data.",
+    techStack: [],
+    descriptionDetails: {
+      paragraphs: [
+        "For an environmental science class in 11th grade, I wrote a short paper on Embry-Riddle Aeronautical University (ERAU) through the lens of ESG: environmental, social, and governance criteria for judging how responsibly an organization operates. It opens by noting that aviation causes about 2.5% of global CO2 emissions, then asks how a university that trains aviation professionals responds to that.",
+        "The paper looks at three areas: flight training and sustainable aviation fuel, campus facilities, and research funding. It points to ERAU's M.S. in Aviation and Aerospace Sustainability and to a $500,000 grant that the U.S. Department of Energy's ARPA-E announced in May 2026 for a professor's work on batteries built into aircraft structures.",
+        "It is a secondary-source case study. I summarized the university's public pages, a news release, and a campus sustainability poster, and I did not collect or analyze original data.",
+      ],
+      bullets: [
+        "Read and summarized public university sources on aviation sustainability.",
+        "Wrote a short paper with an abstract, introduction, conclusion, and reference list.",
+        "No original data or measurements.",
+      ],
+    },
+    pagesInfoArr: [],
+  },
 
 ];
 
