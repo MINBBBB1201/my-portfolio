@@ -60,3 +60,15 @@ test("autopilot class research stays within what is verified", () => {
   assert.match(text, /illustrative/);
   assert.match(text, /no flight or hardware testing/);
 });
+
+test("ERAU ESG case study is framed as a secondary-source summary", () => {
+  const { Projects } = data("config/projects.ts");
+  const study = Projects.find((p) => p.id === "erau-esg-case-study");
+  assert.ok(study);
+  assert.equal(study.status, "Completed");
+  assert.equal(study.startDate, undefined);
+  assert.equal(study.paperLink, undefined);
+  const text = JSON.stringify(study);
+  assert.match(text, /no original data/i);
+  assert.doesNotMatch(text, /99%|@qdis|eliminat/);
+});
