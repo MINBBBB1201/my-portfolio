@@ -46,3 +46,17 @@ test("date display supports confirmed status without inventing a date", () => {
   assert.equal(getDurationText(undefined, "Present"), "In progress");
   assert.match(getDurationText(new Date("2026-08-01"), "Completed"), /Aug 2026.*Completed/);
 });
+
+test("autopilot class research stays within what is verified", () => {
+  const { Projects } = data("config/projects.ts");
+  const study = Projects.find((p) => p.id === "autopilot-mechanism-study");
+  assert.ok(study);
+  assert.equal(study.status, "Completed");
+  assert.equal(study.startDate, undefined);
+  assert.equal(study.endDate, undefined);
+  assert.equal(study.paperLink, undefined);
+  const text = JSON.stringify(study);
+  assert.doesNotMatch(text, /US8457811/);
+  assert.match(text, /illustrative/);
+  assert.match(text, /no flight or hardware testing/);
+});
