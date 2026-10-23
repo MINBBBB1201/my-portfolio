@@ -21,6 +21,7 @@ export interface ProjectInterface {
   websiteLink?: string;
   githubLink?: string;
   paperLink?: string;
+  paperNote?: string;
   demoLink?: string;
   context?: string;
   techStack: ValidSkills[];
@@ -385,6 +386,9 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "A physics research paper on how an autopilot keeps an aircraft stable in turbulence and returns control to the pilot. It draws on a control-systems paper and an Airbus patent. The PID curves are illustrative, not flight or hardware data.",
     techStack: [],
+    paperLink: "/projects/autopilot-mechanism-study/research-paper.pdf",
+    paperNote:
+      "This is a portfolio version of my school report, written mostly in Korean. I removed one patent citation that did not match its source, and the appendix that relied on it. The P, PI, and PID curves are illustrative examples, not flight or hardware data.",
     descriptionDetails: {
       paragraphs: [
         "During my RC aircraft project, a sudden gust flipped the plane I had built. That made me wonder how an airliner holds its attitude in strong turbulence. Most sources I found cover normal flight, so I focused on the moment the system reaches its limit and the pilot takes over.",
@@ -414,15 +418,10 @@ export const Projects: ProjectInterface[] = [
     techStack: [],
     descriptionDetails: {
       paragraphs: [
-        "For an environmental science class in 11th grade, I wrote a short paper on Embry-Riddle Aeronautical University (ERAU) through the lens of ESG: environmental, social, and governance criteria for judging how responsibly an organization operates. It opens by noting that aviation causes about 2.5% of global CO2 emissions, then asks how a university that trains aviation professionals responds to that.",
-        "The paper looks at three areas: flight training and sustainable aviation fuel, campus facilities, and research funding. It points to ERAU's M.S. in Aviation and Aerospace Sustainability and to a $500,000 grant that the U.S. Department of Energy's ARPA-E announced in May 2026 for a professor's work on batteries built into aircraft structures.",
-        "It is a secondary-source case study. I summarized the university's public pages, a news release, and a campus sustainability poster, and I did not collect or analyze original data.",
+        "For an 11th-grade environmental science class, I wrote a short paper on Embry-Riddle Aeronautical University (ERAU) through the lens of ESG (environmental, social, and governance) criteria. It covers flight training and sustainable aviation fuel, campus facilities, and research funding, including ERAU's M.S. in Aviation and Aerospace Sustainability and a $500,000 ARPA-E grant announced in May 2026 for batteries built into aircraft structures.",
+        "It is a summary of the university's public materials, with no original data.",
       ],
-      bullets: [
-        "Read and summarized public university sources on aviation sustainability.",
-        "Wrote a short paper with an abstract, introduction, conclusion, and reference list.",
-        "No original data or measurements.",
-      ],
+      bullets: [],
     },
     pagesInfoArr: [],
   },

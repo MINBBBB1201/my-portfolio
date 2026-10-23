@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import vm from "node:vm";
 import test from "node:test";
@@ -54,7 +54,9 @@ test("autopilot class research stays within what is verified", () => {
   assert.equal(study.status, "Completed");
   assert.equal(study.startDate, undefined);
   assert.equal(study.endDate, undefined);
-  assert.equal(study.paperLink, undefined);
+  assert.equal(study.paperLink, "/projects/autopilot-mechanism-study/research-paper.pdf");
+  assert.ok(existsSync(resolve(import.meta.dirname, "..", "public", study.paperLink.slice(1))));
+  assert.match(study.paperNote, /portfolio version/);
   const text = JSON.stringify(study);
   assert.doesNotMatch(text, /US8457811/);
   assert.match(text, /illustrative/);
