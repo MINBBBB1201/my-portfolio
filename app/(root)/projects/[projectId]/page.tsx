@@ -136,8 +136,7 @@ export default async function Project({ params }: ProjectPageProps) {
             <Icons.research className="h-5 w-5 mr-2" /> Research Paper
           </h2>
           <p className="text-muted-foreground mb-4">
-            Read the full research paper this project produced, submitted
-            for the school&apos;s research paper competition.
+            {project.paperNote ?? "Read the full research paper this project produced, submitted for the school's research paper competition."}
           </p>
           <Link
             href={project.paperLink}
