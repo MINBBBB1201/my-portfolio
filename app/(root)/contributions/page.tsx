@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import PageContainer from "@/components/common/page-container";
 import ContributionCard from "@/components/contributions/contribution-card";
 import GitHubActivity from "@/components/contributions/github-activity";
+import XerjReference from "@/components/contributions/xerj-reference";
 import { contributionsUnsorted } from "@/config/contributions";
 import { pagesConfig } from "@/config/pages";
 
@@ -19,6 +20,7 @@ export default function ContributonsPage() {
       description={pagesConfig.contributions.description}
     >
       <div className="space-y-10">
+        <XerjReference />
         <GitHubActivity />
         <ContributionCard contributions={contributionsUnsorted} />
       </div>
