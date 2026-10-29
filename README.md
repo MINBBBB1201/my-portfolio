@@ -5,6 +5,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://minchankim-portfolio.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/MINBBBB1201/badge.svg)](https://hub.xerj.org/contributors/MINBBBB1201)
 
 Personal portfolio site for Minchan Kim, a 12th-grade student at Qingdao Daewon School interested in AI-related degree programs. The site connects computer vision, ongoing reinforcement-learning work, and AI-assisted software with engineering projects and internship experience.
 
