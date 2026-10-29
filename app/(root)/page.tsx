@@ -14,6 +14,7 @@ import { ParticleNetwork } from "@/components/common/particle-network";
 import { SectionLabel } from "@/components/common/section-label";
 import { StudioLamp } from "@/components/common/studio-lamp";
 import ContributionCard from "@/components/contributions/contribution-card";
+import XerjReference from "@/components/contributions/xerj-reference";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
@@ -228,6 +229,7 @@ export default function IndexPage() {
             {pagesConfig.contributions.description}
           </AnimatedText>
         </div>
+        <XerjReference />
         <ContributionCard contributions={featuredContributions} />
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/contributions">
