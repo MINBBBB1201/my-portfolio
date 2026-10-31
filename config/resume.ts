@@ -8,7 +8,7 @@ export const resumeSelection = {
       "Develop staff tools and the public website, including a document-based support chatbot, photo-assisted damage review, and a 3D cargo-loading planner that checks dimensions, stacking and payload limits.",
     ] },
     { id: "mintech", bullets: [
-      "Assisted with dimensional checks (vernier calipers, micrometers); learned the process flow of sputtering thin-film equipment; completed 4M, 5S and safety onboarding.",
+      "Assisted with OLED deposition equipment manufacturing and dimensional checks (calipers, micrometers); learned sputtering thin-film process flow; completed 4M, 5S and safety onboarding.",
     ] },
     { id: "kau-aerospace-camp", bullets: [] as string[] },
     { id: "cosmos", bullets: [
@@ -29,7 +29,7 @@ export const resumeSelection = {
   ],
   leadership: [
     "Student Council, Planning Department Vice President (2025 to March 2026): helped plan a joint sports day and ran the live scoreboard at the orientation event.",
-    "Orchestrators (formerly Mechanics Club), Vice President (March 2026 to present): contribute to Agent Device, a palm-sized companion device for AI agents (v0.3 board order review and pad-and-pin audit tool; not yet assembled). As Mechanics Club, built a 4-bit ripple-carry adder from logic-gate ICs.",
+    "Orchestrators (formerly Mechanics Club), Vice President (March 2026 to present): contribute to Agent Device, a palm-sized companion device for AI agents (assigned PCB design verification for the v0.3 board; order review and pad-and-pin audit tool; not yet assembled). As Mechanics Club, built a 4-bit ripple-carry adder from logic-gate ICs.",
     "Also: DAEMUN II delegate for Slovakia (2025); Support Group leader (Grade 11); PSYCHOFISH member (2024 to 2025).",
   ],
   honors: [
