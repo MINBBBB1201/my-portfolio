@@ -31,6 +31,7 @@ export const communityInvolvement: CommunityInterface[] = [
     description: [
       "Helped plan a joint sports day for the school's domestic and international divisions. Worked with the planning head and student council president on event schedules, activity selection, and meeting notes.",
       "Operated the live scoreboard at the school orientation event and helped with equipment setup, rehearsal logistics, and cleanup for sports day and graduation.",
+      "Supported the graduation ceremony and produced the ceremony video (8 school-certified hours).",
     ],
   },
   {

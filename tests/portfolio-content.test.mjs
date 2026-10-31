@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";
 import vm from "node:vm";
 import test from "node:test";
@@ -73,4 +73,56 @@ test("ERAU ESG case study is framed as a secondary-source summary", () => {
   const text = JSON.stringify(study);
   assert.match(text, /no original data/i);
   assert.doesNotMatch(text, /99%|@qdis|eliminat/);
+});
+
+test("honors follow the school award record", () => {
+  const { honors } = data("config/honors.ts");
+  const text = JSON.stringify(honors);
+  assert.doesNotMatch(text, /Physics Division/);
+  const paper = honors.find((h) => h.title.startsWith("1st Place, Excellent Research Paper"));
+  assert.ok(paper);
+  assert.equal(paper.date, "December 2025");
+  const writing = honors.find((h) => h.title.includes("Korean Literature Writing Contest"));
+  assert.ok(writing);
+  assert.equal(writing.date, "May 2025");
+  assert.doesNotMatch(JSON.stringify(writing), /Top Excellence/);
+  assert.equal(honors.find((h) => h.title.includes("Science Fair")).date, "April 2026");
+  assert.equal(honors.filter((h) => h.title.startsWith("Academic Improvement Award")).length, 6);
+  for (const honor of honors) assert.ok(honor.group, honor.title);
+  assert.doesNotMatch(text, /45 (school-certified )?hours/);
+});
+
+test("COSMOS titles use co-founder wording and the physics division is gone everywhere", () => {
+  const roots = ["config", "app", "components", "content", "lib"];
+  const files = [];
+  const walk = (dir) => {
+    for (const name of readdirSync(dir)) {
+      const full = resolve(dir, name);
+      if (statSync(full).isDirectory()) walk(full);
+      else if (/\.(ts|tsx|md|mdx)$/.test(name)) files.push(full);
+    }
+  };
+  for (const root of roots) walk(resolve(import.meta.dirname, "..", root));
+  files.push(resolve(import.meta.dirname, "..", "README.md"));
+  for (const file of files) {
+    const text = readFileSync(file, "utf8");
+    assert.doesNotMatch(text, /(?<!o-)[Ff]ounder (&|and) [Pp]resident|(?<!o-)[Ff]ounded COSMOS|club I founded|[Ff]ounder and lead of \*\*COSMOS/, file);
+    assert.doesNotMatch(text, /Physics Division/, file);
+  }
+  const { experiences } = data("config/experience.ts");
+  assert.equal(experiences.find((e) => e.id === "cosmos").position, "Co-founder & President");
+});
+
+test("résumé and CV are static PDFs and the old generator is gone", () => {
+  const root = resolve(import.meta.dirname, "..");
+  const pdfs = [["public/resume.pdf", 1], ["public/cv-full.pdf", 2]];
+  for (const [file, pages] of pdfs) {
+    const bytes = readFileSync(resolve(root, file));
+    assert.equal(bytes.subarray(0, 5).toString("latin1"), "%PDF-");
+    const count = (bytes.toString("latin1").match(/\/Type\s*\/Page[^s]/g) || []).length;
+    assert.equal(count, pages, file);
+  }
+  const scripts = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8")).scripts;
+  assert.equal(scripts.resume, undefined);
+  assert.equal(existsSync(resolve(root, "scripts/generate-resume.mjs")), false);
 });

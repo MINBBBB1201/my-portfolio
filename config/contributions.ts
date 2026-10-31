@@ -27,7 +27,7 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "Rocket-Thrust-Test-Stand",
     contibutionDescription:
-      "Led design, fabrication, and testing of a solid propellant rocket motor thrust test stand as COSMOS club president.",
+      "Co-led design, fabrication, and testing of a solid propellant rocket motor thrust test stand as COSMOS club president.",
     repoOwner: "MINBBBB1201",
     link: "https://github.com/MINBBBB1201/Rocket-Thrust-Test-Stand",
   },

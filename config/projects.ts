@@ -44,7 +44,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Reinforcement Learning", "Aerospace Engineering", "Hardware/Robotics"],
     status: "In progress",
-    role: "COSMOS Founder & President; project coordination",
+    role: "COSMOS Co-founder & President; project coordination",
     shortDescription: "An ongoing COSMOS project comparing reinforcement learning with conventional attitude control for an electric-ducted-fan hopper. We are building the simulation and hardware; physical validation is still in progress.",
     githubLink: "https://github.com/COSMOS-Aero-Engineering/COSMOS-TVC-Hopper",
     techStack: ["Python", "PyTorch", "FreeCAD", "System Architecture"],
@@ -55,7 +55,7 @@ export const Projects: ProjectInterface[] = [
     }],
     descriptionDetails: {
       paragraphs: [
-        "I coordinate TVC-Hopper as founder and president of COSMOS. Our team is building a small electric-ducted-fan (EDF) hopper whose four exhaust vanes control its attitude. The project asks how a learned controller compares with conventional control on the same physical task.",
+        "I coordinate TVC-Hopper as co-founder and president of COSMOS. Our team is building a small electric-ducted-fan (EDF) hopper whose four exhaust vanes control its attitude. The project asks how a learned controller compares with conventional control on the same physical task.",
         "The main track combines a PPO reinforcement-learning pipeline, a simulation environment, avionics, and a web interface for comparing and replaying controller behavior. Planned comparisons with PID/LQR use common test conditions and measures such as recovery time, overshoot, and steady-state error.",
         "An extension explores policy networks with connectivity inspired by the fruit-fly connectome, alongside a shuffled-network control. Some simulator constants still need physical measurements. Calibration and hardware integration must come before conclusions about controller performance.",
       ],
@@ -210,13 +210,13 @@ export const Projects: ProjectInterface[] = [
   {
     id: "cosmos-rocket-thrust-stand",
     context: "COSMOS club project",
-    role: "COSMOS Founder & President; team lead",
+    role: "COSMOS Co-founder & President; team co-lead",
     status: "Completed",
     companyName: "Solid Propellant Rocket Thrust Test Stand",
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Led a 10-member COSMOS team to build a rocket thrust stand, recover from a recording failure, and analyze the second static-fire test.",
+      "Co-led a 10-member COSMOS team to build a rocket thrust stand, recover from a recording failure, and analyze the second static-fire test.",
     githubLink:
       "https://github.com/MINBBBB1201/Rocket-Thrust-Test-Stand",
     techStack: ["Arduino", "System Architecture", "Python"],
@@ -258,11 +258,11 @@ export const Projects: ProjectInterface[] = [
     ],
     descriptionDetails: {
       paragraphs: [
-        "As founder and president of COSMOS, I led a 10-member team building a test stand for a solid-propellant rocket motor. We combined a mechanical frame, a load cell, and a microcontroller-based data logger to record force during a static-fire test.",
+        "As co-founder and president of COSMOS, I co-led a 10-member team building a test stand for a solid-propellant rocket motor. We combined a mechanical frame, a load cell, and a microcontroller-based data logger to record force during a static-fire test.",
         "Before firing, we added and removed known loads to check the sensor response and its return to zero. The first test burned successfully but did not save the thrust data. We reviewed the recording sequence and storage logic, then captured a continuous record during the second test.",
       ],
       bullets: [
-        "Led two static-fire tests and worked with the team to correct the recording failure between them.",
+        "Co-led two static-fire tests and worked with the team to correct the recording failure between them.",
         "Converted load-cell readings to force and analyzed the thrust-time curve: about 190 N peak thrust and a reported total impulse of 270.6 N·s.",
         "Compared the experimental results with an internal-ballistics simulation and used the test record to review the measurement setup.",
       ],
@@ -271,7 +271,7 @@ export const Projects: ProjectInterface[] = [
   {
     id: "cosmos-aeroview-windtunnel",
     context: "COSMOS club project",
-    role: "COSMOS Founder & President; design and fabrication lead",
+    role: "COSMOS Co-founder & President; design and fabrication lead",
     status: "In progress",
     companyName: "Project AEROVIEW: Open-Circuit Suction Wind Tunnel",
     type: "Personal",
@@ -337,7 +337,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Designed, built, and flight-tested an F-22-inspired foam-board RC aircraft. The accompanying paper on aerodynamic design and flight stability won first place in the school research competition's Physics Division.",
+      "Designed, built, and flight-tested an F-22-inspired foam-board RC aircraft. The accompanying paper on aerodynamic design and flight stability received the school's 1st Place award for Excellent Research Paper in Science and Technology (December 2025).",
     techStack: ["FreeCAD", "System Architecture"],
     startDate: new Date("2025-09-01"),
     endDate: new Date("2026-01-31"),
@@ -366,7 +366,7 @@ export const Projects: ProjectInterface[] = [
         "For a school physics research project, I designed and built an F-22-inspired RC aircraft and studied how its structure and wing geometry affected flight behavior. Lift, drag, and stability calculations informed the design.",
         "I assembled the foam-board airframe, installed its components, and observed the finished aircraft in outdoor flight tests. The build photographs and video document the prototype and its flight behavior.",
         "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
-        "The paper won 1st place in the Physics Division of the school's research paper competition.",
+        "The paper received the school's 1st Place award for Excellent Research Paper in Science and Technology (December 2025).",
       ],
       bullets: [
         "Used aerodynamic calculations and simulation references to guide wing geometry and structural choices.",
