@@ -30,7 +30,7 @@ export const honors: HonorInterface[] = [
     detail: "Paper: \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft\"",
   },
   {
-    title: "1st Place, Science Fair (High)",
+    title: "1st Place, Science Fair (High School Division)",
     issuer: "Qingdao Daewon School",
     date: "April 2026",
     type: "Award",
@@ -100,7 +100,7 @@ export const honors: HonorInterface[] = [
     group: "Contests",
   },
   {
-    title: "2nd Place, Korean Literature Writing Contest (prose)",
+    title: "2nd Place, school-wide Korean Literature Writing Contest (prose)",
     issuer: "Qingdao Daewon School",
     date: "May 2025",
     type: "Award",
