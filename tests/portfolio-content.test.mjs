@@ -126,3 +126,27 @@ test("résumé and CV are static PDFs and the old generator is gone", () => {
   assert.equal(scripts.resume, undefined);
   assert.equal(existsSync(resolve(root, "scripts/generate-resume.mjs")), false);
 });
+
+test("Orchestrators entry stays within what the public repositories show", () => {
+  const { experiences } = data("config/experience.ts");
+  assert.equal(experiences.find((e) => e.id === "mechanics-club"), undefined);
+  const team = experiences.find((e) => e.id === "orchestrators");
+  assert.ok(team);
+  assert.equal(team.position, "Vice President");
+  assert.match(team.company, /Orchestrators \(formerly Mechanics Club\)/);
+  const text = JSON.stringify(team);
+  assert.match(text, /not yet assembled/);
+  assert.match(text, /under team review/);
+  assert.doesNotMatch(text, /designed the PCB|built (the )?Agent Device|agentic framework/i);
+  const { contributionsUnsorted } = data("config/contributions.ts");
+  assert.equal(contributionsUnsorted.find((c) => c.repo === "housing-base"), undefined);
+  for (const repo of ["ae", "daesik"]) assert.ok(contributionsUnsorted.find((c) => c.repo === repo && c.repoOwner === "FiveOchestrators"), repo);
+});
+
+test("service hours are not published and honors carry the confirmed qualifiers", () => {
+  const { communityInvolvement } = data("config/community.ts");
+  assert.doesNotMatch(JSON.stringify(communityInvolvement), /school-certified|certified hours/i);
+  const { honors } = data("config/honors.ts");
+  assert.ok(honors.find((h) => h.title === "1st Place, Science Fair (High School Division)"));
+  assert.ok(honors.find((h) => h.title.startsWith("2nd Place, school-wide Korean Literature Writing Contest")));
+});

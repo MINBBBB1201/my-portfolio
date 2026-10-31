@@ -29,7 +29,7 @@ export const resumeSelection = {
   ],
   leadership: [
     "Student Council, Planning Department Vice President (2025 to March 2026): helped plan a joint sports day and ran the live scoreboard at the orientation event.",
-    "Mechanics Club, Vice President (March 2026 to present): designed and tested a 4-bit ripple-carry adder from logic-gate ICs.",
+    "Orchestrators (formerly Mechanics Club), Vice President (March 2026 to present): contribute to Agent Device, a palm-sized companion device for AI agents (v0.3 board order review and pad-and-pin audit tool; not yet assembled). As Mechanics Club, built a 4-bit ripple-carry adder from logic-gate ICs.",
     "Also: DAEMUN II delegate for Slovakia (2025); Support Group leader (Grade 11); PSYCHOFISH member (2024 to 2025).",
   ],
   honors: [

@@ -19,10 +19,18 @@ export const contributionsUnsorted: contributionsInterface[] = [
     link: "https://github.com/MINBBBB1201/jsl-project",
   },
   {
-    repo: "housing-base",
-    contibutionDescription: "Laptop base-cover CAD project with dimensional measurements, design research, and verification records.",
-    repoOwner: "MINBBBB1201",
-    link: "https://github.com/MINBBBB1201/housing-base",
+    repo: "ae",
+    contibutionDescription:
+      "Contribute to Agent Device, the Orchestrators team's palm-sized companion device for AI agents: v0.3 keyring-board order review and a pad-and-pin audit tool with regression tests. The board is designed but not yet assembled.",
+    repoOwner: "FiveOchestrators",
+    link: "https://github.com/FiveOchestrators/ae",
+  },
+  {
+    repo: "daesik",
+    contibutionDescription:
+      "Submitted a researcher and creator workflow for the Orchestrators team's Slack agent (pull request under review).",
+    repoOwner: "FiveOchestrators",
+    link: "https://github.com/FiveOchestrators/daesik",
   },
   {
     repo: "Rocket-Thrust-Test-Stand",
