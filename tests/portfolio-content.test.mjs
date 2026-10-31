@@ -38,6 +38,7 @@ test("completed experience is not represented as current, and unknown dates stay
   const camp = experiences.find((e) => e.id === "kau-aerospace-camp");
   assert.equal(camp.period, "August 3 to 7, 2026");
   assert.equal(experiences.find((e) => e.id === "jsl-logistics").period, "August 2026 to present");
+  assert.equal(experiences.find((e) => e.id === "jsl-logistics").location, "Remote");
   assert.equal(mintech.achievements.length, 0);
   assert.equal(experiences.find((e) => e.id === "jsl-logistics").endDate, "Present");
 });
