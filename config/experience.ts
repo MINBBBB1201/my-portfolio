@@ -23,7 +23,7 @@ export const experiences: ExperienceInterface[] = [
     period: "August 2026 to present",
     position: "Intern",
     company: "JSL Logistics",
-    location: "",
+    location: "Remote",
     endDate: "Present",
     description: [
       "Developing staff tools and the public website for JSL Logistics during an ongoing software internship.",
