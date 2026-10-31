@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "resume": "node scripts/generate-resume.mjs",
     "test": "node --test tests/*.test.mjs",
     "dev": "next dev",
     "build": "next build",

@@ -106,7 +106,7 @@ export default function IndexPage() {
             I'm a senior at Qingdao Daewon School planning to study AI.
             My projects range from a camera-based tracking rig to an AI
             assistant for a Model UN conference. In COSMOS, the engineering
-            club I founded, our team is developing an EDF hopper to compare
+            club I co-founded, our team is developing an EDF hopper to compare
             reinforcement learning with conventional control.
           </AnimatedText>
           <AnimatedText as="p" delay={0.3} className="text-muted-foreground leading-relaxed">

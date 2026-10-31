@@ -4,7 +4,7 @@ import PageContainer from "@/components/common/page-container";
 import HonorsGrid from "@/components/experience/honors-grid";
 import Timeline from "@/components/experience/timeline";
 import { experiences } from "@/config/experience";
-import { academicStats, honors } from "@/config/honors";
+import { academicStats, honors, honorsNote } from "@/config/honors";
 import { pagesConfig } from "@/config/pages";
 import { siteConfig } from "@/config/site";
 
@@ -57,8 +57,9 @@ export default function ExperiencePage() {
         </div>
         <div>
           <h2 className="font-heading text-2xl sm:text-3xl mb-6 text-center">
-            Honors & Certifications
+            Honors, Awards & Certifications
           </h2>
+          <p className="mb-6 text-center text-sm text-muted-foreground">{honorsNote}</p>
           <HonorsGrid honors={honors} />
         </div>
       </div>

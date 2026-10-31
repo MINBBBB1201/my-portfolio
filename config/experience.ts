@@ -55,6 +55,7 @@ export const experiences: ExperienceInterface[] = [
     location: "Goyang, South Korea",
     startDate: new Date("2026-08-01"),
     endDate: new Date("2026-08-31"),
+    period: "August 2026",
     description: [
       "Completed a camp program covering flight training devices (FTD), air traffic control (ATC), CubeSat design, and autonomous drone systems.",
       "Recognized for strong performance in the FTD and ATC simulation exercises.",
@@ -69,14 +70,14 @@ export const experiences: ExperienceInterface[] = [
   },
   {
     id: "cosmos",
-    position: "Founder & President",
+    position: "Co-founder & President",
     company: "COSMOS (Aero-Engineering Club)",
     location: "Qingdao Daewon School",
     startDate: new Date("2025-09-01"),
     endDate: "Present",
     description: [
-      "Founded COSMOS and led a 10-member team working on rocket instrumentation, wind-tunnel construction, and control experiments.",
-      "Led the rocket thrust-stand project through two static-fire tests. After the first test failed to save its data, we corrected the recording sequence and captured a continuous thrust record in the second test.",
+      "Co-founded COSMOS, a 10-member team working on rocket instrumentation, wind-tunnel construction, and control experiments, and have served as president since March 2026.",
+      "Co-led the rocket thrust-stand project through two static-fire tests. After the first test failed to save its data, we corrected the recording sequence and captured a continuous thrust record in the second test.",
       "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
       "Coordinate the ongoing TVC-Hopper project, connecting reinforcement-learning simulations with avionics and mechanical design. Calibration and physical validation are still in progress.",
     ],

@@ -15,9 +15,9 @@ Personal portfolio site for Minchan Kim, a 12th-grade student at Qingdao Daewon 
 
 - **Rocket Motor Thrust Test Stand** — Designed, built, and instrumented a static-fire test stand for a student-made solid rocket motor, logging real thrust-time data (190N peak thrust)
 - **Open-Circuit Wind Tunnel** — Directing the CAD design and fabrication of an open-circuit wind tunnel for flow visualization and aerodynamic validation testing (in progress)
-- **F-22-Inspired RC Aircraft** — Designed, built, and flight-tested a hand-built RC aircraft; the resulting research paper won 1st place in the Physics Division of the school's research competition
+- **F-22-Inspired RC Aircraft** — Designed, built, and flight-tested a hand-built RC aircraft; the resulting research paper won 1st place for Excellent Research Paper (Science and Technology) in December 2025
 - **Dual-Turret Drone-Tracking System** — Built an OpenCV/YOLO-based dual-turret camera tracking system
-- Founder and lead of **COSMOS**, a 10-member student aero-engineering club
+- Co-founder and president of **COSMOS**, a 10-member student aero-engineering club
 
 ## Features
 
@@ -56,16 +56,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The server reads published projects, experience, academics, honors, and community data from `config/*.ts`. Set `GROQ_API_KEY` in local and Vercel environments. `GROQ_MODEL` is optional and defaults to `openai/gpt-oss-20b`. If a configured model becomes unavailable, the route retries once with the default. The API key stays server-side. Run `npm test` for request validation, model fallback, and provider-failure checks.
 
-## Update the resume
+## Résumé and CV
 
-`public/resume.pdf` is served by the Resume button. After changing portfolio content, run:
-
-```bash
-python -m pip install reportlab
-npm run resume
-```
-
-The generator reads the published config files and writes a two-page PDF. Set `PDF_PYTHON` to a Python executable if needed. Review both pages before committing the regenerated PDF. Scores and unlisted activities are not inferred.
+`public/resume.pdf` (one page) and `public/cv-full.pdf` (two pages) are static files designed outside this repository and served by the buttons on `/resume`. They are not generated from `config/*.ts`, so no build or CI step rewrites them. When either file changes, update `config/resume.ts` so the readable page at `/resume` still matches, and review every PDF page before committing. Scores and unlisted activities are not inferred.
 
 ## Project Structure
 

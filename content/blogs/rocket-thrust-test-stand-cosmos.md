@@ -9,7 +9,7 @@ featured: true
 
 *Updated October 20, 2026.*
 
-I founded COSMOS, my school's aerospace engineering club, and led a 10-member team building a thrust test stand for a solid-propellant rocket motor. The stand combined a mechanical frame, a load cell, and a microcontroller-based data logger. We needed a record of force over time to compare the test with our calculations.
+I co-founded COSMOS, my school's aerospace engineering club, and co-led a 10-member team building a thrust test stand for a solid-propellant rocket motor. The stand combined a mechanical frame, a load cell, and a microcontroller-based data logger. We needed a record of force over time to compare the test with our calculations.
 
 ## Checking the measurement setup
 
