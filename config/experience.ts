@@ -139,7 +139,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2026-03-01"),
     endDate: "Present",
     description: [
-      "Vice President of Orchestrators, a student AI development team that grew out of the Mechanics Club.",
+      "Vice President of Orchestrators, a student AI development team. The Mechanics Club was renamed Orchestrators in Grade 12.",
       "Contribute to Agent Device (ae), a palm-sized companion device for AI agents. I wrote the v0.3 keyring-board order review and a pad-and-pin audit tool with regression tests. The board is designed but not yet assembled, and firmware has not started.",
       "Submitted a researcher and creator workflow for the team's Slack agent; the pull request is under team review.",
       "As the Mechanics Club, designed and tested a 4-bit ripple-carry adder on a breadboard using logic-gate ICs and LED indicators, and conceived the initial concept for a flight-booking web app that I later built independently as Tern (see the Tern project).",
