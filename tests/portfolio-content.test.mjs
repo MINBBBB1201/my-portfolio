@@ -155,3 +155,19 @@ test("service hours are not published and honors carry the confirmed qualifiers"
   assert.ok(honors.find((h) => h.title === "1st Place, Science Fair (High School Division)"));
   assert.ok(honors.find((h) => h.title.startsWith("2nd Place, school-wide Korean Literature Writing Contest")));
 });
+
+test("claims that the records do not support stay out of the site", () => {
+  const { Projects } = data("config/projects.ts");
+  const { experiences } = data("config/experience.ts");
+  const f22 = Projects.find((p) => p.id === "wind-tunnel-rc-aircraft");
+  assert.doesNotMatch(JSON.stringify(f22), /foam-board|FreeCAD/);
+  assert.match(JSON.stringify(f22), /corrugated-cardboard/);
+  assert.equal(f22.endDate.toISOString().slice(0, 7), "2025-12");
+  const tern = Projects.find((p) => p.id === "tern");
+  assert.equal(tern.startDate.toISOString().slice(0, 7), "2026-04");
+  assert.equal(experiences.find((e) => e.id === "tern").startDate.toISOString().slice(0, 7), "2026-04");
+  const camp = JSON.stringify(experiences.find((e) => e.id === "kau-aerospace-camp"));
+  assert.doesNotMatch(camp, /Asiana|Korean Air|evacuation|Recognized/);
+  const cosmos = JSON.stringify([experiences.find((e) => e.id === "cosmos"), Projects.filter((p) => /thrust/i.test(p.companyName))]);
+  assert.doesNotMatch(cosmos, /two static-fire|second test|second static/);
+});

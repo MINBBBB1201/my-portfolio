@@ -192,7 +192,7 @@ export const Projects: ProjectInterface[] = [
     websiteLink: "https://flytern.site",
     githubLink: "https://github.com/MINBBBB1201/Tern",
     techStack: ["Next.js", "Typescript", "React Three Fiber", "GSAP", "APIs"],
-    startDate: new Date("2026-03-01"),
+    startDate: new Date("2026-04-01"),
     companyLogoImg: "/projects/tern/logo.png",
     pagesInfoArr: [],
     descriptionDetails: {
@@ -216,7 +216,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Co-led a 10-member COSMOS team to build a rocket thrust stand, recover from a recording failure, and analyze the second static-fire test.",
+      "Co-led a 10-member COSMOS team to build a rocket thrust stand, recover from a recording failure, and analyze a later static-fire test.",
     githubLink:
       "https://github.com/MINBBBB1201/Rocket-Thrust-Test-Stand",
     techStack: ["Arduino", "System Architecture", "Python"],
@@ -248,7 +248,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Static-Fire Test & Results",
         description:
-          "Static-fire footage and the recorded thrust-time curve. The second test produced a peak of about 190 N and a reported total impulse of 270.6 N·s.",
+          "Static-fire footage and the recorded thrust-time curve. A later test produced a peak of about 190 N and a reported total impulse of 270.6 N·s.",
         imgArr: [
           "/projects/cosmos-rocket-thrust-stand/10-ready-for-test.png",
           "/projects/cosmos-rocket-thrust-stand/11-thrust-time-graph.png",
@@ -259,10 +259,10 @@ export const Projects: ProjectInterface[] = [
     descriptionDetails: {
       paragraphs: [
         "As co-founder and president of COSMOS, I co-led a 10-member team building a test stand for a solid-propellant rocket motor. We combined a mechanical frame, a load cell, and a microcontroller-based data logger to record force during a static-fire test.",
-        "Before firing, we added and removed known loads to check the sensor response and its return to zero. The first test burned successfully but did not save the thrust data. We reviewed the recording sequence and storage logic, then captured a continuous record during the second test.",
+        "Before firing, we added and removed known loads to check the sensor response and its return to zero. The first test burned successfully but did not save the thrust data. We reviewed the recording sequence and storage logic, then captured a continuous record in a later test.",
       ],
       bullets: [
-        "Co-led two static-fire tests and worked with the team to correct the recording failure between them.",
+        "Co-led the static-fire tests and worked with the team to correct the recording failure after the first one.",
         "Converted load-cell readings to force and analyzed the thrust-time curve: about 190 N peak thrust and a reported total impulse of 270.6 N·s.",
         "Compared the experimental results with an internal-ballistics simulation and used the test record to review the measurement setup.",
       ],
@@ -337,17 +337,17 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Aerospace Engineering", "Hardware/Robotics"],
     shortDescription:
-      "Designed, built, and flight-tested an F-22-inspired foam-board RC aircraft. The accompanying paper on aerodynamic design and flight stability received the school's 1st Place award for Excellent Research Paper in Science and Technology (December 2025).",
-    techStack: ["FreeCAD", "System Architecture"],
+      "Designed, built, and flight-tested an F-22-inspired corrugated-cardboard RC aircraft. The accompanying paper on aerodynamic design and flight stability received the school's 1st Place award for Excellent Research Paper in Science and Technology (December 2025).",
+    techStack: ["System Architecture"],
     startDate: new Date("2025-09-01"),
-    endDate: new Date("2026-01-31"),
+    endDate: new Date("2025-12-31"),
     companyLogoImg: "/projects/wind-tunnel-rc-aircraft/01-hero-aircraft-topdown.jpg",
     paperLink: "/projects/wind-tunnel-rc-aircraft/research-paper.pdf",
     pagesInfoArr: [
       {
         title: "The Test Aircraft",
         description:
-          "The foam-board aircraft I assembled and painted for the project, with its propulsion components, control surfaces, and wiring visible in the build photographs.",
+          "The corrugated-cardboard aircraft I cut, assembled and painted for the project, with its propulsion components, control surfaces, and wiring visible in the build photographs.",
         imgArr: [
           "/projects/wind-tunnel-rc-aircraft/01-hero-aircraft-topdown.jpg",
           "/projects/wind-tunnel-rc-aircraft/02-aircraft-build-detail.jpg",
@@ -364,7 +364,7 @@ export const Projects: ProjectInterface[] = [
     descriptionDetails: {
       paragraphs: [
         "For a school physics research project, I designed and built an F-22-inspired RC aircraft and studied how its structure and wing geometry affected flight behavior. Lift, drag, and stability calculations informed the design.",
-        "I assembled the foam-board airframe, installed its components, and observed the finished aircraft in outdoor flight tests. The build photographs and video document the prototype and its flight behavior.",
+        "I drew the F-22 pattern on 3 mm corrugated cardboard, cut and assembled the airframe, installed its components, and observed the finished aircraft in outdoor flight tests. The build photographs and video document the prototype and its flight behavior.",
         "Wrote this up as a research paper, \"Analysis of the Correlation Between Aerodynamic Design Variables and Flight Stability of an F-22-Based RC Aircraft,\" examining how structure and wing geometry choices shape flight characteristics through lift and drag.",
         "The paper received the school's 1st Place award for Excellent Research Paper in Science and Technology (December 2025).",
       ],

@@ -13,7 +13,7 @@ export const resumeSelection = {
     { id: "kau-aerospace-camp", bullets: [] as string[] },
     { id: "cosmos", bullets: [
       "Co-founder; president since March 2026.",
-      "Co-led a rocket thrust-stand project through two static-fire tests; after the first test failed to save data, corrected the recording sequence and captured a continuous thrust record reaching about 190 N.",
+      "Co-led a rocket thrust-stand project through its static-fire tests; after the first test failed to save data, corrected the recording sequence, and a later test captured a continuous thrust record reaching about 190 N.",
       "Direct Project AEROVIEW, a suction wind tunnel designed in FreeCAD and OpenSCAD, and coordinate TVC-Hopper, which combines reinforcement-learning simulation, avionics and CAD (physical validation in progress).",
     ] },
     { id: "daemun-iii", bullets: [
@@ -22,7 +22,7 @@ export const resumeSelection = {
     ] },
   ],
   projects: [
-    { id: "wind-tunnel-rc-aircraft", bullets: ["Designed the airframe in FreeCAD, built and flight-tested a foam-board aircraft, and wrote a 22-page paper relating design variables to stability."] },
+    { id: "wind-tunnel-rc-aircraft", bullets: ["Designed and built a corrugated-cardboard RC aircraft, flight-tested it, and wrote a 22-page paper relating design variables to stability."] },
     { id: "autopilot-mechanism-study", bullets: ["Analyzed a control-systems paper and an Airbus patent on autopilot disengagement; compared illustrative P, PI and PID error curves. Literature-based; no flight or hardware testing."] },
     { id: "tern", bullets: ["Built with Next.js, the Duffel API and React Three Fiber in four languages; compares fares, layovers and airport weather. Checkout runs through an external partner."] },
     { id: "ciws-drone-tracking-turret", bullets: ["Built a camera-tracking rig (Python, OpenCV, Arduino servos); tested YOLOv5 detection and a color-tracking dual-turret demo."] },
@@ -37,6 +37,6 @@ export const resumeSelection = {
     "Performance Excellence Award, COSMOS (July 2026) and Point of View club (July 2025). Subject Excellence Award: Precalculus (December 2025, July 2026) and Creative Writing (December 2025).",
     "1st Place, English Speaking Contest (November 2024) and Social Studies Project Creativity (June 2025). 2nd Place, Korean Literature Writing Contest, prose (May 2025). Seven Academic Improvement Awards (2024 to 2026).",
   ],
-  skills: "Python, TypeScript, Next.js, React, PostgreSQL, OpenCV, Arduino, FreeCAD",
+  skills: "Python, TypeScript, Next.js, React, Node.js, MongoDB, PostgreSQL, Docker, OpenCV, Arduino/ESP32, KiCad, FreeCAD",
   languages: "Korean, English, Mandarin",
 };

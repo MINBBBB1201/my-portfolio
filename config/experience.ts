@@ -30,7 +30,7 @@ export const experiences: ExperienceInterface[] = [
       "Work includes a document-based support chatbot, photo-assisted damage review, a 3D cargo-loading planner, and shipment and trade-document interfaces. The chatbot retrieves source documents for its answers; inspection suggestions remain subject to staff review.",
     ],
     achievements: [],
-    skills: ["Next.js", "Typescript", "Node.js", "MongoDB", "APIs"],
+    skills: ["Next.js", "React", "Typescript", "Tailwind CSS", "Three.js", "Node.js", "express.js", "MongoDB", "Docker", "APIs"],
     companyUrl: "https://github.com/MINBBBB1201/jsl-project",
   },
   {
@@ -58,12 +58,8 @@ export const experiences: ExperienceInterface[] = [
     period: "August 3 to 7, 2026",
     description: [
       "Completed a camp program covering flight training devices (FTD), air traffic control (ATC), CubeSat design, and autonomous drone systems.",
-      "Recognized for strong performance in the FTD and ATC simulation exercises.",
     ],
-    achievements: [
-      "Visited Korean Air and Asiana Airlines headquarters, touring aircraft hangars and completing evacuation slide and safety training.",
-      "Took part in sessions on autonomous systems and urban air mobility (UAM).",
-    ],
+    achievements: [],
     skills: [],
     companyUrl: "",
     logo: "",
@@ -77,12 +73,12 @@ export const experiences: ExperienceInterface[] = [
     endDate: "Present",
     description: [
       "Co-founded COSMOS, a 10-member team working on rocket instrumentation, wind-tunnel construction, and control experiments, and have served as president since March 2026.",
-      "Co-led the rocket thrust-stand project through two static-fire tests. After the first test failed to save its data, we corrected the recording sequence and captured a continuous thrust record in the second test.",
+      "Co-led the rocket thrust-stand project through its static-fire tests. After the first test failed to save its data, we corrected the recording sequence, and a later test captured a continuous thrust record.",
       "Directed Project AEROVIEW, an open-circuit suction wind tunnel: parametric CAD design (FreeCAD, OpenSCAD) to compare airflow over NACA 0012/2412/4412 airfoils.",
       "Coordinate the ongoing TVC-Hopper project, connecting reinforcement-learning simulations with avionics and mechanical design. Calibration and physical validation are still in progress.",
     ],
     achievements: [
-      "Analyzed the second test's thrust curve, which reached about 190 N and a reported total impulse of 270.6 N·s, and compared it with an internal-ballistics simulation.",
+      "Analyzed the thrust curve of a later test, which reached about 190 N and a reported total impulse of 270.6 N·s, and compared it with an internal-ballistics simulation.",
       "Identified and corrected a design-to-fabrication dimensional error in the wind tunnel through direct measurement and recalculation.",
       "Used wind-tunnel blockage calculations of 1.4% to 14% across angles of attack to revise the support design. Final integration and airflow measurements remain pending.",
     ],
@@ -95,7 +91,7 @@ export const experiences: ExperienceInterface[] = [
     position: "Founder & Developer",
     company: "Tern",
     location: "Gyeonggi, South Korea",
-    startDate: new Date("2026-03-01"),
+    startDate: new Date("2026-04-01"),
     endDate: "Present",
     description: [
       "Built Tern (flytern.site), a flight booking web app using Next.js, the Duffel API, and React Three Fiber.",
