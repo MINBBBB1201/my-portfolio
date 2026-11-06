@@ -171,3 +171,11 @@ test("claims that the records do not support stay out of the site", () => {
   const cosmos = JSON.stringify([experiences.find((e) => e.id === "cosmos"), Projects.filter((p) => /thrust/i.test(p.companyName))]);
   assert.doesNotMatch(cosmos, /two static-fire|second test|second static/);
 });
+
+test("rocket impulse is rounded because two baselines give 270 and 280 N·s", () => {
+  const { Projects } = data("config/projects.ts");
+  const { experiences } = data("config/experience.ts");
+  const text = JSON.stringify([experiences.find((e) => e.id === "cosmos"), Projects.filter((p) => /thrust/i.test(p.companyName))]);
+  assert.match(text, /about 270 N·s/);
+  assert.doesNotMatch(text, /270\.6/);
+});
