@@ -7,6 +7,14 @@ export interface CommunityInterface {
 
 export const communityInvolvement: CommunityInterface[] = [
   {
+    name: "DAEMUN I",
+    role: "Admin staff",
+    period: "2024",
+    description: [
+      "Helped the chairs communicate and kept committee procedure running as conference staff.",
+    ],
+  },
+  {
     name: "DAEMUN II",
     role: "Slovakia Delegate, UNCSTD",
     period: "Completed",
