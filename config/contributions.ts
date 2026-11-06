@@ -21,16 +21,16 @@ export const contributionsUnsorted: contributionsInterface[] = [
   {
     repo: "ae",
     contibutionDescription:
-      "Contribute to Agent Device, the Orchestrators team's palm-sized companion device for AI agents: v0.3 keyring-board order review and a pad-and-pin audit tool with regression tests. The board is designed but not yet assembled.",
+      "Private team repository, so the link opens the Orchestrators page. Contribute to Agent Device, the team's palm-sized companion device for AI agents: v0.3 keyring-board order review and a pad-and-pin audit tool with regression tests. The board is designed but not yet assembled.",
     repoOwner: "FiveOchestrators",
-    link: "https://github.com/FiveOchestrators/ae",
+    link: "https://github.com/FiveOchestrators",
   },
   {
     repo: "daesik",
     contibutionDescription:
-      "Submitted a researcher and creator workflow for the Orchestrators team's Slack agent (pull request under review).",
+      "Private team repository, so the link opens the Orchestrators page. Submitted a researcher and creator workflow for the team's Slack agent (pull request under review).",
     repoOwner: "FiveOchestrators",
-    link: "https://github.com/FiveOchestrators/daesik",
+    link: "https://github.com/FiveOchestrators",
   },
   {
     repo: "Rocket-Thrust-Test-Stand",
