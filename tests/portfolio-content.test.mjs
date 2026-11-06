@@ -145,7 +145,13 @@ test("Orchestrators entry stays within what the public repositories show", () =>
   assert.doesNotMatch(text, /designed the PCB|built (the )?Agent Device|agentic framework/i);
   const { contributionsUnsorted } = data("config/contributions.ts");
   assert.equal(contributionsUnsorted.find((c) => c.repo === "housing-base"), undefined);
-  for (const repo of ["ae", "daesik"]) assert.ok(contributionsUnsorted.find((c) => c.repo === repo && c.repoOwner === "FiveOchestrators"), repo);
+  for (const repo of ["ae", "daesik"]) {
+    const entry = contributionsUnsorted.find((c) => c.repo === repo && c.repoOwner === "FiveOchestrators");
+    assert.ok(entry, repo);
+    // These two repositories are private (404 for visitors), so the card opens the public org page and says so.
+    assert.equal(entry.link, "https://github.com/FiveOchestrators", repo);
+    assert.match(entry.contibutionDescription, /^Private team repository/, repo);
+  }
 });
 
 test("service hours are not published and honors carry the confirmed qualifiers", () => {
