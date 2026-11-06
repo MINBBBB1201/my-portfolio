@@ -195,3 +195,10 @@ test("DAEMUN I staff role is listed on the site and in the résumé text", () =>
   const { resumeSelection } = data("config/resume.ts");
   assert.match(resumeSelection.leadership.join(" "), /DAEMUN I admin staff \(2024\)/);
 });
+
+test("Roger outage wording matches the CUHK essay (at the presentation, not during a demonstration)", () => {
+  const { resumeSelection } = data("config/resume.ts");
+  const daemun = resumeSelection.experience.find((e) => e.id === "daemun-iii").bullets.join(" ");
+  assert.match(daemun, /stopped answering at the school-wide site presentation/);
+  assert.doesNotMatch(daemun, /during a school-wide demonstration/);
+});
