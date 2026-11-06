@@ -179,3 +179,13 @@ test("rocket impulse is rounded because two baselines give 270 and 280 N·s", ()
   assert.match(text, /about 270 N·s/);
   assert.doesNotMatch(text, /270\.6/);
 });
+
+test("DAEMUN I staff role is listed on the site and in the résumé text", () => {
+  const { communityInvolvement } = data("config/community.ts");
+  const first = communityInvolvement.find((c) => c.name === "DAEMUN I");
+  assert.ok(first);
+  assert.equal(first.role, "Admin staff");
+  assert.equal(first.period, "2024");
+  const { resumeSelection } = data("config/resume.ts");
+  assert.match(resumeSelection.leadership.join(" "), /DAEMUN I admin staff \(2024\)/);
+});

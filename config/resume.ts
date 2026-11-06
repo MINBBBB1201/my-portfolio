@@ -30,7 +30,7 @@ export const resumeSelection = {
   leadership: [
     "Student Council, Planning Department Vice President (2025 to March 2026): helped plan a joint sports day and ran the live scoreboard at the orientation event.",
     "Orchestrators (formerly Mechanics Club), Vice President (March 2026 to present): contribute to Agent Device, a palm-sized companion device for AI agents (assigned PCB design verification for the v0.3 board; order review and pad-and-pin audit tool; not yet assembled). As Mechanics Club, built a 4-bit ripple-carry adder from logic-gate ICs.",
-    "Also: DAEMUN II delegate for Slovakia (2025); Support Group leader (Grade 11); PSYCHOFISH member (2024 to 2025).",
+    "Also: DAEMUN I admin staff (2024); DAEMUN II delegate for Slovakia (2025); Support Group leader (Grade 11); PSYCHOFISH member (2024 to 2025).",
   ],
   honors: [
     "1st Place, Excellent Research Paper (Science and Technology), December 2025, for a paper on design variables and flight stability of an F-22-inspired RC aircraft. 1st Place, School Science Fair (High), April 2026.",
