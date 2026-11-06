@@ -248,7 +248,7 @@ export const Projects: ProjectInterface[] = [
       {
         title: "Static-Fire Test & Results",
         description:
-          "Static-fire footage and the recorded thrust-time curve. A later test produced a peak of about 190 N and a reported total impulse of 270.6 N·s.",
+          "Static-fire footage and the recorded thrust-time curve. A later test produced a peak of about 190 N and a total impulse of about 270 N·s.",
         imgArr: [
           "/projects/cosmos-rocket-thrust-stand/10-ready-for-test.png",
           "/projects/cosmos-rocket-thrust-stand/11-thrust-time-graph.png",
@@ -263,7 +263,7 @@ export const Projects: ProjectInterface[] = [
       ],
       bullets: [
         "Co-led the static-fire tests and worked with the team to correct the recording failure after the first one.",
-        "Converted load-cell readings to force and analyzed the thrust-time curve: about 190 N peak thrust and a reported total impulse of 270.6 N·s.",
+        "Converted load-cell readings to force and analyzed the thrust-time curve: about 190 N peak thrust and a total impulse of about 270 N·s.",
         "Compared the experimental results with an internal-ballistics simulation and used the test record to review the measurement setup.",
       ],
     },

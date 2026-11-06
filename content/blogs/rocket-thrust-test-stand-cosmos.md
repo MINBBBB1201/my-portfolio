@@ -25,7 +25,7 @@ We reviewed the recording start sequence and data-storage logic before repeating
 
 ## Reading the thrust curve
 
-We converted the load-cell readings to force and plotted them against time. The report records a peak thrust of about **190 N** and a total impulse of **270.6 N·s**, calculated from the area under the curve.
+We converted the load-cell readings to force and plotted them against time. The report records a peak thrust of about **190 N** and a total impulse of about **270 N·s**, calculated from the area under the curve. The published sample output on the project page is about 3.5% higher because its plotting script adds a calibration offset.
 
 We compared the experimental results with an internal-ballistics simulation. The report also discusses CFD and a qualitative comparison with the visible exhaust. Only a later test produced the complete record used for this analysis.
 

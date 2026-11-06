@@ -78,7 +78,7 @@ export const experiences: ExperienceInterface[] = [
       "Coordinate the ongoing TVC-Hopper project, connecting reinforcement-learning simulations with avionics and mechanical design. Calibration and physical validation are still in progress.",
     ],
     achievements: [
-      "Analyzed the thrust curve of a later test, which reached about 190 N and a reported total impulse of 270.6 N·s, and compared it with an internal-ballistics simulation.",
+      "Analyzed the thrust curve of a later test, which reached about 190 N and a total impulse of about 270 N·s, and compared it with an internal-ballistics simulation.",
       "Identified and corrected a design-to-fabrication dimensional error in the wind tunnel through direct measurement and recalculation.",
       "Used wind-tunnel blockage calculations of 1.4% to 14% across angles of attack to revise the support design. Final integration and airflow measurements remain pending.",
     ],
