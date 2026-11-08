@@ -18,7 +18,7 @@ export const resumeSelection = {
     ] },
     { id: "daemun-iii", bullets: [
       "Co-developed the conference platform with Junwon Kim (public site, AI assistant, organizer dashboard, delegate submissions with version history) and built the assistant's first backend and admin tools.",
-      "After the assistant stopped during a school-wide demonstration, called a team meeting; the team moved to a gateway-based design with a fallback provider, and the next 51 logged queries recorded no upstream errors.",
+      "After the assistant stopped answering at the school-wide site presentation, called a team meeting; the team moved to a gateway with a fallback provider, and the next 51 logged queries recorded no upstream errors.",
     ] },
   ],
   projects: [
