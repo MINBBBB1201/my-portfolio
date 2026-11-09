@@ -26,7 +26,7 @@ export const experiences: ExperienceInterface[] = [
     location: "Remote",
     endDate: "Present",
     description: [
-      "Developing staff tools and the public website for JSL Logistics during an ongoing software internship.",
+      "Sole developer of the company website and staff tools for JSL Logistics, front end and back end, during an ongoing software internship.",
       "Work includes a document-based support chatbot, photo-assisted damage review, a 3D cargo-loading planner, and shipment and trade-document interfaces. The chatbot retrieves source documents for its answers; inspection suggestions remain subject to staff review.",
     ],
     achievements: [],

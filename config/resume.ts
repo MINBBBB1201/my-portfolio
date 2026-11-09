@@ -5,7 +5,7 @@ export const resumeSelection = {
   apPlanned: "AP exams planned for May 2027: Calculus BC, Physics C (Mechanics; Electricity and Magnetism), Physics 1, Computer Science A.",
   experience: [
     { id: "jsl-logistics", bullets: [
-      "Develop staff tools and the public website, including a document-based support chatbot, photo-assisted damage review, and a 3D cargo-loading planner that checks dimensions, stacking and payload limits.",
+      "Sole developer of the company website and staff tools, front end and back end: document-based support chatbot, photo-assisted damage review, and a 3D cargo-loading planner.",
     ] },
     { id: "mintech", bullets: [
       "Assisted with OLED deposition equipment manufacturing and dimensional checks (calipers, micrometers); learned sputtering thin-film process flow; completed 4M, 5S and safety onboarding.",
