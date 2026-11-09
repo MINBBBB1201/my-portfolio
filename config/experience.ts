@@ -129,14 +129,14 @@ export const experiences: ExperienceInterface[] = [
   },
   {
     id: "tessellarium-ai",
-    position: "Vice President",
+    position: "Co-founder and Vice President",
     company: "Tessellarium AI",
     location: "Qingdao, China",
     startDate: new Date("2026-09-01"),
     endDate: "Present",
     description: [
       "Six-student startup building AI agents that run school operations at international boarding schools, starting with Qingdao Daewon School.",
-      "Interviewed teachers to find operational problems, and wrote product hypotheses with test plans for an admissions-support agent and a hardware-club engineering-coach agent.",
+      "Interviewing homeroom teachers and students across the school to find operational problems; wrote product hypotheses with test plans for an admissions-support agent and a hardware-club engineering-coach agent.",
     ],
     achievements: [],
     skills: [],
