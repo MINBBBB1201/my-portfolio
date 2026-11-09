@@ -128,6 +128,22 @@ export const experiences: ExperienceInterface[] = [
     logo: "",
   },
   {
+    id: "tessellarium-ai",
+    position: "Vice President",
+    company: "Tessellarium AI",
+    location: "Qingdao, China",
+    startDate: new Date("2026-09-01"),
+    endDate: "Present",
+    description: [
+      "Six-student startup building AI agents that run school operations at international boarding schools, starting with Qingdao Daewon School.",
+      "Interviewed teachers to find operational problems, and wrote product hypotheses with test plans for an admissions-support agent and a hardware-club engineering-coach agent.",
+    ],
+    achievements: [],
+    skills: [],
+    companyUrl: "",
+    logo: "",
+  },
+  {
     id: "orchestrators",
     position: "Vice President",
     company: "Orchestrators (formerly Mechanics Club)",
