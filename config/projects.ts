@@ -451,7 +451,7 @@ export const Projects: ProjectInterface[] = [
     companyLogoImg: "/projects/erau-esg-case-study/card.jpg",
     paperLink: "/projects/erau-esg-case-study/research-paper.pdf",
     paperNote:
-      "This is the school paper as I wrote it, a summary of Embry-Riddle's public pages and news with no original data. The figures are as those sources report them and I did not verify them independently. I left out my teacher's email address and one reference entry that repeated another.",
+      "This is my school paper, a summary of Embry-Riddle's public pages and news with no original data. The figures are as those sources report them and I did not verify them independently. For this page I softened one sentence in the conclusion that overstated the emissions savings, left out my teacher's email address, and dropped one reference entry that repeated another.",
     descriptionDetails: {
       paragraphs: [
         "For an 11th-grade environmental science class, I wrote a short paper on Embry-Riddle Aeronautical University (ERAU) through the lens of ESG (environmental, social, and governance) criteria. It covers flight training and sustainable aviation fuel, campus facilities, and research funding, including ERAU's M.S. in Aviation and Aerospace Sustainability and a $500,000 ARPA-E grant announced in May 2026 for batteries built into aircraft structures.",
