@@ -139,7 +139,29 @@ export const Projects: ProjectInterface[] = [
     shortDescription: "Ongoing JSL internship work on a logistics platform: document-based AI support, photo-assisted damage review, a 3D cargo-loading planner, and shipment and trade-document tools.",
     githubLink: "https://github.com/MINBBBB1201/jsl-project",
     techStack: ["Next.js", "Typescript", "Node.js", "MongoDB"],
-    pagesInfoArr: [],
+    companyLogoImg: "/projects/jsl-logistics/card.jpg",
+    pagesInfoArr: [
+      {
+        title: "Website: one shipment journey",
+        description: "Preview of the new company website. A scroll-driven sequence follows one JSL container from road to warehouse, ocean and air, opening on a globe of the five directly operated locations. The site runs in Korean, English, Chinese, and Vietnamese. It is still in review with the company.",
+        imgArr: [
+          "/projects/jsl-logistics/01-hero-globe.jpg",
+          "/projects/jsl-logistics/02-journey-road.jpg",
+          "/projects/jsl-logistics/03-journey-operations.jpg",
+          "/projects/jsl-logistics/04-journey-ocean.jpg",
+          "/projects/jsl-logistics/05-global-network.jpg",
+        ],
+      },
+      {
+        title: "Customer tools",
+        description: "Public tools for customers: a 3D container load calculator on a packing engine I wrote, a trade document generator for commercial invoices and packing lists, and an HS code lookup over 6,939 HS2022 entries. The screens show sample data.",
+        imgArr: [
+          "/projects/jsl-logistics/06-container-planner.jpg",
+          "/projects/jsl-logistics/07-trade-documents.jpg",
+          "/projects/jsl-logistics/08-hs-code-lookup.jpg",
+        ],
+      },
+    ],
     descriptionDetails: {
       paragraphs: [
         "During my JSL internship, I am developing a logistics platform with a Next.js and TypeScript frontend and an Express and MongoDB backend. My work covers tools for staff as well as the public website. Development and integration are ongoing.",
@@ -403,7 +425,17 @@ export const Projects: ProjectInterface[] = [
         "Wrote the paper with guidance from my teacher.",
       ],
     },
-    pagesInfoArr: [],
+    companyLogoImg: "/projects/autopilot-mechanism-study/card.jpg",
+    pagesInfoArr: [
+      {
+        title: "Figures from the paper",
+        description: "Figure 1.1 is the flowchart I drew for the transition from autopilot to manual control. Figure 1.2 compares P, PI, and PID error curves. The curve values are illustrative parameters I ran through an open-source PID implementation, not flight or hardware data.",
+        imgArr: [
+          "/projects/autopilot-mechanism-study/figure-1-1-transition-flowchart.png",
+          "/projects/autopilot-mechanism-study/figure-1-2-pid-error-curves.png",
+        ],
+      },
+    ],
   },
   {
     id: "erau-esg-case-study",
@@ -416,6 +448,10 @@ export const Projects: ProjectInterface[] = [
     shortDescription:
       "A short case-study paper on how Embry-Riddle Aeronautical University links aviation education with sustainability. It is based on the university's public pages and news, with no original data.",
     techStack: [],
+    companyLogoImg: "/projects/erau-esg-case-study/card.jpg",
+    paperLink: "/projects/erau-esg-case-study/research-paper.pdf",
+    paperNote:
+      "This is my school paper, a summary of Embry-Riddle's public pages and news with no original data. The figures are as those sources report them and I did not verify them independently. For this page I softened one sentence in the conclusion that overstated the emissions savings, left out my teacher's email address, and dropped one reference entry that repeated another.",
     descriptionDetails: {
       paragraphs: [
         "For an 11th-grade environmental science class, I wrote a short paper on Embry-Riddle Aeronautical University (ERAU) through the lens of ESG (environmental, social, and governance) criteria. It covers flight training and sustainable aviation fuel, campus facilities, and research funding, including ERAU's M.S. in Aviation and Aerospace Sustainability and a $500,000 ARPA-E grant announced in May 2026 for batteries built into aircraft structures.",

@@ -72,7 +72,8 @@ test("ERAU ESG case study is framed as a secondary-source summary", () => {
   assert.ok(study);
   assert.equal(study.status, "Completed");
   assert.equal(study.startDate, undefined);
-  assert.equal(study.paperLink, undefined);
+  assert.equal(study.paperLink, "/projects/erau-esg-case-study/research-paper.pdf");
+  assert.ok(existsSync(resolve(import.meta.dirname, "..", "public", study.paperLink.slice(1))));
   const text = JSON.stringify(study);
   assert.match(text, /no original data/i);
   assert.doesNotMatch(text, /99%|@qdis|eliminat/);
