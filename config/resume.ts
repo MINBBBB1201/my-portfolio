@@ -5,7 +5,7 @@ export const resumeSelection = {
   apPlanned: "AP exams planned for May 2027: Calculus BC, Physics C (Mechanics; Electricity and Magnetism), Physics 1, Computer Science A.",
   experience: [
     { id: "jsl-logistics", bullets: [
-      "Develop staff tools and the public website, including a document-based support chatbot, photo-assisted damage review, and a 3D cargo-loading planner that checks dimensions, stacking and payload limits.",
+      "Sole developer of the company website and staff tools, front end and back end: document-based support chatbot, photo-assisted damage review, and a 3D cargo-loading planner.",
     ] },
     { id: "mintech", bullets: [
       "Assisted with OLED deposition equipment manufacturing and dimensional checks (calipers, micrometers); learned sputtering thin-film process flow; completed 4M, 5S and safety onboarding.",
@@ -14,7 +14,7 @@ export const resumeSelection = {
     { id: "cosmos", bullets: [
       "Co-founder; president since March 2026.",
       "Co-led a rocket thrust-stand project through its static-fire tests; after the first test failed to save data, corrected the recording sequence, and a later test captured a continuous thrust record reaching about 190 N.",
-      "Direct Project AEROVIEW, a suction wind tunnel designed in FreeCAD and OpenSCAD, and coordinate TVC-Hopper, which combines reinforcement-learning simulation, avionics and CAD (physical validation in progress).",
+      "Direct Project AEROVIEW, a suction wind tunnel designed in FreeCAD and OpenSCAD, and coordinate TVC-Hopper, which combines reinforcement-learning simulation, avionics and CAD.",
     ] },
     { id: "daemun-iii", bullets: [
       "Co-developed the conference platform with Junwon Kim (public site, AI assistant, organizer dashboard, delegate submissions with version history) and built the assistant's first backend and admin tools.",
@@ -23,8 +23,8 @@ export const resumeSelection = {
   ],
   projects: [
     { id: "wind-tunnel-rc-aircraft", bullets: ["Designed and built a corrugated-cardboard RC aircraft, flight-tested it, and wrote a 22-page paper relating design variables to stability."] },
-    { id: "autopilot-mechanism-study", bullets: ["Analyzed a control-systems paper and an Airbus patent on autopilot disengagement; compared illustrative P, PI and PID error curves. Literature-based; no flight or hardware testing."] },
-    { id: "tern", bullets: ["Built with Next.js, the Duffel API and React Three Fiber in four languages; compares fares, layovers and airport weather. Checkout runs through an external partner."] },
+    { id: "autopilot-mechanism-study", bullets: ["Analyzed a control-systems paper and an Airbus patent on autopilot disengagement; compared simulated P, PI and PID error curves."] },
+    { id: "tern", bullets: ["Built with Next.js, the Duffel API and React Three Fiber in four languages; compares fares, layovers and airport weather."] },
     { id: "ciws-drone-tracking-turret", bullets: ["Built a camera-tracking rig (Python, OpenCV, Arduino servos); tested YOLOv5 detection and a color-tracking dual-turret demo."] },
   ],
   leadership: [

@@ -26,7 +26,7 @@ export const experiences: ExperienceInterface[] = [
     location: "Remote",
     endDate: "Present",
     description: [
-      "Developing staff tools and the public website for JSL Logistics during an ongoing software internship.",
+      "Sole developer of the company website and staff tools for JSL Logistics, front end and back end, during an ongoing software internship.",
       "Work includes a document-based support chatbot, photo-assisted damage review, a 3D cargo-loading planner, and shipment and trade-document interfaces. The chatbot retrieves source documents for its answers; inspection suggestions remain subject to staff review.",
     ],
     achievements: [],
@@ -125,6 +125,22 @@ export const experiences: ExperienceInterface[] = [
     ],
     skills: ["Next.js", "Typescript", "PostgreSQL", "APIs", "Vercel", "Docker", "CI/CD", "System Architecture"],
     companyUrl: "https://github.com/junwonkim07/DAEMUN-III",
+    logo: "",
+  },
+  {
+    id: "tessellarium-ai",
+    position: "Co-founder and Vice President",
+    company: "Tessellarium AI",
+    location: "Qingdao, China",
+    startDate: new Date("2026-09-01"),
+    endDate: "Present",
+    description: [
+      "Six-student startup building AI agents that run school operations at international boarding schools, starting with Qingdao Daewon School.",
+      "Interviewing homeroom teachers and students across the school to find operational problems; wrote product hypotheses with test plans for an admissions-support agent and a hardware-club engineering-coach agent.",
+    ],
+    achievements: [],
+    skills: [],
+    companyUrl: "",
     logo: "",
   },
   {
